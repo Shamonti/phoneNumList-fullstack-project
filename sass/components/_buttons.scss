@@ -1,0 +1,133 @@
+.btn {
+  &-access {
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: $color-primary;
+    border: 1px solid $color-grey-light--3;
+    border-radius: 0.3rem;
+
+    &:hover {
+      color: $color-primary;
+      border: 1px solid $color-grey-dark--1;
+    }
+  }
+
+  &-grad {
+    // margin: 10px;
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-align: center;
+    text-transform: capitalize;
+    line-height: 1.8;
+
+    padding: 0.5rem 0;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: $color-white;
+    box-shadow: 0 0 2rem #eee;
+    border-radius: 1rem;
+    display: block;
+    height: 3.75rem;
+    border-radius: 0.75rem;
+    background-color: $color-primary;
+    color: $color-white;
+
+    background-image: linear-gradient(
+      to right,
+      #a770ef 0%,
+      #cf8bf3 51%,
+      #a770ef 100%
+    );
+
+    &:hover {
+      background-position: right center; /* change the direction of the change here */
+      color: $color-white;
+      text-decoration: none;
+
+      transform: scale(1.05);
+      transition: all 0.3s ease-in-out 0s;
+    }
+  }
+
+  &-purple {
+    text-transform: capitalize;
+    border-radius: 3rem;
+    background-color: $color-primary;
+    color: $color-white;
+    font-weight: 500;
+    font-size: 1.4rem;
+    height: 3rem;
+
+    &:hover {
+      color: $color-white;
+      background-color: $color-purple--1;
+    }
+  }
+
+  &-google-login {
+    width: 100%;
+    height: 3rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: $color-grey-dark--3;
+    text-transform: capitalize;
+    border: 1px solid $color-grey-light--3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: $color-grey-light--2;
+      box-shadow: 0 4px 9px rgba(0, 0, 0, 0.09);
+    }
+  }
+
+  &-facebook-login {
+    width: 100%;
+    height: 3rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: $color-white;
+    text-transform: capitalize;
+    border: 1px solid $color-blue-facebook;
+    background-color: $color-blue-facebook;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      color: $color-white;
+      background-color: rgba($color-blue-facebook, 0.95);
+      box-shadow: 0 4px 9px rgba(0, 0, 0, 0.09);
+    }
+  }
+
+  &-login {
+    width: 100%;
+    background-color: $color-primary;
+
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: $color-white;
+
+    &:hover {
+      background-color: rgba($color-purple--1, 0.85);
+      color: $color-white;
+    }
+  }
+  &-home {
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 1.75rem;
+
+    color: $color-white;
+    text-transform: capitalize;
+
+    &:hover {
+      text-decoration: underline;
+      color: $color-white;
+    }
+  }
+}

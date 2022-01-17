@@ -1,0 +1,44 @@
+@include respond(tab-land) {
+  .navbar-brand {
+    display: none;
+  }
+}
+
+@include respond(phone) {
+  .navbar-brand,
+  .navbar i {
+    display: none;
+  }
+}
+
+@include respond(tab-port) {
+  .hide {
+    display: none !important;
+    // z-index: 10000;
+  }
+
+  .show {
+    display: flex;
+    // z-index: 10001;
+    // position: absolute;
+  }
+
+  .navbar-nav .nav-item .nav-link.active {
+    border: none !important;
+    background-color: transparent !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .navbar-nav {
+    margin-top: 1.4rem;
+    background-color: $color-white !important;
+    width: 100vw;
+    z-index: 1000;
+  }
+
+  .navbar-collapse {
+    position: relative;
+    left: 1rem;
+  }
+}
