@@ -1,0 +1,15 @@
+{
+  "name": "apollo_clone--project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/style.scss css/style.css",
+    "watch:sass": "nodemon -e scss -x \"npm run compile:sass\""
+  },
+  "author": "Shamonti",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^7.0.0"
+  }
+}
