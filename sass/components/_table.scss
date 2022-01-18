@@ -1,0 +1,78 @@
+// .table {
+//   height: 100vh;
+
+//   td {
+//     white-space: nowrap;
+//     text-align: left !important;
+
+//     i {
+//       .bi-envelope {
+//         font-weight: 400;
+//         font-size: 1.8rem;
+//       }
+//       .bi-caret-down-fill {
+//         font-weight: 400;
+//         font-size: 1rem;
+
+//         color: red;
+//       }
+//     }
+//   }
+
+//   &-row {
+//     cursor: pointer;
+
+//     th {
+//       white-space: nowrap;
+//       text-align: left !important;
+
+//       &:hover {
+//         text-decoration: underline;
+//       }
+//     }
+//   }
+
+//   .person-name {
+//     color: $color-primary !important;
+//     font-weight: 500;
+
+//     &:hover {
+//       text-decoration: underline !important;
+//     }
+//   }
+// }
+
+.section-table {
+  display: flex;
+  width: calc(100vw -30rem);
+  height: calc(100vh - 15rem);
+  overflow-y: scroll;
+
+  border: 1px solid $color-grey-light--1;
+
+  .table {
+    max-height: 50vh !important;
+    margin: 1rem;
+    background-color: $color-white;
+
+    .name {
+      color: $color-primary !important;
+      font-weight: 600;
+    }
+
+    tr th {
+      color: $color-secondary !important;
+      font-weight: 400;
+    }
+
+    tr td {
+      text-align: center;
+    }
+  }
+}
+
+tfoot input {
+  width: 100%;
+  padding: 3px;
+  box-sizing: border-box;
+}

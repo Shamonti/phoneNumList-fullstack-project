@@ -1,0 +1,100 @@
+.section-dashboard {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: $color-grey-light--4;
+
+  display: flex;
+
+  &--sidebar {
+    width: 30rem;
+    // height: 100vh;
+    background-color: $color-dashboard--dark;
+
+    display: flex;
+    flex-direction: column;
+
+    .menubar {
+      padding: 4rem;
+
+      .menu {
+        .active {
+          .menu-item--text,
+          .menu-item--icon {
+            color: $color-grey-light--4;
+          }
+          transform: scale(1.03);
+          padding-left: 0.5rem;
+          transition: all 0.1s;
+        }
+        .navbar-brand {
+          display: flex;
+          align-items: center;
+          padding-bottom: 2.5rem;
+
+          img {
+            width: 18rem;
+          }
+
+          span {
+            font-size: 3rem;
+            padding: 0 0 0 0.8rem;
+          }
+        }
+        &-item {
+          font-size: 1.6rem;
+
+          padding: 1rem 0;
+
+          &-footer {
+            margin-top: 34rem;
+
+            i {
+              font-size: 1.8rem;
+            }
+
+            span {
+              font-size: 1.8rem;
+            }
+          }
+
+          &:hover {
+            .menu-item--text,
+            .menu-item--icon {
+              color: $color-grey-light--4;
+            }
+            transform: scale(1.03);
+            padding-left: 0.5rem;
+            transition: all 0.1s;
+          }
+
+          &--icon {
+            color: $color-grey-light--5;
+          }
+
+          &--text {
+            padding: 0 0 0 1rem;
+            color: $color-grey-light--5;
+          }
+        }
+      }
+    }
+  }
+
+  &--main {
+    width: calc(100vw - 30rem);
+    // height: 100vh;
+    background-color: $color-dashboard--light;
+
+    .container {
+      padding: 3rem 3rem 0 3rem;
+    }
+
+    .card {
+      background-color: $color-dashboard--light--1;
+
+      &-body {
+        color: $color-grey-light--5;
+      }
+    }
+  }
+}
