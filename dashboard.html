@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-
   <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,15 +20,13 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
   <!-- CUSTOM CSS -->
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
   <title>Dashboard</title>
 </head>
 
 <body>
 
   <section class="section-dashboard">
- 
-    
     <!-- START SIDEBAR -->
     <section class="section-dashboard--sidebar">
       <!-- START MENU -->
@@ -49,10 +46,18 @@
             </a>
           </li>
           <li class="menu-item">
-            <a href="">
+            <a href="viewPeopleData.html">
               <i class="bi bi-files menu-item--icon "></i>
               <span class="menu-item--text ">
-                View All Data
+                View All People Data
+              </span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="viewCompanyData.html">
+              <i class="bi bi-files menu-item--icon "></i>
+              <span class="menu-item--text ">
+                View All Company Data
               </span>
             </a>
           </li>
@@ -91,7 +96,7 @@
           </li>
           <li class="menu-item">
             <a href="">
-              <i class="bi bi-chat-right-dots menu-item--icon"></i>
+              <i class="bi bi-arrow-left-right menu-item--icon"></i>
               <span class="menu-item--text">
                 Credit Transfer
               </span>
@@ -99,13 +104,13 @@
           </li>
           <li class="menu-item">
             <a href="">
-              <i class="bi bi-chat-right-dots menu-item--icon"></i>
+              <i class="bi bi-wallet2 menu-item--icon"></i>
               <span class="menu-item--text">
                 Payment Settings
               </span>
             </a>
           </li>
-          <li class="menu-item menu-item-footer ">
+          <li class="menu-item menu-item-footer">
             <a href="home.html">
               <i class="bi bi-power menu-item--icon"></i>
               <span class="menu-item--text">
@@ -119,8 +124,7 @@
       <!-- END MENU -->
     </section>
     <!-- END SIDEBAR -->
-  
-      
+
     <!-- START MAIN BODY -->
     <section class="section-dashboard--main">
       <div class="container">
@@ -131,28 +135,51 @@
                 <div class="display-6">
                   Hi, Shamonti Haque. Welcome to your dashboard!
                 </div>
+                <p class="mt-2 text-end mb-0 pe-3 text-info fw-bold"  id="file-upload-filename">
+                  &nbsp;
+                </p>
               </div>
             </div>
           </div>
-          <div class="col-md-2 d-flex align-items-center">
-            
-            <input id='fileid' type='file' hidden />
-            <input id='buttonid' type='button' class="btn btn-upload" value='Upload' />
+
+          <div class="col-md-2 d-flex align-items-center justify-content-start">
+            <form action="" class="d-flex">
+              <!-- START UPLOAD BTN -->
+              <div class="col-md-6 px-2">
+                <input id='fileid' type='file' hidden />
+                <input id='buttonid' type='button' class="btn btn-upload" value='Upload' />
+              </div>
+              <!-- END UPLOAD BTN -->  
+            </form>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-md-12 card rounded-3 mx-2 my-5">
-            <canvas id="salesChart"></canvas>
+        <div class="container px-2">
+          <div class="row">
+            <div class="col-md-12 card rounded-3">
+              <h2 class="heading--main pt-4 pb-0 px-3 mt-2">
+                Sales Report
+              </h2>
+              <canvas id="salesChart" height="300rem"></canvas>
+            </div>
           </div>
         </div>
+
+        <div class="container px-2">
+        <div class="row">
+          <div class="col-md-12 card rounded-3">
+            <h2 class="heading--main pt-4 pb-0 px-3 mt-2">
+              Recent Credit History
+            </h2>
+            <canvas id="creditChart" height="300rem"></canvas>
+          </div>
+        </div>
+        </div>
+
       </div>
     </section>
     <!-- END MAIN BODY -->
- 
- 
   </section>
-
 
   <!-- jQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
@@ -162,9 +189,14 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
   </script>
 
-  <!-- CUSTOM JS -->
+  <!-- Chart JS -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Custom JS -->
   <script src="assets/js/chart.js"></script>
+  <script src="assets/js/dashboard.js"></script>
   <script src="assets/js/script.js"></script>
+
 </body>
 
 </html>
