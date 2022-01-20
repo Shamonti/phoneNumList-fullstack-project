@@ -23,3 +23,10 @@ function readMore() {
     moreText.style.display = 'inline';
   }
 }
+
+//UPLOAD BUTTON
+document.getElementById('buttonid').addEventListener('click', openDialog);
+
+function openDialog() {
+  document.getElementById('fileid').click();
+}
