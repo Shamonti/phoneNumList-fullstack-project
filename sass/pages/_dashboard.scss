@@ -163,3 +163,37 @@
     color: $color-grey-light--5;
   }
 }
+
+#editModal {
+  .modal {
+    &-header {
+      .btn-close {
+        color: $color-grey-light--5;
+      }
+    }
+
+    &-title {
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+
+    &-content {
+      background-color: $color-dashboard--dark;
+      color: $color-grey-light--5;
+    }
+
+    &-body {
+      .form-control {
+        background-color: $color-background;
+        font-size: 1.5rem;
+        color: $color-dashboard--dark;
+      }
+    }
+
+    &-footer {
+      button {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

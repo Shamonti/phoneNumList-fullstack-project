@@ -1,72 +1,39 @@
-// .table {
-//   height: 100vh;
+.table {
+  td {
+    white-space: nowrap;
+    text-align: left !important;
 
-//   td {
-//     white-space: nowrap;
-//     text-align: left !important;
+    i {
+      .bi-envelope {
+        font-weight: 400;
+        font-size: 1.8rem;
+      }
+      .bi-caret-down-fill {
+        font-weight: 400;
+        font-size: 1rem;
 
-//     i {
-//       .bi-envelope {
-//         font-weight: 400;
-//         font-size: 1.8rem;
-//       }
-//       .bi-caret-down-fill {
-//         font-weight: 400;
-//         font-size: 1rem;
-
-//         color: red;
-//       }
-//     }
-//   }
-
-//   &-row {
-//     cursor: pointer;
-
-//     th {
-//       white-space: nowrap;
-//       text-align: left !important;
-
-//       &:hover {
-//         text-decoration: underline;
-//       }
-//     }
-//   }
-
-//   .person-name {
-//     color: $color-primary !important;
-//     font-weight: 500;
-
-//     &:hover {
-//       text-decoration: underline !important;
-//     }
-//   }
-// }
-
-.section-table {
-  display: flex;
-  width: calc(100vw -30rem);
-  height: calc(100vh - 15rem);
-  overflow-y: scroll;
-
-  border: 1px solid $color-grey-light--1;
-
-  .table {
-    max-height: 50vh !important;
-    margin: 1rem;
-    background-color: $color-white;
-
-    .name {
-      color: $color-primary !important;
-      font-weight: 600;
+        color: red;
+      }
     }
+  }
+  &-row {
+    cursor: pointer;
 
-    tr th {
-      color: $color-secondary !important;
-      font-weight: 400;
+    th {
+      white-space: nowrap;
+      text-align: left !important;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
+  }
+  .person-name {
+    color: $color-primary !important;
+    font-weight: 500;
 
-    tr td {
-      text-align: center;
+    &:hover {
+      text-decoration: underline !important;
     }
   }
 }
@@ -75,4 +42,62 @@ tfoot input {
   width: 100%;
   padding: 3px;
   box-sizing: border-box;
+}
+
+#table_wrapper {
+  .form-select:focus {
+    box-shadow: none;
+  }
+  #table_length {
+    color: $color-grey-light--5;
+  }
+
+  .form-select-sm {
+    color: $color-grey-light--5;
+    font-size: 1.5rem;
+  }
+
+  #table_filter {
+    display: none;
+  }
+
+  .table-row {
+    background-color: $color-dashboard--light--1;
+  }
+
+  .dataTables_info {
+    color: $color-grey-light--5;
+  }
+
+  .page-link {
+    color: $color-dashboard--dark;
+    padding: 0.1rem 0.75rem;
+  }
+
+  .dataTables_paginate .paginate_button {
+    padding: 0;
+    margin: 0;
+  }
+
+  .dataTables_paginate .paginate_button {
+    &:hover {
+      background: transparent;
+      border: none;
+
+      .page-link {
+        color: $color-primary;
+      }
+    }
+  }
+
+  .page-item.active .page-link {
+    background-color: $color-dashboard--dark;
+    border-color: transparent;
+
+    color: $color-grey-light--5;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
 }

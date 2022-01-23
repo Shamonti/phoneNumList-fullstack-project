@@ -1,21 +1,22 @@
 'use strict';
+Chart.defaults.color = '#b3b7bb';
 
 //Chart JS SalesChart Setup
 const salesLabels = [
-  'Day01',
-  'Day02',
-  'Day03',
-  'Day04',
-  'Day05',
-  'Day06',
-  'Day07',
+  'Day 01',
+  'Day 02',
+  'Day 03',
+  'Day 04',
+  'Day 05',
+  'Day 06',
+  'Day 07',
 ];
 
 const salesData = {
   labels: salesLabels,
   datasets: [
     {
-      label: 'Number of Orders',
+      label: 'Orders Received',
       backgroundColor: 'rgb(255, 99, 132)',
       borderColor: 'rgb(255, 99, 132)',
       data: [0, 10, 5, 2, 20, 30, 45],
@@ -37,23 +38,29 @@ const salesChart = new Chart(
 
 //Chart JS CreditChart Setup
 const creditLabels = [
-  'Day01',
-  'Day02',
-  'Day03',
-  'Day04',
-  'Day05',
-  'Day06',
-  'Day07',
+  'Day 01',
+  'Day 02',
+  'Day 03',
+  'Day 04',
+  'Day 05',
+  'Day 06',
+  'Day 07',
 ];
 
 const creditData = {
   labels: creditLabels,
   datasets: [
     {
-      label: 'Number of Customers',
-      backgroundColor: 'rgb(75, 192, 192)',
-      borderColor: 'rgb(75, 192, 192)',
+      label: 'New Customers',
+      backgroundColor: 'rgba(54, 162, 235, 1)',
+      borderColor: 'rgba(54, 162, 235, 1)',
       data: [2, 10, 5, 2, 20, 30, 45],
+    },
+    {
+      label: 'Credit Earned',
+      backgroundColor: 'rgba(75, 192, 192, 1)',
+      borderColor: 'rgba(75, 192, 192, 1)',
+      data: [12, 20, 15, 21, 2, 10, 35],
     },
   ],
 };
