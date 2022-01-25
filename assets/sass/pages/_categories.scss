@@ -1,0 +1,81 @@
+.section-people-cards {
+  .circle-element {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 3rem;
+    box-shadow: 0 4px 14px 0 rgba(27, 20, 65, 0.2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+
+    i {
+      color: $color-white;
+      font-size: 2.5rem;
+    }
+
+    &--person {
+      background-image: linear-gradient(45deg, #12d8fa, $color-primary);
+    }
+
+    &--company {
+      background-image: linear-gradient(45deg, #6277e2, #62a0df);
+    }
+  }
+
+  .dark-link {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-right: 1.5rem;
+    line-height: 2.5;
+
+    &:hover {
+      font-weight: 500;
+      color: $color-primary;
+    }
+  }
+
+  .active {
+    font-weight: 700;
+    color: $color-primary;
+  }
+
+  .heading {
+    &--sub {
+      font-size: 2rem;
+
+      font-weight: 700;
+      line-height: 1.5;
+    }
+  }
+}
+
+.section-message {
+  .card-text {
+    font-size: 1.6rem;
+    font-style: italic;
+    color: $color-secondary;
+
+    span {
+      font-weight: 600;
+      color: $color-secondary;
+    }
+  }
+
+  .user-link {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.5;
+    color: $color-primary;
+    white-space: nowrap;
+
+    padding: 1rem 2rem 1rem 0;
+
+    &:hover {
+      color: $color-primary;
+      text-decoration: underline;
+    }
+  }
+}
