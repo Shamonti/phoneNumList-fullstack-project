@@ -16,7 +16,7 @@
   .heading {
     &--main {
       font-weight: 800;
-      font-size: 4.5rem;
+      font-size: 4.2rem;
       color: $color-blue-dark;
     }
     &--sub {
@@ -35,7 +35,7 @@
   .btn-grad {
     height: auto;
 
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 800;
 
     text-transform: none;
@@ -58,13 +58,13 @@
 
       &-title {
         font-weight: 800;
-        font-size: 4rem;
+        font-size: 3.5rem;
         color: $color-blue-dark;
       }
 
       &-text {
         font-weight: 800;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         text-transform: uppercase;
 
         color: $color-primary;
@@ -109,7 +109,7 @@
       font-size: 1.6rem;
       font-weight: 600;
       color: $color-primary;
-      margin-right: 3.4rem;
+      margin-right: 2.75rem;
 
       &:hover {
         text-decoration: underline;
