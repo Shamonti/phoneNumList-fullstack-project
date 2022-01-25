@@ -7,11 +7,17 @@
 @import 'base/utilities';
 
 @import 'components/buttons';
+@import 'components/card';
+@import 'components/faq';
 @import 'components/form';
 @import 'components/navbar';
 @import 'components/table';
 
 @import 'layout/animatedbg';
+@import 'layout/banner';
 @import 'layout/navigation';
 
+@import 'pages/categories';
 @import 'pages/dashboard';
+@import 'pages/home';
+@import 'pages/user';

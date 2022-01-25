@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap"
       rel="stylesheet"
     />
 
@@ -34,432 +34,239 @@
     />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
 
-    <title>Lidata</title>
+    <title>Phone Number List</title>
     <link rel="shortcut icon" href="images/icons/favicon.ico" />
   </head>
 
-  <body>
+  <body id="home">
     <header>
       <!-- START NAVBAR -->
-      <nav class="navbar navbar-expand-md navbar-light">
-        <div class="container-fluid justify-content-end">
-          <a class="navbar-brand" href="index.html">
-            <img src="assets/images/logo.png" alt="logo" />
-          </a>
+      <div class="container">
+        <div class="row" id="home-navbar">
+          <div class="navbar__logo">
+            <a class="navbar-brand" href="#">
+              <img src="assets/images/logo--company-name-dark.png" alt="logo" />
+            </a>
+          </div>
 
-          <button
-            class="navbar-toggler me-auto"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"> </span>
-          </button>
-          <div
-            class="collapse navbar-collapse justify-content-between"
-            id="navbarSupportedContent"
-          >
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item pl-4">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="index.html"
-                >
-                  <i class="bi bi-house-door"></i>
-                  Home
-                </a>
+          <nav class="navbar navbar--center">
+            <ul class="navbar__ul">
+              <li class="navabar__li">
+                <a href="" class="navbar__a"> Product </a>
               </li>
-              <li class="nav-item d-none d-md-block">
-                <a class="nav-link nav-link__search" href="#">
-                  <i class="bi bi-search"></i>
-                  Search
-                </a>
-
-                <!-- Show element on hover  -->
-                <div
-                  class="search__details d-none"
-                  id="search__details-display "
-                >
-                  <a href="people.html">
-                    <div class="search__details--left d-flex">
-                      <div class="search__details--icon-box">
-                        <i class="bi bi-people"></i>
-                      </div>
-                      <div class="search__details--text">
-                        <div
-                          class="fw-bold heading--sub d-flex justify-content-between"
-                        >
-                          People
-                          <i class="bi bi-arrow-right animate-arrow"></i>
-                        </div>
-                        <p>
-                          Search for hyper-targeted lists of people using
-                          filters.
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-
-                  <a href="company.html">
-                    <div class="search__details--right d-flex">
-                      <div class="search__details--icon-box">
-                        <i class="bi bi-building"></i>
-                      </div>
-                      <div class="search__details--text">
-                        <div
-                          class="fw-bold heading--sub d-flex justify-content-between"
-                        >
-                          Companies
-                          <i class="bi bi-arrow-right animate-arrow"></i>
-                        </div>
-                        <p>
-                          Search for targeted lists of companies using filters.
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
+              <li class="navabar__li">
+                <a href="" class="navbar__a"> Pricing </a>
               </li>
-
-              <li class="nav-item d-md-none d-lg-none">
-                <a class="nav-link" href="people.html">
-                  <i class="bi bi-send"></i>
-                  People
-                </a>
+              <li class="navabar__li">
+                <a href="" class="navbar__a"> Blog </a>
               </li>
-              <li class="nav-item d-md-none d-lg-none">
-                <a class="nav-link" href="company.html">
-                  <i class="bi bi-building px-2"></i>
-                  Companies
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <i class="bi bi-send px-2"></i>
-                  Engage
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <i class="bi bi-arrow-repeat px-2"></i>
-                  Enrich
-                </a>
+              <li class="navabar__li">
+                <a href="" class="navbar__a"> Careers </a>
               </li>
             </ul>
-          </div>
+          </nav>
+          <nav class="navbar navbar--right">
+            <ul class="navbar__ul align-items-center">
+              <li class="navabar__li">
+                <a href="" class="navbar__a" id="login"> Login </a>
+              </li>
 
-          <!-- START SHOW ELEMENT ON CLICKING USER -->
-          <div class="user-div hide">
-            <h4 class="px-4 pt-5">Shamonti Haque</h4>
-            <div class="user--label mx-4">
-              <span>Admin</span>
-            </div>
-
-            <div class="user--menu">
-              <a class="user--menu-item" href="settings.html">
-                <i class="bi bi-gear"></i>
-                <span>Settings</span>
-              </a>
-              <a class="user--menu-item" href="packages.html">
-                <i class="bi bi-trophy"></i>
-                <span>Upgrade Plan</span>
-              </a>
-
-              <a class="user--menu-item mb-3" href="login.html">
-                <i class="bi bi-power"></i>
-                <span>Logout</span>
-              </a>
-            </div>
-          </div>
-          <!-- END SHOW ELEMENT ON CLICKING USER -->
+              <li class="navabar__li">
+                <a class="btn btn-grad rounded-pill"> Sign up for free </a>
+              </li>
+            </ul>
+          </nav>
         </div>
-      </nav>
+      </div>
       <!-- END NAVBAR -->
     </header>
 
     <main>
-      <div class="container">
-        <h3 class="py-4">PEOPLE TABLE</h3>
+      <!-- START BANNER -->
+      <section class="section-banner">
+        <div class="container">
+          <div class="row my-5">
+            <div class="bg-pink"></div>
+            <div class="col-md-6 my-5">
+              <h1 class="heading--sub pb-3">
+                The <strong>sales intelligence and engagement</strong> platform
+                to
+              </h1>
+              <h2 class="heading--main pb-4">
+                Crush your sales numbers every quarter
+              </h2>
 
-        <!-- START TABLE -->
-        <section class="demo-table section-table section-table--people">
-          <table
-            class="table table-hover table-bordered table-responsive"
-            id="peopleTable"
-          >
-            <thead class="table-light">
-              <tr>
-                <th scope="col" colspan="2">Name</th>
-                <th scope="col">Job Title</th>
-                <th scope="col">Phone Number</th>
-                <th scope="col">Facebook URL</th>
-                <th scope="col">Email</th>
-                <th scope="col">Gender</th>
-                <th scope="col">Home Town</th>
-                <th scope="col">City</th>
-                <th scope="col">State</th>
-                <th scope="col">Country</th>
-                <th scope="col">Relationship Status</th>
-                <th scope="col">Education Last Year</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="table-row">
-                <td scope="row" class="name" colspan="2">
-                  <a href="user01.html"> Shamonti Haque</a>
-                </td>
+              <p>
+                Use our data of over 220 million contacts and 30 million
+                companies to find and engage your future customers at the right
+                time with the right message in our all-in-one platform
+              </p>
 
-                <td>Web Developer</td>
-                <td>+880 1111111111</td>
-                <td>facebook.com/1234</td>
-                <td>shamonti@gmail.com</td>
-                <td>female</td>
-                <td>Dinajpur</td>
-                <td>Sahjahanpur</td>
-                <td>Rajshahi</td>
-                <td>Bangladesh</td>
-                <td>Single</td>
-                <td>2019</td>
-              </tr>
-              <tr class="table-row">
-                <td scope="row" class="name" colspan="2">
-                  <a href="user01.html"> Shamonti Haque</a>
-                </td>
+              <div class="input-group py-4">
+                <input
+                  type="email"
+                  class="form-control form-control--signup"
+                  placeholder="Enter your email"
+                  aria-label="Enter your email..."
+                  aria-describedby="button-signup"
+                />
+                <button
+                  class="btn btn-grad rounded-end-pill px-4"
+                  type="button"
+                  id="button-signup"
+                >
+                  Sign up for free
+                </button>
+              </div>
 
-                <td>Web Developer</td>
-                <td>+880 1111111111</td>
-                <td>facebook.com/1234</td>
-                <td>shamonti@gmail.com</td>
-                <td>female</td>
-                <td>Dinajpur</td>
-                <td>Sahjahanpur</td>
-                <td>Rajshahi</td>
-                <td>Bangladesh</td>
-                <td>Single</td>
-                <td>2019</td>
-              </tr>
-              <tr class="table-row">
-                <td scope="row" class="name" colspan="2">
-                  <a href="user01.html"> Shamonti Haque</a>
-                </td>
+              <div class="divider mt-4 mb-3 w-75">
+                <div class="divider--line me-5"></div>
+                <span>OR</span>
+                <div class="divider--line ms-5"></div>
+              </div>
 
-                <td>Web Developer</td>
-                <td>+880 1111111111</td>
-                <td>facebook.com/1234</td>
-                <td>shamonti@gmail.com</td>
-                <td>female</td>
-                <td>Dinajpur</td>
-                <td>Sahjahanpur</td>
-                <td>Rajshahi</td>
-                <td>Bangladesh</td>
-                <td>Single</td>
-                <td>2019</td>
-              </tr>
-              <tr class="table-row">
-                <td scope="row" class="name" colspan="2">
-                  <a href="user01.html"> Shamonti Haque</a>
-                </td>
+              <div class="google-signup w-75">
+                <a
+                  type="button"
+                  class="btn btn-google-login u-box-shadow-2"
+                  href="#"
+                >
+                  <img
+                    src="assets/images/icons/google.svg"
+                    alt="google logo"
+                    class="me-2"
+                  />
+                  Sign up with google
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 banner-bg">
+              <img
+                src="assets/images/banner.svg"
+                alt="banner"
+                class="banner-bg--img"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END BANNER -->
 
-                <td>Web Developer</td>
-                <td>+880 1111111111</td>
-                <td>facebook.com/1234</td>
-                <td>shamonti@gmail.com</td>
-                <td>female</td>
-                <td>Dinajpur</td>
-                <td>Sahjahanpur</td>
-                <td>Rajshahi</td>
-                <td>Bangladesh</td>
-                <td>Single</td>
-                <td>2019</td>
-              </tr>
-              <tr class="table-row">
-                <td scope="row" class="name" colspan="2">
-                  <a href="user01.html"> Shamonti Haque</a>
-                </td>
+      <!-- START COUNTER -->
+      <section class="section-counter bg-light u-padding-lg px-4">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card border-0 bg-transparent">
+              <div class="card-body text-start">
+                <h4 class="card-title">
+                  Trusted by over 1M sales users worldwide
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 d-flex justify-content-center align-items-end">
+            <div class="card border-0 bg-transparent">
+              <div class="card-body">
+                <h4 class="card-title">
+                  <span> 220M+ </span>
+                </h4>
+                <p class="card-text">contacts</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 d-flex justify-content-center align-items-end">
+            <div class="card border-0 bg-transparent">
+              <div class="card-body">
+                <h4 class="card-title">
+                  <span> 30M+</span>
+                </h4>
+                <p class="card-text">companies</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 d-flex justify-content-center align-items-end">
+            <div class="card border-0 bg-transparent">
+              <div class="card-body">
+                <h4 class="card-title">
+                  <span>120M+ </span>
+                </h4>
+                <p class="card-text">mobile numbers</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 d-flex justify-content-center align-items-end">
+            <div class="card border-0 bg-transparent">
+              <div class="card-body">
+                <h4 class="card-title">
+                  <span>10,000+ </span>
+                </h4>
+                <p class="card-text">paying customers</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END COUNTER -->
 
-                <td>Web Developer</td>
-                <td>+880 1111111111</td>
-                <td>facebook.com/1234</td>
-                <td>shamonti@gmail.com</td>
-                <td>female</td>
-                <td>Dinajpur</td>
-                <td>Sahjahanpur</td>
-                <td>Rajshahi</td>
-                <td>Bangladesh</td>
-                <td>Single</td>
-                <td>2019</td>
-              </tr>
-              <tr class="table-row">
-                <td scope="row" class="name" colspan="2">
-                  <a href="user01.html"> Shamonti Haque</a>
-                </td>
-
-                <td>Web Developer</td>
-                <td>+880 1111111111</td>
-                <td>facebook.com/1234</td>
-                <td>shamonti@gmail.com</td>
-                <td>female</td>
-                <td>Dinajpur</td>
-                <td>Sahjahanpur</td>
-                <td>Rajshahi</td>
-                <td>Bangladesh</td>
-                <td>Single</td>
-                <td>2019</td>
-              </tr>
-              <tr class="table-row">
-                <td scope="row" class="name" colspan="2">
-                  <a href="user01.html"> Shamonti Haque</a>
-                </td>
-
-                <td>Web Developer</td>
-                <td>+880 1111111111</td>
-                <td>facebook.com/1234</td>
-                <td>shamonti@gmail.com</td>
-                <td>female</td>
-                <td>Dinajpur</td>
-                <td>Sahjahanpur</td>
-                <td>Rajshahi</td>
-                <td>Bangladesh</td>
-                <td>Single</td>
-                <td>2019</td>
-              </tr>
-              <tr class="table-row">
-                <td scope="row" class="name" colspan="2">
-                  <a href="user01.html"> Shamonti Haque</a>
-                </td>
-
-                <td>Web Developer</td>
-                <td>+880 1111111111</td>
-                <td>facebook.com/1234</td>
-                <td>shamonti@gmail.com</td>
-                <td>female</td>
-                <td>Dinajpur</td>
-                <td>Sahjahanpur</td>
-                <td>Rajshahi</td>
-                <td>Bangladesh</td>
-                <td>Single</td>
-                <td>2019</td>
-              </tr>
-              <tr class="table-row">
-                <td scope="row" class="name" colspan="2">
-                  <a href="user01.html"> Shamonti Haque</a>
-                </td>
-
-                <td>Web Developer</td>
-                <td>+880 1111111111</td>
-                <td>facebook.com/1234</td>
-                <td>shamonti@gmail.com</td>
-                <td>female</td>
-                <td>Dinajpur</td>
-                <td>Sahjahanpur</td>
-                <td>Rajshahi</td>
-                <td>Bangladesh</td>
-                <td>Single</td>
-                <td>2019</td>
-              </tr>
-              <tr class="table-row">
-                <td scope="row" class="name" colspan="2">
-                  <a href="user01.html"> Shamonti Haque</a>
-                </td>
-
-                <td>Web Developer</td>
-                <td>+880 1111111111</td>
-                <td>facebook.com/1234</td>
-                <td>shamonti@gmail.com</td>
-                <td>female</td>
-                <td>Dinajpur</td>
-                <td>Sahjahanpur</td>
-                <td>Rajshahi</td>
-                <td>Bangladesh</td>
-                <td>Single</td>
-                <td>2019</td>
-              </tr>
-              <tr class="table-row">
-                <td scope="row" class="name" colspan="2">
-                  <a href="user01.html"> Shamonti Haque</a>
-                </td>
-
-                <td>Web Developer</td>
-                <td>+880 1111111111</td>
-                <td>facebook.com/1234</td>
-                <td>shamonti@gmail.com</td>
-                <td>female</td>
-                <td>Dinajpur</td>
-                <td>Sahjahanpur</td>
-                <td>Rajshahi</td>
-                <td>Bangladesh</td>
-                <td>Single</td>
-                <td>2019</td>
-              </tr>
-              <tr class="table-row">
-                <td scope="row" class="name" colspan="2">
-                  <a href="user01.html"> Shamonti Haque</a>
-                </td>
-
-                <td>Web Developer</td>
-                <td>+880 1111111111</td>
-                <td>facebook.com/1234</td>
-                <td>shamonti@gmail.com</td>
-                <td>female</td>
-                <td>Dinajpur</td>
-                <td>Sahjahanpur</td>
-                <td>Rajshahi</td>
-                <td>Bangladesh</td>
-                <td>Single</td>
-                <td>2019</td>
-              </tr>
-              <tr class="table-row">
-                <td scope="row" class="name" colspan="2">
-                  <a href="user01.html"> Shamonti Haque</a>
-                </td>
-
-                <td>Web Developer</td>
-                <td>+880 1111111111</td>
-                <td>facebook.com/1234</td>
-                <td>shamonti@gmail.com</td>
-                <td>female</td>
-                <td>Dinajpur</td>
-                <td>Sahjahanpur</td>
-                <td>Rajshahi</td>
-                <td>Bangladesh</td>
-                <td>Single</td>
-                <td>2019</td>
-              </tr>
-              <tr class="table-row">
-                <td scope="row" class="name" colspan="2">
-                  <a href="user01.html"> Shamonti Haque</a>
-                </td>
-
-                <td>Web Developer</td>
-                <td>+880 1111111111</td>
-                <td>facebook.com/1234</td>
-                <td>shamonti@gmail.com</td>
-                <td>female</td>
-                <td>Dinajpur</td>
-                <td>Sahjahanpur</td>
-                <td>Rajshahi</td>
-                <td>Bangladesh</td>
-                <td>Single</td>
-                <td>2019</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <!-- END TABLE -->
-      </div>
+      <!-- START CATAGORIES -->
+      <section class="section-categories u-padding-lg">
+        <div class="container">
+          <div class="row mb-3">
+            <div class="col-md-12 border-bottom">
+              <h5 class="sub-heading">
+                Browse Phone Number List's Directories
+              </h5>
+            </div>
+          </div>
+          <div class="row py-5 px-3">
+            <div class="col-md-12 pe-4">
+              <div class="d-flex align-items-center border-bottom pb-3 mb-4">
+                <div class="circle-element circle-element--person">
+                  <i class="bi bi-people-fill"></i>
+                </div>
+                <span class="sub-heading">Person Search</span>
+              </div>
+              <div>
+                <a href="directory/people/A.html" class="blue-link">A</a>
+                <a href="directory/people/A.html" class="blue-link">B</a>
+                <a href="directory/people/A.html" class="blue-link">C</a>
+                <a href="directory/people/A.html" class="blue-link">D</a>
+                <a href="directory/people/A.html" class="blue-link">E</a>
+                <a href="directory/people/A.html" class="blue-link">F</a>
+                <a href="directory/people/A.html" class="blue-link">G</a>
+                <a href="directory/people/A.html" class="blue-link">H</a>
+                <a href="directory/people/A.html" class="blue-link">I</a>
+                <a href="directory/people/A.html" class="blue-link">J</a>
+                <a href="directory/people/A.html" class="blue-link">K</a>
+                <a href="directory/people/A.html" class="blue-link">L</a>
+                <a href="directory/people/A.html" class="blue-link">M</a>
+                <a href="directory/people/A.html" class="blue-link">N</a>
+                <a href="directory/people/A.html" class="blue-link">O</a>
+                <a href="directory/people/A.html" class="blue-link">P</a>
+                <a href="directory/people/A.html" class="blue-link">Q</a>
+                <a href="directory/people/A.html" class="blue-link">R</a>
+                <a href="directory/people/A.html" class="blue-link">S</a>
+                <a href="directory/people/A.html" class="blue-link">T</a>
+                <a href="directory/people/A.html" class="blue-link">U</a>
+                <a href="directory/people/A.html" class="blue-link">V</a>
+                <a href="directory/people/A.html" class="blue-link">W</a>
+                <a href="directory/people/A.html" class="blue-link">X</a>
+                <a href="directory/people/A.html" class="blue-link">Y</a>
+                <a href="directory/people/A.html" class="blue-link">Z</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END CATAGORIES -->
     </main>
 
     <!-- Custom JS -->
 
-    <script src="navbar.js"></script>
-    <script src="script.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/script.js"></script>
 
     <!-- Bootstrap JS -->
     <script

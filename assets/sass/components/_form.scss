@@ -23,20 +23,6 @@
       display: flex;
       justify-content: center;
 
-      .divider {
-        font-size: 1.2rem;
-        color: $color-secondary;
-
-        display: flex;
-        align-items: center;
-
-        &--line {
-          height: 1px;
-          width: 100%;
-          background: $color-grey-light--3;
-        }
-      }
-
       .card {
         width: 36rem;
         font-weight: 500;
@@ -371,5 +357,19 @@
 
   .section-footer {
     margin: 0 !important;
+  }
+}
+
+.divider {
+  font-size: 1.2rem;
+  color: $color-secondary;
+
+  display: flex;
+  align-items: center;
+
+  &--line {
+    height: 1px;
+    width: 100%;
+    background: $color-grey-light--3;
   }
 }
