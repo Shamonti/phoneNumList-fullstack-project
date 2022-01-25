@@ -23,221 +23,266 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- Animate CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
-    <title>PhoneNumList</title>
-    <link rel="shortcut icon" href="assets/images/icons/favicon.ico" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <title>Phone Number List</title>
+    <link rel="shortcut icon" href="images/icons/favicon.ico" />
   </head>
 
-  <body>
+  <body id="home">
     <header>
       <!-- START NAVBAR -->
-      <nav class="navbar navbar-expand-md navbar-light">
-        <div class="container-fluid justify-content-end">
-          <a class="navbar-brand" href="index.html">
-            <img src="assets/images/logo.png" alt="logo" />
-          </a>
+      <div class="container">
+        <div class="row" id="home-navbar">
+          <div class="navbar__logo">
+            <a class="navbar-brand" href="#">
+              <img src="assets/images/logo--company-name-dark.png" alt="logo" />
+            </a>
+          </div>
 
-          <button
-            class="navbar-toggler me-auto"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"> </span>
-          </button>
-          <div
-            class="collapse navbar-collapse justify-content-between"
-            id="navbarSupportedContent"
-          >
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item pl-4">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="index.html"
-                >
-                  <i class="bi bi-house-door"></i>
-                  Home
-                </a>
+          <nav class="navbar navbar--center">
+            <ul class="navbar__ul">
+              <li class="navabar__li">
+                <a href="" class="navbar__a"> Product </a>
               </li>
-              <li class="nav-item d-none d-md-block">
-                <a class="nav-link nav-link__search" href="#">
-                  <i class="bi bi-search"></i>
-                  Search
-                </a>
-
-                <!-- Show element on hover  -->
-                <div class="search__details hide">
-                  <a href="people.html">
-                    <div class="search__details--left d-flex">
-                      <div class="search__details--icon-box">
-                        <i class="bi bi-people"></i>
-                      </div>
-                      <div class="search__details--text">
-                        <div
-                          class="fw-bold heading--sub d-flex justify-content-between"
-                        >
-                          People
-                          <i class="bi bi-arrow-right animate-arrow"></i>
-                        </div>
-                        <p>
-                          Search for hyper-targeted lists of people using
-                          filters.
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-
-                  <a href="company.html">
-                    <div class="search__details--right d-flex">
-                      <div class="search__details--icon-box">
-                        <i class="bi bi-building"></i>
-                      </div>
-                      <div class="search__details--text">
-                        <div
-                          class="fw-bold heading--sub d-flex justify-content-between"
-                        >
-                          Companies
-                          <i class="bi bi-arrow-right animate-arrow"></i>
-                        </div>
-                        <p>
-                          Search for targeted lists of companies using filters.
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
+              <li class="navabar__li">
+                <a href="" class="navbar__a"> Pricing </a>
+              </li>
+              <li class="navabar__li">
+                <a href="" class="navbar__a"> Blog </a>
+              </li>
+              <li class="navabar__li">
+                <a href="" class="navbar__a"> Careers </a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="navbar navbar--right">
+            <ul class="navbar__ul align-items-center">
+              <li class="navabar__li">
+                <a href="login.html" class="navbar__a" id="login"> Login </a>
               </li>
 
-              <li class="nav-item d-md-none d-lg-none">
-                <a class="nav-link" href="people.html">
-                  <i class="bi bi-send"></i>
-                  People
-                </a>
-              </li>
-              <li class="nav-item d-md-none d-lg-none">
-                <a class="nav-link" href="company.html">
-                  <i class="bi bi-building px-2"></i>
-                  Companies
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <i class="bi bi-send px-2"></i>
-                  Engage
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <i class="bi bi-arrow-repeat px-2"></i>
-                  Enrich
+              <li class="navabar__li">
+                <a href="signup.html" class="btn btn-grad rounded-pill">
+                  Sign up for free
                 </a>
               </li>
             </ul>
-          </div>
-
-          <!-- START SHOW ELEMENT ON CLICKING USER -->
-          <div class="user-div hide">
-            <h4 class="px-4 pt-5">Shamonti Haque</h4>
-            <div class="user--label mx-4">
-              <span>Admin</span>
-            </div>
-
-            <div class="user--menu">
-              <a class="user--menu-item" href="settings.html">
-                <i class="bi bi-gear"></i>
-                <span>Settings</span>
-              </a>
-              <a class="user--menu-item" href="packages.html">
-                <i class="bi bi-trophy"></i>
-                <span>Upgrade Plan</span>
-              </a>
-
-              <a class="user--menu-item mb-3" href="login.html">
-                <i class="bi bi-power"></i>
-                <span>Logout</span>
-              </a>
-            </div>
-          </div>
-          <!-- END SHOW ELEMENT ON CLICKING USER -->
+          </nav>
         </div>
-      </nav>
+      </div>
       <!-- END NAVBAR -->
+    </header>
 
-      <!-- FIXME hide when clecked somewhere else -->
-      <!-- START SHOW WHEN CLICKED ON PHONE -->
-      <div class="u-box-shadow-1 phone-call__div hide">
-        <div class="phone-call--icon">
-          <i class="bi bi-telephone-outbound text-primary"></i>
-        </div>
-        <div class="phone-call--text">
-          Instantly click-to-call prospects from anywhere.
-        </div>
-        <div class="phone-call--button btn-purple">Upgrade to Professional</div>
-        <a class="phone-call--link"> Learn more </a>
-      </div>
-      <!-- END SHOW WHEN CLICKED ON PHONE -->
+    <main>
+      <!-- START BANNER -->
+      <section class="section-banner">
+        <div class="container">
+          <div class="row my-5">
+            <div class="bg-pink"></div>
+            <div class="col-md-6 my-5">
+              <h1 class="heading--sub pb-3">
+                The <strong>sales intelligence and engagement</strong> platform
+                to
+              </h1>
+              <h2 class="heading--main pb-4">
+                Crush your sales numbers every quarter
+              </h2>
 
-      <!-- START SHOW WHEN CLICKED ON NOTIFICATION -->
-      <div
-        class="u-box-shadow-1 notification__sidebar hide animate__animated animate__fadeInRightBig"
-      >
-        <div class="notification--header">
-          <div class="notification--header-title">
-            <h5>NOTIFICATIONS</h5>
-          </div>
-          <div class="notification--header-icons">
-            <div class="btn"><i class="bi bi-arrow-clockwise"></i></div>
-            <div class="btn close-btn">
-              <i class="bi bi-x-lg"></i>
+              <p>
+                Use our data of over 220 million contacts and 30 million
+                companies to find and engage your future customers at the right
+                time with the right message in our all-in-one platform
+              </p>
+
+              <div class="input-group py-4">
+                <input
+                  type="email"
+                  class="form-control form-control--signup"
+                  placeholder="Enter your email"
+                  aria-label="Enter your email..."
+                  aria-describedby="button-signup"
+                />
+                <button
+                  class="btn btn-grad rounded-end-pill px-4"
+                  type="button"
+                  id="button-signup"
+                >
+                  Sign up for free
+                </button>
+              </div>
+
+              <div class="divider mt-4 mb-3 w-75">
+                <div class="divider--line me-5"></div>
+                <span>OR</span>
+                <div class="divider--line ms-5"></div>
+              </div>
+
+              <div class="google-signup w-75">
+                <a
+                  type="button"
+                  class="btn btn-google-login u-box-shadow-2"
+                  href="#"
+                >
+                  <img
+                    src="assets/images/icons/google.svg"
+                    alt="google logo"
+                    class="me-2"
+                  />
+                  Sign up with google
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 banner-bg">
+              <img
+                src="assets/images/banner.svg"
+                alt="banner"
+                class="banner-bg--img"
+              />
             </div>
           </div>
         </div>
-        <div class="notification--body"></div>
-      </div>
-      <!-- END SHOW WHEN CLICKED ON NOTIFICATION -->
+      </section>
+      <!-- END BANNER -->
 
-      <!-- START RIGHT NAV ITEMS -->
-      <div class="d-flex nav-right__box">
-        <a class="btn btn-purple mx-4" href="packages.html"
-          >Get unlimited leads
-        </a>
-        <button type="button" class="btn">
-          <i class="bi bi-telephone phone-btn"></i>
-        </button>
+      <!-- START COUNTER -->
+      <section class="section-counter bg-light u-padding-lg px-4">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card border-0 bg-transparent">
+              <div class="card-body text-start">
+                <h4 class="card-title">
+                  Trusted by over 1M sales users worldwide
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 d-flex justify-content-center align-items-end">
+            <div class="card border-0 bg-transparent">
+              <div class="card-body">
+                <h4 class="card-title">
+                  <span> 220M+ </span>
+                </h4>
+                <p class="card-text">contacts</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 d-flex justify-content-center align-items-end">
+            <div class="card border-0 bg-transparent">
+              <div class="card-body">
+                <h4 class="card-title">
+                  <span> 30M+</span>
+                </h4>
+                <p class="card-text">companies</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 d-flex justify-content-center align-items-end">
+            <div class="card border-0 bg-transparent">
+              <div class="card-body">
+                <h4 class="card-title">
+                  <span>120M+ </span>
+                </h4>
+                <p class="card-text">mobile numbers</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 d-flex justify-content-center align-items-end">
+            <div class="card border-0 bg-transparent">
+              <div class="card-body">
+                <h4 class="card-title">
+                  <span>10,000+ </span>
+                </h4>
+                <p class="card-text">paying customers</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END COUNTER -->
 
-        <!-- TODO Link to blogsite -->
-        <a class="btn"><i class="bi bi-question-circle" href="#"></i></a>
+      <!-- START CATAGORIES -->
+      <section class="section-categories u-padding-lg">
+        <div class="container">
+          <div class="row mb-3">
+            <div class="col-md-12 border-bottom">
+              <h5 class="sub-heading">
+                Browse Phone Number List's Directories
+              </h5>
+            </div>
+          </div>
+          <div class="row py-5 px-3">
+            <div class="col-md-12 pe-4">
+              <div class="d-flex align-items-center border-bottom pb-3 mb-4">
+                <div class="circle-element circle-element--person">
+                  <i class="bi bi-people-fill"></i>
+                </div>
+                <span class="sub-heading">Person Search</span>
+              </div>
+              <div>
+                <a href="directory/people/A.html" class="blue-link">A</a>
+                <a href="directory/people/A.html" class="blue-link">B</a>
+                <a href="directory/people/A.html" class="blue-link">C</a>
+                <a href="directory/people/A.html" class="blue-link">D</a>
+                <a href="directory/people/A.html" class="blue-link">E</a>
+                <a href="directory/people/A.html" class="blue-link">F</a>
+                <a href="directory/people/A.html" class="blue-link">G</a>
+                <a href="directory/people/A.html" class="blue-link">H</a>
+                <a href="directory/people/A.html" class="blue-link">I</a>
+                <a href="directory/people/A.html" class="blue-link">J</a>
+                <a href="directory/people/A.html" class="blue-link">K</a>
+                <a href="directory/people/A.html" class="blue-link">L</a>
+                <a href="directory/people/A.html" class="blue-link">M</a>
+                <a href="directory/people/A.html" class="blue-link">N</a>
+                <a href="directory/people/A.html" class="blue-link">O</a>
+                <a href="directory/people/A.html" class="blue-link">P</a>
+                <a href="directory/people/A.html" class="blue-link">Q</a>
+                <a href="directory/people/A.html" class="blue-link">R</a>
+                <a href="directory/people/A.html" class="blue-link">S</a>
+                <a href="directory/people/A.html" class="blue-link">T</a>
+                <a href="directory/people/A.html" class="blue-link">U</a>
+                <a href="directory/people/A.html" class="blue-link">V</a>
+                <a href="directory/people/A.html" class="blue-link">W</a>
+                <a href="directory/people/A.html" class="blue-link">X</a>
+                <a href="directory/people/A.html" class="blue-link">Y</a>
+                <a href="directory/people/A.html" class="blue-link">Z</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END CATAGORIES -->
+    </main>
 
-        <button type="button" class="btn notification-btn">
-          <i class="bi bi-bell"></i>
-        </button>
-        <button type="button" class="user user-btn circle-element mx-3">
-          <p class="user-name">SH</p>
-        </button>
-      </div>
-      <!-- END RIGHT NAV ITEMS -->
-    </header>
-    <main></main>
+    <!-- Custom JS -->
 
-    <!-- CUSTOM JS -->
     <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/script.js"></script>
 
     <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
+    ></script>
+
+    <!-- jQuery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     ></script>
   </body>
 </html>
