@@ -26,21 +26,62 @@
     }
   }
 
-  p {
-    font-size: 2rem;
-    font-weight: 600;
-    color: $color-text;
-  }
-
   .btn-grad {
     height: auto;
 
     font-size: 1.6rem;
     font-weight: 800;
-
     text-transform: none;
 
     padding: 1rem 3rem;
+
+    @include respond(phone) {
+      padding: 0;
+    }
+  }
+
+  .section-services {
+    .card {
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.5);
+      // font-size: 1.5rem;
+      border-radius: 3px;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s;
+      padding: 2.5rem;
+
+      &:hover {
+        transform: translateY(-1.5rem) scale(1.03);
+      }
+
+      &-body {
+        i {
+          font-size: 6rem;
+          background-image: linear-gradient(
+            to right,
+            rgba($color-primary, 0.75),
+            $color-purple-dark
+          );
+          -webkit-background-clip: text;
+          color: transparent;
+          margin-bottom: 1.5rem;
+        }
+      }
+      &-title {
+        font-weight: 800;
+        font-size: 1.6rem;
+        line-height: 1.6;
+        text-transform: uppercase;
+        color: $color-blue-dark;
+      }
+      &-text {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        font-weight: 500;
+        text-align: center;
+        color: $color-grey-dark--3;
+      }
+    }
   }
 
   .section-counter {
@@ -109,7 +150,11 @@
       font-size: 1.6rem;
       font-weight: 600;
       color: $color-primary;
-      margin-right: 2.75rem;
+      padding-right: 2.45rem;
+
+      @include respond(tab-port) {
+        padding-right: 1.75rem;
+      }
 
       &:hover {
         text-decoration: underline;

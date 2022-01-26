@@ -11,5 +11,9 @@
 }
 
 .u-padding-lg {
-  padding: 4.8rem;
+  padding: 9rem 2.4rem;
+
+  @include respond(phone) {
+    padding: 7rem 1.5rem;
+  }
 }
