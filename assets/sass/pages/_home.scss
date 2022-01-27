@@ -19,6 +19,7 @@
       font-size: 4.2rem;
       color: $color-blue-dark;
     }
+
     &--sub {
       font-weight: 500;
       font-size: 2.35rem;
@@ -66,6 +67,7 @@
           margin-bottom: 1.5rem;
         }
       }
+
       &-title {
         font-weight: 800;
         font-size: 1.6rem;
@@ -73,6 +75,7 @@
         text-transform: uppercase;
         color: $color-blue-dark;
       }
+
       &-text {
         font-size: 1.6rem;
         line-height: 1.5;
@@ -159,6 +162,80 @@
         text-decoration: underline;
         color: $color-primary;
       }
+    }
+
+    .country-dropdown {
+      #country {
+        color: $color-blue-dark;
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 1.6;
+
+        border: 1px solid rgba($color-primary, 0.75);
+        border-radius: 0.3rem;
+
+        &:focus-visible {
+          border: 1px solid rgba($color-blue-dark, 0.5);
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .section-cta {
+    .input-group {
+      // width: 45rem;
+
+      @include respond(phone) {
+        width: 30.5rem;
+      }
+
+      .form-control {
+        height: 6rem;
+        padding: 1rem 2rem;
+        // border-radius: 5rem;
+        border-top-left-radius: 5rem;
+        border-bottom-left-radius: 5rem;
+        border: 1px solid $color-grey-light--1;
+        font-size: 1.8rem;
+        line-height: 1.5;
+        font-weight: 600;
+
+        @include respond(phone) {
+          height: 4.5rem;
+        }
+      }
+
+      button {
+        font-size: 1.6rem;
+        font-weight: 800;
+        // border-radius: 5rem;
+        border-top-right-radius: 5rem;
+        border-bottom-right-radius: 5rem;
+        border: none;
+        padding: 0 1.5rem;
+
+        &:hover {
+          transform: scale(1) !important;
+        }
+      }
+    }
+  }
+
+  .google-signup {
+    img {
+      height: 2.5rem;
+    }
+
+    .btn-google-login {
+      height: 5rem;
+      border-radius: 3rem;
+
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: $color-blue-dark;
+
+      background-color: $color-white;
     }
   }
 }
