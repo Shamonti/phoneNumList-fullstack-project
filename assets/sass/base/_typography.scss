@@ -22,3 +22,16 @@ body {
 p {
   color: $color-secondary;
 }
+
+.section {
+  &-title {
+    font-weight: 800;
+    font-size: 3.5rem;
+    color: $color-blue-dark;
+  }
+  &-text {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $color-text;
+  }
+}
