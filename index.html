@@ -27,12 +27,8 @@
       rel="stylesheet"
     />
 
-    <!-- TODO REMOVE IF UNUSED -->
     <!-- Animate CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -119,7 +115,7 @@
               <a href="login.html" class="navigation__link">Login</a>
             </li>
             <li class="navigation__item d-flex justify-content-center mt-5">
-              <a href="signup.html" class="btn btn-grad rounded-pill w-25">
+              <a href="signup.html" class="btn btn-grad rounded-pill">
                 Sign up for free
               </a>
             </li>
@@ -204,7 +200,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6 d-lg-block banner-bg d-none">
+            <div class="col-md-6 d-lg-flex banner-bg d-none">
               <img
                 src="assets/images/banner.svg"
                 alt="banner"
@@ -219,6 +215,17 @@
       <!-- START SERVICES -->
       <section class="section-services bg-light u-padding-lg">
         <div class="container">
+          <div class="row">
+            <div class="col-md-12 py-5 mb-4">
+              <h3
+                class="section-title text-center text-uppercase"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
+                Our Services
+              </h3>
+            </div>
+          </div>
           <div class="row">
             <div class="col-md-4 px-lg-5 px-5">
               <div class="card border-0">
@@ -269,6 +276,38 @@
         </div>
       </section>
       <!-- END SERVICES -->
+
+      <!-- START SERVICE01 DETAILS -->
+      <section class="section-analyze u-padding-lg">
+        <div class="container">
+          <div class="row">
+            <div
+              class="col-md-6 pe-5 d-flex flex-column justify-content-center"
+            >
+              <h2 class="section-title mb-5">
+                Make data-driven sales engagement decisions
+              </h2>
+              <p class="section-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perspiciatis nam doloribus quisquam vero illum odit voluptas,
+                commodi cum minima libero et culpa porro sapiente officiis nihil
+                dolor, quae corrupti facere.
+              </p>
+              <a href="signup.html" class="btn-txt mt-3">
+                Sign up for free →
+              </a>
+            </div>
+            <div class="col-md-6 p-5 mt-5 mt-md-0">
+              <img
+                src="assets/images/service01.svg"
+                class="img-fluid"
+                alt="service illustration"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END SERVICE01 DETAILS -->
 
       <!-- START COUNTER -->
       <section class="section-counter bg-light u-padding-lg">
@@ -341,6 +380,38 @@
       </section>
       <!-- END COUNTER -->
 
+      <!-- START SERVICE02 DETAILS -->
+      <section class="section-analyze u-padding-lg">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 p-5">
+              <img
+                src="assets/images/service01.svg"
+                class="img-fluid"
+                alt="service illustration"
+              />
+            </div>
+            <div
+              class="col-md-6 ps-5 d-flex flex-column justify-content-center"
+            >
+              <h2 class="section-title mb-5">
+                Automatically enrich your CRM with the most accurate data
+              </h2>
+              <p class="section-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perspiciatis nam doloribus quisquam vero illum odit voluptas,
+                commodi cum minima libero et culpa porro sapiente officiis nihil
+                dolor, quae corrupti facere.
+              </p>
+              <a href="signup.html" class="btn-txt mt-3">
+                Sign up for free →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END SERVICE02 DETAILS -->
+
       <!-- START CATAGORIES -->
       <section class="section-categories u-padding-lg">
         <div class="container">
@@ -409,9 +480,12 @@
       referrerpolicy="no-referrer"
     ></script>
 
+    <!-- ANIMATION JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <!-- Custom JS -->
-    <!-- <script src="assets/js/navbar.js"></script>
-    <script src="assets/js/script.js"></script> -->
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/script.js"></script>
     <script src="assets/js/counter.js"></script>
     <script src="assets/js/typewriter.js"></script>
 
@@ -430,6 +504,13 @@
         .pauseFor(1500)
         // .deleteAll()
         .start();
+    </script>
+
+    <!-- ANIMATION JS -->
+    <script>
+      AOS.init({
+        once: true,
+      });
     </script>
   </body>
 </html>
