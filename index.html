@@ -39,10 +39,17 @@
     <!-- Animate CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
+    <!-- SwiperJS CSS-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <title>Phone Number List</title>
+
     <link rel="shortcut icon" href="images/icons/favicon.ico" />
   </head>
 
@@ -52,35 +59,38 @@
       <div class="container">
         <div class="row" id="home-navbar">
           <div class="navbar__logo">
-            <a class="navbar-brand d-lg-flex" href="#">
+            <a class="navbar-brand d-lg-flex" href="index.html">
               <img src="assets/images/logo--company-name-dark.png" alt="logo" />
             </a>
           </div>
 
           <nav class="navbar navbar--center d-lg-flex d-none">
             <ul class="navbar__ul">
-              <li class="navabar__li">
-                <a href="" class="navbar__a"> Product </a>
+              <li class="navbar__li">
+                <a href="product.html" class="navbar__a"> Product </a>
               </li>
-              <li class="navabar__li">
-                <a href="" class="navbar__a"> Pricing </a>
+              <li class="navbar__li">
+                <a href="packages.html" class="navbar__a"> Pricing </a>
               </li>
-              <li class="navabar__li">
-                <a href="" class="navbar__a"> Blog </a>
+              <li class="navbar__li">
+                <a href="https://blog.phonelist.io" class="navbar__a"> Blog </a>
               </li>
-              <li class="navabar__li">
-                <a href="" class="navbar__a"> Careers </a>
+              <li class="navbar__li">
+                <a href="careers.html" class="navbar__a"> Careers </a>
               </li>
             </ul>
           </nav>
           <nav class="navbar navbar--right d-lg-flex d-none">
             <ul class="navbar__ul align-items-center">
-              <li class="navabar__li">
+              <li class="navbar__li">
                 <a href="login.html" class="navbar__a" id="login"> Login </a>
               </li>
 
-              <li class="navabar__li">
-                <a href="signup.html" class="btn btn-grad rounded-pill">
+              <li class="navbar__li">
+                <a
+                  href="signup.html"
+                  class="btn btn-grad rounded-pill text-white"
+                >
                   Sign up for free
                 </a>
               </li>
@@ -91,9 +101,10 @@
       <!-- END NAVBAR -->
     </header>
 
+    <!-- START NAVBAR FOR SMALL SCREEN -->
     <div class="d-lg-none d-flex">
       <div class="navbar__logo ms-md-5 ms-2 ps-5">
-        <a class="navbar-brand d-flex" href="#">
+        <a class="navbar-brand d-flex" href="index.html">
           <img src="assets/images/logo--company-name-dark.png" alt="logo" />
         </a>
       </div>
@@ -109,13 +120,15 @@
         <nav class="navigation__nav">
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a href="#" class="navigation__link">Product</a>
+              <a href="product.html" class="navigation__link">Product</a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="navigation__link">Pricing</a>
+              <a href="packages.html" class="navigation__link">Pricing</a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="navigation__link">Blog</a>
+              <a href="https://blog.phonelist.io" class="navigation__link"
+                >Blog</a
+              >
             </li>
             <li class="navigation__item">
               <a href="#" class="navigation__link">Careers</a>
@@ -132,6 +145,7 @@
         </nav>
       </div>
     </div>
+    <!-- END NAVBAR FOR SMALL SCREEN -->
 
     <main>
       <!-- START BANNER -->
@@ -436,13 +450,109 @@
       </section>
       <!-- END SERVICE02 DETAILS -->
 
+      <!-- START TESTIMONIAL -->
+      <section class="section-testimonial bg-light u-padding-lg">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h3
+                class="section-title text-center text-uppercase"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
+                Customers love the ease <br />
+                and simplicity
+              </h3>
+            </div>
+          </div>
+
+          <div class="row pt-5">
+            <div class="col-md-12">
+              <!-- Slider main container -->
+              <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <img
+                        class="card-img-top img-fluid rounded-circle"
+                        src="assets/images/user01.jpg"
+                        alt="User01 Image"
+                      />
+
+                      <div class="card-body">
+                        <blockquote class="card-text">
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit. Delectus labore reiciendis eveniet optio
+                          corrupti.
+                        </blockquote>
+                        <blockquote class="card-text">
+                          - Maliha Mustafa
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <img
+                        class="card-img-top img-fluid rounded-circle"
+                        src="assets/images/user02.jpg"
+                        alt="User01 Image"
+                      />
+
+                      <div class="card-body">
+                        <blockquote class="card-text">
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit. Delectus labore reiciendis eveniet optio
+                          corrupti.
+                        </blockquote>
+                        <blockquote class="card-text">
+                          - Shawn Mendes
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <img
+                        class="card-img-top img-fluid rounded-circle"
+                        src="assets/images/user03.jpg"
+                        alt="User01 Image"
+                      />
+
+                      <div class="card-body">
+                        <blockquote class="card-text">
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit. Delectus labore reiciendis eveniet optio
+                          corrupti.
+                        </blockquote>
+                        <blockquote class="card-text">
+                          - Maliha Mustafa
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                  ...
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END TESTIMONIAL -->
+
       <!-- START CALL TO ACTION -->
-      <section class="section-cta bg-light u-padding-lg">
+      <section class="section-cta u-padding-lg">
         <div class="container">
           <div class="row">
             <div class="offset-lg-3 col-lg-6 text-center">
               <div class="row">
-                <div class="col-md-12">
+                <div class="offset-lg-0 col-lg-12 col-md-8 offset-md-2">
                   <h2
                     class="section-title pb-4"
                     data-aos="fade-up"
@@ -459,7 +569,7 @@
                 </div>
               </div>
 
-              <div class="row">
+              <div class="row d-flex justify-content-center">
                 <div class="col-lg-10 col-md-6 col-10 mx-lg-0 mx-auto">
                   <div class="input-group py-4 mx-lg-0 mx-auto">
                     <input
@@ -480,7 +590,7 @@
                 </div>
               </div>
 
-              <div class="row">
+              <div class="row d-flex justify-content-center">
                 <div class="col-lg-10 col-md-6 col-7 mx-auto mx-lg-0">
                   <div class="divider mt-4 mb-3 mx-lg-0 mx-auto">
                     <div class="divider--line me-5"></div>
@@ -490,7 +600,7 @@
                 </div>
               </div>
 
-              <div class="row">
+              <div class="row d-flex justify-content-center">
                 <div class="col-lg-10 col-md-6 col-8 mx-auto mx-lg-0">
                   <div class="google-signup mx-lg-0 mx-auto">
                     <a
@@ -515,7 +625,7 @@
       <!-- END CALL TO ACTION -->
 
       <!-- START CATAGORIES -->
-      <section class="section-categories u-padding-lg">
+      <section class="section-categories bg-light u-padding-lg">
         <div class="container">
           <div class="row mb-3">
             <div class="col-md-12 border-bottom">
@@ -896,7 +1006,7 @@
       <div class="container">
         <div class="row pt-3">
           <div class="col-lg-3 pl-5 mb-lg-0 mb-5">
-            <a href="#">
+            <a href="index.html">
               <img
                 class="img-fluid footer__logo"
                 src="assets/images/logo--company-name-dark.png"
@@ -907,10 +1017,10 @@
           <div class="col-lg-2 col-md-4 col-sm-6 pl-md-0 pb-3 ps-md-0 ps-4">
             <h5 class="footer-title">ABOUT</h5>
             <ul class="pt-3">
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Contact us</a></li>
-              <li><a href="#">Forum</a></li>
-              <li><a href="#">Help</a></li>
+              <li><a href="about.html">About us</a></li>
+              <li><a href="contact.html">Contact us</a></li>
+              <li><a href="http://phonelist.io/forum/">Forum</a></li>
+              <li><a href="http://help.phonelist.io/">Help</a></li>
             </ul>
           </div>
           <div
@@ -977,22 +1087,21 @@
               progress.
             </div>
             <div class="social-media pt-3">
-              <a
-                href="https://www.facebook.com/Phonelistio-111559994765583"
-                class="pl-0"
-              >
+              <a href="https://www.facebook.com/Phonelistio-111559994765583">
                 <i class="fab fa-facebook-f"></i>
               </a>
-              <a href="#">
+              <a href="https://twitter.com/Phonelistio">
                 <i class="fab fa-twitter"></i>
               </a>
-              <a href="#">
+              <a
+                href="https://www.youtube.com/channel/UCIYmVIkqTG1oi79AWTeVLDQ"
+              >
                 <i class="fab fa-youtube"></i>
               </a>
-              <a href="#">
+              <a href="https://www.linkedin.com/in/phone-list-05b32a230/">
                 <i class="fab fa-linkedin-in"></i>
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/phonelist.io/">
                 <i class="fab fa-instagram"></i>
               </a>
             </div>
@@ -1038,11 +1147,15 @@
     <!-- ANIMATION JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
     <!-- Custom JS -->
+    <script src="assets/js/typewriter.js"></script>
+    <script src="assets/js/counter.js"></script>
+    <script src="assets/js/testimonial.js"></script>
     <script src="assets/js/navbar.js"></script>
     <script src="assets/js/script.js"></script>
-    <script src="assets/js/counter.js"></script>
-    <script src="assets/js/typewriter.js"></script>
 
     <!-- TYPEWRITER JS -->
     <script>

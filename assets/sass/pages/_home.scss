@@ -28,7 +28,7 @@
   }
 
   .btn-grad {
-    height: auto;
+    height: auto !important;
 
     font-size: 1.6rem;
     font-weight: 800;
@@ -115,73 +115,6 @@
     }
   }
 
-  .section-categories {
-    background: #ece9e6;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #ffffff, #ece9e6);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ffffff, #ece9e6);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    .circle-element {
-      width: 6rem;
-      height: 6rem;
-      border-radius: 3rem;
-      box-shadow: 0 4px 14px 0 rgba(27, 20, 65, 0.2);
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-right: 2rem;
-
-      i {
-        color: $color-white;
-        font-size: 2.5rem;
-      }
-
-      &--person {
-        background-image: linear-gradient(45deg, #12d8fa, $color-primary);
-      }
-
-      &--company {
-        background-image: linear-gradient(45deg, #6277e2, #62a0df);
-      }
-    }
-
-    .blue-link {
-      font-size: 1.6rem;
-      font-weight: 600;
-      color: $color-primary;
-      padding-right: 2.45rem;
-
-      @include respond(tab-port) {
-        padding-right: 1.75rem;
-      }
-
-      &:hover {
-        text-decoration: underline;
-        color: $color-primary;
-      }
-    }
-
-    .country-dropdown {
-      #country {
-        color: $color-blue-dark;
-        font-weight: 700;
-        font-size: 1.6rem;
-        line-height: 1.6;
-
-        border: 1px solid rgba($color-primary, 0.75);
-        border-radius: 0.3rem;
-
-        &:focus-visible {
-          border: 1px solid rgba($color-blue-dark, 0.5);
-          outline: none;
-        }
-      }
-    }
-  }
-
   .section-cta {
     .input-group {
       // width: 45rem;
@@ -236,6 +169,81 @@
       color: $color-blue-dark;
 
       background-color: $color-white;
+    }
+  }
+}
+
+.section-categories {
+  background: #ece9e6;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffffff, #ece9e6);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffffff, #ece9e6);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  .circle-element {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 3rem;
+    box-shadow: 0 4px 14px 0 rgba(27, 20, 65, 0.2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+
+    i {
+      color: $color-white;
+      font-size: 2.5rem;
+    }
+
+    &--person {
+      background-image: linear-gradient(
+        45deg,
+        $color-primary,
+        $color-purple-dark
+      );
+    }
+
+    &--company {
+      background-image: linear-gradient(
+        45deg,
+        $color-primary,
+        $color-purple-dark
+      );
+    }
+  }
+
+  .blue-link {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: $color-primary;
+    padding-right: 2.45rem;
+
+    @include respond(tab-port) {
+      padding-right: 1.75rem;
+    }
+
+    &:hover {
+      text-decoration: underline;
+      color: $color-primary;
+    }
+  }
+
+  .country-dropdown {
+    #country {
+      color: $color-blue-dark;
+      font-weight: 700;
+      font-size: 1.6rem;
+      line-height: 1.6;
+
+      border: 1px solid rgba($color-primary, 0.75);
+      border-radius: 0.3rem;
+
+      &:focus-visible {
+        border: 1px solid rgba($color-blue-dark, 0.5);
+        outline: none;
+      }
     }
   }
 }

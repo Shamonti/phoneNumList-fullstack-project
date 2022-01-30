@@ -473,6 +473,37 @@
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 800;
 
+    &__ul {
+      display: flex;
+    }
+
+    &__a {
+      margin-right: 4.5rem;
+      color: $color-nav;
+
+      position: relative;
+      transition: all 0.5s;
+
+      &::after {
+        position: absolute;
+        bottom: -0.3rem;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: $color-primary;
+        color: transparent;
+        width: 0%;
+        content: '';
+        height: 3px;
+
+        transition: all 0.5s;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+
     &--center {
       width: max-content;
       margin-top: 1rem;
@@ -495,24 +526,28 @@
         position: relative;
 
         .navbar__a {
-          padding-right: 3.4rem;
+          margin-right: 3.4rem;
         }
       }
 
       .navbar__li:nth-child(2) a {
         color: $color-purple;
-        padding-right: 2rem;
+        // padding-right: 2rem;
       }
     }
+  }
 
-    &__ul {
-      display: flex;
-      color: red;
-    }
+  .btn-grad {
+    height: auto;
 
-    &__a {
-      padding-right: 4.5rem;
-      color: $color-nav;
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-transform: none;
+
+    padding: 1rem 3rem;
+
+    @include respond(phone) {
+      padding: 0;
     }
   }
 }
