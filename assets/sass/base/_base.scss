@@ -105,18 +105,16 @@ button {
   box-shadow: none !important;
 }
 
-form {
-  .form-control:focus {
-    box-shadow: none;
-    border-color: $color-primary;
-  }
+.form-control:focus {
+  box-shadow: none;
+  border-color: $color-primary;
+}
 
-  .form-check-input {
-    &:checked {
-      background-color: $color-primary !important;
-    }
-    &:focus {
-      box-shadow: none;
-    }
+.form-check-input {
+  &:checked {
+    background-color: $color-primary !important;
+  }
+  &:focus {
+    box-shadow: none;
   }
 }

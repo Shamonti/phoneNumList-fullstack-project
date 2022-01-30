@@ -15,7 +15,7 @@
   &-grad {
     // margin: 10px;
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     text-align: center;
     text-transform: capitalize;
     line-height: 1.8;
@@ -26,8 +26,10 @@
     color: $color-white;
     box-shadow: 0 0 2rem #eee;
     border-radius: 1rem;
-    display: block;
-    height: 3.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // height: 3.75rem;
     border-radius: 0.75rem;
     background-color: $color-primary;
     color: $color-white;
@@ -67,7 +69,7 @@
   &-google-login {
     width: 100%;
     height: 3rem;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 1.4rem;
     color: $color-grey-dark--3;
     text-transform: capitalize;
@@ -86,7 +88,7 @@
   &-facebook-login {
     width: 100%;
     height: 3rem;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 1.4rem;
     color: $color-white;
     text-transform: capitalize;
@@ -108,7 +110,7 @@
     width: 100%;
     background-color: $color-primary;
 
-    font-weight: 500;
+    font-weight: 700;
     font-size: 1.4rem;
     color: $color-white;
 

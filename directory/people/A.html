@@ -22,9 +22,8 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap"
       rel="stylesheet"
     />
 
@@ -44,59 +43,109 @@
   <body>
     <header>
       <!-- START NAVBAR -->
-      <nav
-        class="navbar navbar--category fixed-top navbar-expand-lg navbar-light border-bottom bg-white"
-        id="sticky-nav"
-      >
-        <div class="container-fluid px-5 py-2">
-          <a class="navbar-brand d-block ms-5 ps-5" href="../../index.html">
-            <img
-              src="../../assets/images/logo--company-name-dark.png"
-              alt="logo"
-            />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul
-              class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center py-2 mx-5 px-5"
-            >
-              <li class="nav-item">
-                <a class="nav-link pe-4" aria-current="page" href="#"
-                  >Product</a
-                >
+      <div class="container">
+        <div class="row" id="home-navbar">
+          <div class="navbar__logo">
+            <a class="navbar-brand d-lg-flex" href="../../index.html">
+              <img
+                src="../../assets/images/logo--company-name-dark.png"
+                alt="logo"
+              />
+            </a>
+          </div>
+
+          <nav class="navbar navbar--center d-lg-flex d-none">
+            <ul class="navbar__ul">
+              <li class="navbar__li">
+                <a href="../../product.html" class="navbar__a"> Product </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link pe-4" href="#">About</a>
+              <li class="navbar__li">
+                <a href="../../packages.html" class="navbar__a"> Pricing </a>
+              </li>
+              <li class="navbar__li">
+                <a href="https://blog.phonelist.io" class="navbar__a"> Blog </a>
+              </li>
+              <li class="navbar__li">
+                <a href="../../careers.html" class="navbar__a"> Careers </a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="navbar navbar--right d-lg-flex d-none">
+            <ul class="navbar__ul align-items-center">
+              <li class="navbar__li">
+                <a href="../../login.html" class="navbar__a" id="login">
+                  Login
+                </a>
               </li>
 
-              <li class="nav-item">
-                <a class="nav-link py-0">
-                  <button type="button" class="btn btn-grad px-4">
-                    Create Free Account
-                  </button>
+              <li class="navbar__li">
+                <a
+                  href="../../signup.html"
+                  class="btn btn-grad rounded-pill text-white"
+                >
+                  Sign up for free
                 </a>
               </li>
             </ul>
-          </div>
+          </nav>
         </div>
-      </nav>
+      </div>
       <!-- END NAVBAR -->
     </header>
 
+    <!-- START NAVBAR FOR SMALL SCREEN -->
+    <div class="d-lg-none d-flex">
+      <div class="navbar__logo ms-md-5 ms-2 ps-5">
+        <a class="navbar-brand d-flex" href="../../index.html">
+          <img
+            src="../../assets/images/logo--company-name-dark.png"
+            alt="logo"
+          />
+        </a>
+      </div>
+      <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+
+        <label for="navi-toggle" class="navigation__button">
+          <span class="navigation__icon">&nbsp;</span>
+        </label>
+
+        <div class="navigation__background">&nbsp;</div>
+
+        <nav class="navigation__nav">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="../../product.html" class="navigation__link">Product</a>
+            </li>
+            <li class="navigation__item">
+              <a href="../../packages.html" class="navigation__link">Pricing</a>
+            </li>
+            <li class="navigation__item">
+              <a href="https://blog.phonelist.io" class="navigation__link"
+                >Blog</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="../../careers.html" class="navigation__link">Careers</a>
+            </li>
+            <li class="navigation__item">
+              <a href="../../login.html" class="navigation__link">Login</a>
+            </li>
+            <li class="navigation__item d-flex justify-content-center mt-5">
+              <a href="../../signup.html" class="btn btn-grad rounded-pill">
+                Sign up for free
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- END NAVBAR FOR SMALL SCREEN -->
+
     <main>
       <!-- START SECTION PEOPLE CARDS -->
-      <section class="section-people-cards u-padding-lg mt-5">
-        <div class="container mt-5 pt-4">
+      <section class="section-people-cards u-padding-lg">
+        <div class="container">
           <div class="row">
             <div class="col-md-6">
               <div
@@ -142,7 +191,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 mt-md-0 mt-5">
               <div class="card bg-transparent u-border-radius h-100">
                 <div class="card-body d-flex align-items-center px-5 mx-5">
                   <div class="col-md-4 px-4 mx-3">

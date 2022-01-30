@@ -1,0 +1,121 @@
+#home {
+  .section-testimonial {
+    position: relative;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow-x: hidden;
+  }
+
+  .swiper {
+    width: 36rem;
+    height: 48rem;
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+
+    .card {
+      height: 100%;
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+      text-align: center;
+      border: transparent;
+
+      &-img-top {
+        height: 15rem;
+        width: 15rem;
+
+        margin-top: 5rem;
+      }
+
+      &-body {
+        padding: 5rem 7rem;
+      }
+
+      &-body::before {
+        content: '\201C';
+        position: absolute;
+        font-size: 20rem;
+        bottom: 8rem;
+        left: -1rem;
+        line-height: 1;
+        color: rgba($color-blue-dark, 0.3);
+        z-index: 1;
+      }
+
+      &-body::after {
+        content: '\201D';
+        position: absolute;
+        font-size: 20rem;
+        bottom: -6rem;
+        right: -1rem;
+        line-height: 1;
+        color: rgba($color-blue-dark, 0.3);
+        z-index: 1;
+      }
+
+      &-text {
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  .swiper-slide:nth-child(n) .card {
+    background-color: $color-purple-dark;
+  }
+
+  .swiper-slide:nth-child(2n) .card {
+    background-color: #7b3de6;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: $color-blue-dark;
+  }
+
+  // .swiper-slide:nth-child(3n) .card {
+  //   background-color: rgba($color-primary, 0.95);
+  // }
+
+  // .swiper-slide:nth-child(4n) {
+  //   background-color: rgb(211, 122, 7);
+  // }
+
+  // .swiper-slide:nth-child(5n) {
+  //   background-color: rgb(118, 163, 12);
+  // }
+
+  // .swiper-slide:nth-child(6n) {
+  //   background-color: rgb(180, 10, 47);
+  // }
+
+  // .swiper-slide:nth-child(7n) {
+  //   background-color: rgb(35, 99, 19);
+  // }
+
+  // .swiper-slide:nth-child(8n) {
+  //   background-color: rgb(0, 68, 255);
+  // }
+
+  // .swiper-slide:nth-child(9n) {
+  //   background-color: rgb(218, 12, 218);
+  // }
+
+  // .swiper-slide:nth-child(10n) {
+  //   background-color: rgb(54, 94, 77);
+  // }
+}
