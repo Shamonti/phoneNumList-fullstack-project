@@ -3,12 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>People Directory: A | Phone List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta
       name="description"
       content="List of contacts in Phone Number List's database for names starting with 'A'"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="phone list, phone number list," />
+
+    <title>People Directory: A | Phone List</title>
 
     <!-- Bootstrap CSS -->
     <link
@@ -22,6 +25,15 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+
+    <!-- Font awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
 
     <!-- Google Fonts -->
@@ -41,7 +53,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../../assets/css/style.css" />
 
-    <title>Phone Number List</title>
+    <!-- Favicon -->
     <link rel="shortcut icon" href="../../assets/images/icons/favicon.ico" />
   </head>
 
@@ -148,8 +160,37 @@
     <!-- END NAVBAR FOR SMALL SCREEN -->
 
     <main>
+      <!-- START SEARCH BARS -->
+      <section class="section-searchbar pt-md-5 pb-md-4 py-2 mt-md-0 mt-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-6 ms-auto">
+              <input
+                type="text"
+                name="search"
+                id="searchPeople"
+                class="searchBar w-100 bg-white border-5 text-dark fw-normal"
+                onkeyup="searchPeople()"
+                placeholder="Search Person by Name..."
+              />
+            </div>
+            <div class="col-md-3 col-6">
+              <input
+                type="text"
+                name="search"
+                id="searchPeopleCountry"
+                class="searchBar w-100 bg-white border-5 text-dark fw-normal"
+                onkeyup="searchPeople()"
+                placeholder="Search Person by Country..."
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END SEARCH BARS -->
+
       <!-- START SECTION PEOPLE CARDS -->
-      <section class="section-people-cards u-padding-lg">
+      <section class="section-people-cards py-5">
         <div class="container">
           <div class="row">
             <div class="col-md-6">
@@ -227,7 +268,7 @@
       <!-- END SECTION PEOPLE CARDS -->
 
       <!-- START SECTION MESSAGE -->
-      <section class="section-message">
+      <section class="section-message py-5 mb-4">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
@@ -387,6 +428,7 @@
         </div>
       </section>
       <!-- END SECTION MESSAGE -->
+
       <!-- START CATAGORIES -->
       <section class="section-categories bg-light u-padding-lg">
         <div class="container">
@@ -806,7 +848,7 @@
                   <img
                     src="../../assets/images/Brother Phone Number List--logo.png"
                     class="img-fluid partner-logo"
-                    alt="latestdatabase logo"
+                    alt="Brother Phone Number List logo"
                   />
                 </a>
               </div>
@@ -882,9 +924,9 @@
 
           <div class="col-md-8 mt-md-0 mt-4">
             <ul class="text-center m-auto terms">
-              <li><a href="terms.html">Terms of service</a></li>
-              <li><a href="privacy_policy.html">Privacy Policy</a></li>
-              <li><a href="refund.html">Refund Policy</a></li>
+              <li><a href="../../terms.html">Terms of service</a></li>
+              <li><a href="../../privacy_policy.html">Privacy Policy</a></li>
+              <li><a href="../../refund.html">Refund Policy</a></li>
             </ul>
           </div>
         </div>
