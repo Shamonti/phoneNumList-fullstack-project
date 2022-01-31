@@ -1,3 +1,9 @@
+.section-searchbar {
+  .searchBar {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+}
+
 .section-people-cards {
   .circle-element {
     width: 6rem;
@@ -70,9 +76,7 @@
     color: $color-blue-dark;
     border: 1px solid rgba($color-blue-dark, 0.5);
     border-radius: 0.2rem;
-    // width: 40%;
-    // background-color: transparent;
-    // padding: 0.3rem 1.2rem 0.3rem 0;
+
     &:focus-visible {
       border: 1px solid rgba($color-blue-dark, 0.5);
       outline: none;
