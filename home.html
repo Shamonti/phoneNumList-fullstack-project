@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta name="description" content="" />
-    <meta name="keywords" content="phone list, phone number list," />
+    <meta
+      name="keywords"
+      content="phone number list, mobile number list, sales leads, mobile leads, data prospect, sales crm, contact database, contact details"
+    />
 
     <title></title>
 
@@ -66,7 +69,7 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"> </span>
+            <span class="navbar-toggler-icon"></span>
           </button>
           <div
             class="collapse navbar-collapse justify-content-between"
@@ -83,14 +86,14 @@
                   Home
                 </a>
               </li>
-              <li class="nav-item d-none d-md-block">
+              <li class="nav-item d-none d-md-block" id="search">
                 <a class="nav-link nav-link__search" href="#">
                   <i class="bi bi-search"></i>
                   Search
                 </a>
 
-                <!-- Show element on hover  -->
-                <div class="search__details hide">
+                <!-- Start Show element on hover  -->
+                <div class="search__details">
                   <a href="people.html">
                     <div class="search__details--left d-flex">
                       <div class="search__details--icon-box">
@@ -130,6 +133,7 @@
                     </div>
                   </a>
                 </div>
+                <!-- End Show element on hover  -->
               </li>
 
               <li class="nav-item d-md-none d-lg-none">
@@ -147,13 +151,13 @@
 
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  <i class="bi bi-send px-2"></i>
+                  <i class="bi bi-send"></i>
                   Engage
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  <i class="bi bi-arrow-repeat px-2"></i>
+                  <i class="bi bi-arrow-repeat"></i>
                   Enrich
                 </a>
               </li>
@@ -243,11 +247,44 @@
       <!-- END SHOW WHEN CLICKED ON NOTIFICATION -->
     </header>
 
-    <main></main>
+    <main>
+      <section
+        class="section-user-dashboard-heading bg-white u-padding-lg pb-3"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 class="heading--main">Let's get started!</h1>
+              <h2 class="heading--sub pb-5">
+                Hi <span>Shamonti Haque</span>, welcome to Phone Number List.
+              </h2>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <!-- Custom JS -->
-    <script src="assets/js/navbar.js"></script>
-    <script src="assets/js/script.js"></script>
+      <section class="section-purchase-history bg-white pb-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <h3 class="chart-title">Purchase History</h3>
+              <canvas id="purchaseChart" width="150" height="60"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-billing-history bg-white">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <h3 class="chart-title">Billing History</h3>
+              <canvas id="billingChart" width="150" height="60"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Bootstrap JS -->
     <script
@@ -263,5 +300,97 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
+    <!-- Chart JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <script>
+      //Chart JS PurchaseChart Setup
+      const purchaseLabels = [
+        'Day 01',
+        'Day 02',
+        'Day 03',
+        'Day 04',
+        'Day 05',
+        'Day 06',
+        'Day 07',
+      ];
+
+      const purchaseData = {
+        labels: purchaseLabels,
+        datasets: [
+          {
+            label: 'Data Purchased',
+            backgroundColor: 'rgba(137, 121, 232, 1)',
+            borderColor: 'rgba(137, 121, 232, 1)',
+            data: [2, 10, 5, 2, 20, 30, 45],
+          },
+          {
+            label: 'Credit Purchased',
+            backgroundColor: 'rgba(75, 192, 192, 1)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            data: [12, 20, 15, 21, 2, 10, 35],
+          },
+        ],
+      };
+
+      const purchaseConfig = {
+        type: 'line',
+        data: purchaseData,
+        options: {},
+      };
+
+      //Chart JS purchaseChart Configuration
+      const purchaseChart = new Chart(
+        document.getElementById('purchaseChart'),
+        purchaseConfig
+      );
+    </script>
+    <script>
+      //Chart JS BillingChart Setup
+      const billingLabels = [
+        'Day 01',
+        'Day 02',
+        'Day 03',
+        'Day 04',
+        'Day 05',
+        'Day 06',
+        'Day 07',
+      ];
+
+      const billingData = {
+        labels: billingLabels,
+        datasets: [
+          {
+            label: 'Data billing',
+            backgroundColor: 'rgba(137, 121, 232, 1)',
+            borderColor: 'rgba(137, 121, 232, 1)',
+            data: [2, 10, 5, 2, 20, 30, 45],
+          },
+          {
+            label: 'Credit billing',
+            backgroundColor: 'rgba(75, 192, 192, 1)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            data: [12, 20, 15, 21, 2, 10, 35],
+          },
+        ],
+      };
+
+      const billingConfig = {
+        type: 'line',
+        data: billingData,
+        options: {},
+      };
+
+      //Chart JS billingChart Configuration
+      const billingChart = new Chart(
+        document.getElementById('billingChart'),
+        billingConfig
+      );
+    </script>
   </body>
 </html>

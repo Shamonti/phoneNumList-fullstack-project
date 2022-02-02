@@ -1,5 +1,12 @@
 'use strict';
 
+//UPLOAD BUTTON
+document.getElementById('buttonid').addEventListener('click', openDialog);
+
+function openDialog() {
+  document.getElementById('fileid').click();
+}
+
 //UPLOAD BUTTON SHOWING FILE NAME
 const uploadBtn = document.getElementById('fileid');
 const infoArea = document.getElementById('file-upload-filename');
