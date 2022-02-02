@@ -1,6 +1,7 @@
 'use strict';
 Chart.defaults.color = '#b3b7bb';
 
+// CHART#01
 //Chart JS SalesChart Setup
 const salesLabels = [
   'Day 01',
@@ -36,6 +37,7 @@ const salesChart = new Chart(
   salesConfig
 );
 
+// CHART#02
 //Chart JS CreditChart Setup
 const creditLabels = [
   'Day 01',

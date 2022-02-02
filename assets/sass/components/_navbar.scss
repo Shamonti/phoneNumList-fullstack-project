@@ -11,18 +11,6 @@
     height: 4.5rem;
     border-bottom: 1px solid $color-grey-light--1;
 
-    .nav-item .nav-link {
-      font-size: 1.5rem;
-      font-weight: 600;
-      line-height: 1.5;
-    }
-
-    i {
-      color: $color-secondary;
-      font-size: 1.6rem;
-      font-weight: 800;
-    }
-
     .user {
       &-btn {
         background-color: $color-grey-light--1;
@@ -33,13 +21,18 @@
       }
     }
 
-    .navbar-brand img {
-      width: 2rem;
-    }
     .navbar-brand {
       margin-right: 1.5rem;
+
+      img {
+        width: 2rem;
+      }
     }
+
     .navbar-nav .nav-item .nav-link {
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 1.5;
       color: $color-black;
       padding: 1rem 2rem 1rem 2rem;
 
@@ -48,6 +41,8 @@
 
         font-weight: 900;
         font-size: 1.75rem;
+
+        padding: 0 0.5rem;
       }
 
       &:hover {
@@ -68,6 +63,12 @@
         i {
           color: $color-primary;
         }
+      }
+    }
+
+    #search:hover {
+      .search__details {
+        display: flex;
       }
     }
   }
@@ -208,7 +209,18 @@
     top: 4.5rem;
     left: 3rem;
 
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 0.6rem;
+
     display: none;
+
+    .heading--sub {
+      font-weight: 700 !important;
+    }
+
+    i {
+      font-weight: 800 !important;
+    }
 
     &--left {
       flex-basis: 50%;
@@ -456,7 +468,7 @@
 
   .navbar__logo {
     margin-top: 0.5rem;
-    margin-right: 2rem;
+    margin-right: 4rem;
     width: 16.5rem;
     padding: 3rem 0;
 

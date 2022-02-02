@@ -1,0 +1,23 @@
+.section-user-dashboard-heading {
+  .heading {
+    &--main {
+      font-size: 4.5rem;
+      font-weight: 800;
+      color: $color-blue-dark;
+    }
+    &--sub {
+      font-weight: 500;
+      color: $color-grey-dark--3;
+    }
+  }
+}
+
+.section-purchase-history,
+.section-billing-history {
+  .chart-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $color-blue-dark;
+    margin-bottom: 1.8rem;
+  }
+}
