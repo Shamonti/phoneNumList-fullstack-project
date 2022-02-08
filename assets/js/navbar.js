@@ -25,11 +25,11 @@ phoneBtn.addEventListener('click', function () {
   timesClicked++;
 
   if (timesClicked % 2 == 0) {
-    phoneCallDiv.classList.remove('show-block');
-    phoneCallDiv.classList.add('hide');
+    phoneCallDiv.classList.remove('visible');
+    phoneCallDiv.classList.add('invisible');
   } else {
-    phoneCallDiv.classList.remove('hide');
-    phoneCallDiv.classList.add('show-block');
+    phoneCallDiv.classList.remove('invisible');
+    phoneCallDiv.classList.add('visible');
   }
 });
 

@@ -2,6 +2,34 @@
   .searchBar {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   }
+  #searchCountry {
+    .dropdown {
+      padding: 0.5rem;
+
+      &-menu {
+        height: 37.5rem;
+        overflow-x: hidden;
+      }
+
+      &-item {
+        font-size: 1.4rem;
+        font-weight: 500;
+        padding: 0.5rem;
+
+        &:hover,
+        &:visited,
+        &::selection {
+          cursor: pointer;
+          background-color: $color-grey-light--1;
+          font-weight: 600;
+        }
+
+        a:hover {
+          color: $color-black !important;
+        }
+      }
+    }
+  }
 }
 
 .section-people-cards {

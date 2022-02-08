@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta name="description" content="Displaying Sales Report and Recent Credit History from Phone Number List's Database" />
+  <meta name="description" content="Displaying Sales Report and Recent Credit History from Phone List's Database" />
   <meta name="keywords" content="phone list, " />
 
   <title>Sales Report | Phone List</title>
@@ -26,9 +26,9 @@
 
   <!-- CUSTOM CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
-  
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="../../assets/images/icons/favicon.ico" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../../assets/images/icons/favicon.ico" />
 </head>
 
 <body>
@@ -41,7 +41,7 @@
         <ul class="menu d-flex flex-column">
           <li class="">
             <a href="admin.html" class="navbar-brand">
-              <img src="assets/images/logo--company-name.png" alt="logo" />
+              <img class="img-fluid" src="assets/images/logo--company-name.svg" alt="logo" />
             </a>
           </li>
           <li class="menu-item active">
@@ -76,7 +76,7 @@
               </span>
             </a>
           </li>
-        
+
           <li class="menu-item">
             <a href="">
               <i class="bi bi-bar-chart menu-item--icon"></i>
@@ -135,7 +135,7 @@
                 <h1 class="display-6">
                   Hi, Shamonti Haque. Welcome to your dashboard!
                 </h1>
-                <p class="mt-2 text-end mb-0 pe-3 text-info fw-bold"  id="file-upload-filename">
+                <p class="mt-2 text-end mb-0 pe-3 text-info fw-bold" id="file-upload-filename">
                   &nbsp;
                 </p>
               </div>
@@ -150,16 +150,16 @@
                 <input id='fileid' type='file' hidden />
                 <input id='buttonid' type='button' class="btn btn-upload" value='Upload' />
               </div>
-              <!-- END UPLOAD BTN -->  
-            
+              <!-- END UPLOAD BTN -->
+
               <!-- START IMPORT BTN -->
               <div class="col-md-6 px-2">
-                
+
                 <input type='button' class="btn btn-upload" value='Import' />
               </div>
-              <!-- END IMPORT  BTN -->  
+              <!-- END IMPORT  BTN -->
             </form>
-          </div>          
+          </div>
         </div>
 
         <div class="container px-2">
@@ -174,14 +174,14 @@
         </div>
 
         <div class="container px-2">
-        <div class="row">
-          <div class="col-md-12 card rounded-3">
-            <h2 class="heading--main pt-4 pb-0 px-3 mt-2">
-              Recent Credit History
-            </h2>
-            <canvas id="creditChart" height="300rem"></canvas>
+          <div class="row">
+            <div class="col-md-12 card rounded-3">
+              <h2 class="heading--main pt-4 pb-0 px-3 mt-2">
+                Recent Credit History
+              </h2>
+              <canvas id="creditChart" height="300rem"></canvas>
+            </div>
           </div>
-        </div>
         </div>
 
       </div>

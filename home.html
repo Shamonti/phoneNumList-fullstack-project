@@ -11,7 +11,7 @@
       content="phone number list, mobile number list, sales leads, mobile leads, data prospect, sales crm, contact database, contact details"
     />
 
-    <title></title>
+    <title>| Phone List</title>
 
     <!-- Bootstrap CSS -->
     <link
@@ -56,8 +56,8 @@
         id="user-nav"
       >
         <div class="container-fluid justify-content-end">
-          <a class="navbar-brand" href="index.html">
-            <img src="assets/images/logo.png" alt="logo" />
+          <a class="navbar-brand" href="home.html">
+            <img class="img-fluid" src="assets/images/logo.svg" alt="logo" />
           </a>
 
           <button
@@ -69,7 +69,7 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <i class="bi bi-list"></i>
           </button>
           <div
             class="collapse navbar-collapse justify-content-between"
@@ -77,75 +77,22 @@
           >
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item pl-4">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="index.html"
-                >
+                <a class="nav-link active" aria-current="page" href="home.html">
                   <i class="bi bi-house-door"></i>
                   Home
                 </a>
               </li>
               <li class="nav-item d-none d-md-block" id="search">
-                <a class="nav-link nav-link__search" href="#">
+                <a class="nav-link nav-link__search" href="people.html">
                   <i class="bi bi-search"></i>
                   Search
                 </a>
-
-                <!-- Start Show element on hover  -->
-                <div class="search__details">
-                  <a href="people.html">
-                    <div class="search__details--left d-flex">
-                      <div class="search__details--icon-box">
-                        <i class="bi bi-people"></i>
-                      </div>
-                      <div class="search__details--text">
-                        <div
-                          class="fw-bold heading--sub d-flex justify-content-between"
-                        >
-                          People
-                          <i class="bi bi-arrow-right animate-arrow"></i>
-                        </div>
-                        <p>
-                          Search for hyper-targeted lists of people using
-                          filters.
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-
-                  <a href="company.html">
-                    <div class="search__details--right d-flex">
-                      <div class="search__details--icon-box">
-                        <i class="bi bi-building"></i>
-                      </div>
-                      <div class="search__details--text">
-                        <div
-                          class="fw-bold heading--sub d-flex justify-content-between"
-                        >
-                          Companies
-                          <i class="bi bi-arrow-right animate-arrow"></i>
-                        </div>
-                        <p>
-                          Search for targeted lists of companies using filters.
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <!-- End Show element on hover  -->
               </li>
 
               <li class="nav-item d-md-none d-lg-none">
                 <a class="nav-link" href="people.html">
                   <i class="bi bi-send"></i>
-                  People
-                </a>
-              </li>
-              <li class="nav-item d-md-none d-lg-none">
-                <a class="nav-link" href="company.html">
-                  <i class="bi bi-building px-2"></i>
-                  Companies
+                  Search
                 </a>
               </li>
 
@@ -165,7 +112,7 @@
           </div>
 
           <!-- START SHOW ELEMENT ON CLICKING USER -->
-          <div class="user-div hide">
+          <div class="user-div hide u-box-shadow-1">
             <h4 class="px-4 pt-5">Shamonti Haque</h4>
             <div class="user--label mx-4">
               <span>Admin</span>
@@ -191,16 +138,20 @@
         </div>
 
         <!-- START RIGHT NAV ITEMS -->
-        <div class="d-flex nav-right__box">
+        <div class="d-flex align-items-center nav-right__box">
           <a class="btn btn-purple mx-4" href="packages.html"
             >Get unlimited leads
           </a>
           <button type="button" class="btn">
-            <i class="bi bi-telephone phone-btn"></i>
+            <a href="#">
+              <i class="bi bi-telephone phone-btn"></i>
+            </a>
           </button>
 
-          <!-- TODO Link to Blog site -->
-          <a class="btn"><i class="bi bi-question-circle" href="#"></i></a>
+          <!-- Link to Blog site -->
+          <a class="btn" href="http://help.phonelist.io/">
+            <i class="bi bi-question-circle"></i>
+          </a>
 
           <button type="button" class="btn notification-btn">
             <i class="bi bi-bell"></i>
@@ -212,20 +163,6 @@
         <!-- END RIGHT NAV ITEMS -->
       </nav>
       <!-- END NAVBAR -->
-
-      <!-- FIXME hide when clicked somewhere else -->
-      <!-- START SHOW WHEN CLICKED ON PHONE -->
-      <div class="u-box-shadow-1 phone-call__div hide">
-        <div class="phone-call--icon">
-          <i class="bi bi-telephone-outbound text-primary"></i>
-        </div>
-        <div class="phone-call--text">
-          Instantly click-to-call prospects from anywhere.
-        </div>
-        <div class="phone-call--button btn-blue">Upgrade to Professional</div>
-        <a class="phone-call--link"> Learn more </a>
-      </div>
-      <!-- END SHOW WHEN CLICKED ON PHONE -->
 
       <!-- START SHOW WHEN CLICKED ON NOTIFICATION -->
       <div
@@ -248,42 +185,191 @@
     </header>
 
     <main>
+      <!-- START USER DASHBOARD HEADING-->
       <section
-        class="section-user-dashboard-heading bg-white u-padding-lg pb-3"
+        class="section-user-dashboard-heading bg-white mt-5 pt-5 px-md-0 px-5"
       >
         <div class="container">
           <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6 col-12">
               <h1 class="heading--main">Let's get started!</h1>
-              <h2 class="heading--sub pb-5">
-                Hi <span>Shamonti Haque</span>, welcome to Phone Number List.
+              <h2 class="heading--sub pb-md-5 pb-4">
+                Hi <span>Shamonti Haque</span>, welcome to Phone List.
               </h2>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section-purchase-history bg-white pb-5">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 text-center">
-              <h3 class="chart-title">Purchase History</h3>
-              <canvas id="purchaseChart" width="150" height="60"></canvas>
+            <div
+              class="col-md-6 col-10 d-flex align-items-center justify-content-md-end"
+            >
+              <button type="button" class="btn btn-download border-3">
+                <i class="bi bi-download"></i>
+                &nbsp; Download Data CSV
+              </button>
             </div>
           </div>
         </div>
       </section>
+      <!-- END USER DASHBOARD HEADING-->
 
-      <section class="section-billing-history bg-white">
+      <!-- START USER HISTORY -->
+      <section class="section-history py-5 mb-md-0 mb-5 custom-scrollbar">
         <div class="container">
           <div class="row">
-            <div class="col-md-12 text-center">
-              <h3 class="chart-title">Billing History</h3>
-              <canvas id="billingChart" width="150" height="60"></canvas>
+            <!-- START PURCHASE HISTORY -->
+            <div class="col-md-6 pe-md-5 px-5 py-md-0 py-5">
+              <h3>Purchase History</h3>
+              <canvas id="purchaseChart" width="150" height="140"></canvas>
             </div>
+            <!-- END PURCHASE HISTORY -->
+
+            <!-- START BILLING HISTORY -->
+            <div class="col-md-6 ps-5 pe-md-0 px-5 pt-md-0 pt-5">
+              <h3>Billing History</h3>
+              <div class="table-scrollable">
+                <table class="table table-striped table-hover">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Credit Used</th>
+                      <th>Data Purchased</th>
+                      <th>Final Credit</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>01-02-2022</td>
+                      <td>10 Credit</td>
+                      <td>100 Data</td>
+                      <td>50 Credit</td>
+                    </tr>
+                    <tr>
+                      <td>02-02-2022</td>
+                      <td>20 Credit</td>
+                      <td>200 Data</td>
+                      <td>60 Credit</td>
+                    </tr>
+                    <tr>
+                      <td>02-02-2022</td>
+                      <td>20 Credit</td>
+                      <td>200 Data</td>
+                      <td>60 Credit</td>
+                    </tr>
+                    <tr>
+                      <td>02-02-2022</td>
+                      <td>20 Credit</td>
+                      <td>200 Data</td>
+                      <td>60 Credit</td>
+                    </tr>
+                    <tr>
+                      <td>02-02-2022</td>
+                      <td>20 Credit</td>
+                      <td>200 Data</td>
+                      <td>60 Credit</td>
+                    </tr>
+                    <tr>
+                      <td>02-02-2022</td>
+                      <td>20 Credit</td>
+                      <td>200 Data</td>
+                      <td>60 Credit</td>
+                    </tr>
+                    <tr>
+                      <td>02-02-2022</td>
+                      <td>20 Credit</td>
+                      <td>200 Data</td>
+                      <td>60 Credit</td>
+                    </tr>
+                    <tr>
+                      <td>02-02-2022</td>
+                      <td>20 Credit</td>
+                      <td>200 Data</td>
+                      <td>60 Credit</td>
+                    </tr>
+                    <tr>
+                      <td>02-02-2022</td>
+                      <td>20 Credit</td>
+                      <td>200 Data</td>
+                      <td>60 Credit</td>
+                    </tr>
+                    <tr>
+                      <td>02-02-2022</td>
+                      <td>20 Credit</td>
+                      <td>200 Data</td>
+                      <td>60 Credit</td>
+                    </tr>
+                    <tr>
+                      <td>02-02-2022</td>
+                      <td>20 Credit</td>
+                      <td>200 Data</td>
+                      <td>60 Credit</td>
+                    </tr>
+                    <tr>
+                      <td>02-02-2022</td>
+                      <td>20 Credit</td>
+                      <td>200 Data</td>
+                      <td>60 Credit</td>
+                    </tr>
+                    <tr>
+                      <td>02-02-2022</td>
+                      <td>20 Credit</td>
+                      <td>200 Data</td>
+                      <td>60 Credit</td>
+                    </tr>
+                    <tr>
+                      <td>02-02-2022</td>
+                      <td>20 Credit</td>
+                      <td>200 Data</td>
+                      <td>60 Credit</td>
+                    </tr>
+                    <tr>
+                      <td>02-02-2022</td>
+                      <td>20 Credit</td>
+                      <td>200 Data</td>
+                      <td>60 Credit</td>
+                    </tr>
+                    <tr>
+                      <td>02-02-2022</td>
+                      <td>20 Credit</td>
+                      <td>200 Data</td>
+                      <td>60 Credit</td>
+                    </tr>
+                    <tr>
+                      <td>02-02-2022</td>
+                      <td>20 Credit</td>
+                      <td>200 Data</td>
+                      <td>60 Credit</td>
+                    </tr>
+                    <tr>
+                      <td>02-02-2022</td>
+                      <td>20 Credit</td>
+                      <td>200 Data</td>
+                      <td>60 Credit</td>
+                    </tr>
+                    <tr>
+                      <td>02-02-2022</td>
+                      <td>20 Credit</td>
+                      <td>200 Data</td>
+                      <td>60 Credit</td>
+                    </tr>
+                    <tr>
+                      <td>02-02-2022</td>
+                      <td>20 Credit</td>
+                      <td>200 Data</td>
+                      <td>60 Credit</td>
+                    </tr>
+                    <tr>
+                      <td>02-02-2022</td>
+                      <td>20 Credit</td>
+                      <td>200 Data</td>
+                      <td>60 Credit</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- END BILLING HISTORY -->
           </div>
         </div>
       </section>
+      <!-- END USER HISTORY -->
     </main>
 
     <!-- Bootstrap JS -->
@@ -348,48 +434,6 @@
       const purchaseChart = new Chart(
         document.getElementById('purchaseChart'),
         purchaseConfig
-      );
-    </script>
-    <script>
-      //Chart JS BillingChart Setup
-      const billingLabels = [
-        'Day 01',
-        'Day 02',
-        'Day 03',
-        'Day 04',
-        'Day 05',
-        'Day 06',
-        'Day 07',
-      ];
-
-      const billingData = {
-        labels: billingLabels,
-        datasets: [
-          {
-            label: 'Data billing',
-            backgroundColor: 'rgba(137, 121, 232, 1)',
-            borderColor: 'rgba(137, 121, 232, 1)',
-            data: [2, 10, 5, 2, 20, 30, 45],
-          },
-          {
-            label: 'Credit billing',
-            backgroundColor: 'rgba(75, 192, 192, 1)',
-            borderColor: 'rgba(75, 192, 192, 1)',
-            data: [12, 20, 15, 21, 2, 10, 35],
-          },
-        ],
-      };
-
-      const billingConfig = {
-        type: 'line',
-        data: billingData,
-        options: {},
-      };
-
-      //Chart JS billingChart Configuration
-      const billingChart = new Chart(
-        document.getElementById('billingChart'),
-        billingConfig
       );
     </script>
   </body>
