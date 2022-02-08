@@ -4,12 +4,12 @@
   }
 }
 
-@include respond(phone) {
-  .navbar-brand,
-  .navbar i {
-    display: none;
-  }
-}
+// @include respond(phone) {
+//   .navbar-brand,
+//   .navbar i {
+//     display: none;
+//   }
+// }
 
 @include respond(tab-port) {
   .hide {

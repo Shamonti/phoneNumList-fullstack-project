@@ -251,3 +251,124 @@
     }
   }
 }
+
+.social-media-button {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    width: 100%;
+    height: 4.5rem;
+
+    @include respond(tab-port) {
+      width: 60%;
+    }
+  }
+
+  ul::before {
+    content: '\f1e0';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 700;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, #8979e8, #682ad5);
+    border-radius: 3rem;
+    text-align: center;
+    line-height: 4.5rem;
+    color: $color-white;
+    font-size: 30px;
+    padding-right: 2px;
+    transition: 0.5s;
+    z-index: 1;
+
+    @include respond(tab-port) {
+      font-size: 2.4rem;
+    }
+  }
+
+  ul:hover::before {
+    width: 4.5rem;
+  }
+
+  ul li {
+    position: absolute;
+    transition: 1s;
+  }
+
+  ul li a {
+    display: block;
+    width: 4.5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+    background-color: #262626;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 3rem;
+    transition: 0.5s;
+
+    @include respond(tab-port) {
+      font-size: 2.4rem;
+    }
+  }
+
+  ul li:nth-child(1) a {
+    background-color: #3b5999;
+  }
+
+  ul li:nth-child(2) a {
+    background-color: #55acee;
+  }
+
+  ul li:nth-child(3) a {
+    background-color: #dd4b39;
+  }
+
+  ul li:nth-child(4) a {
+    background-color: #0077b5;
+  }
+
+  ul li:nth-child(5) a {
+    background-color: #e4405f;
+  }
+
+  ul:hover li:nth-child(1) a {
+    // transform: translatex(68px) rotate(360deg);
+    transform: translatex(5rem) rotate(360deg);
+    transition-delay: 0.8s;
+  }
+
+  ul:hover li:nth-child(2) a {
+    // transform: translatex(136px) rotate(360deg);
+    transform: translatex(10rem) rotate(360deg);
+    transition-delay: 0.6s;
+  }
+
+  ul:hover li:nth-child(3) a {
+    // transform: translatex(204px) rotate(360deg);
+    transform: translatex(15rem) rotate(360deg);
+    transition-delay: 0.4s;
+  }
+
+  ul:hover li:nth-child(4) a {
+    // transform: translatex(272px) rotate(360deg);
+    transform: translatex(20rem) rotate(360deg);
+    transition-delay: 0.2s;
+  }
+
+  ul:hover li:nth-child(5) a {
+    // transform: translatex(340px) rotate(360deg);
+    transform: translatex(25rem) rotate(360deg);
+    transition-delay: 0s;
+  }
+}
