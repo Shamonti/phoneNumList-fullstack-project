@@ -1,0 +1,48 @@
+.section-product-heading {
+  h1 {
+    color: $color-blue-dark;
+    font-weight: 800;
+    font-size: 4.5rem;
+    line-height: 1.3;
+  }
+
+  p {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: $color-text;
+  }
+
+  .btn-grad {
+    width: 40%;
+    font-size: 1.8rem;
+
+    @include respond(tab-land) {
+      width: 50%;
+    }
+  }
+}
+
+.curved-bg {
+  background-image: linear-gradient(
+    to right bottom,
+    #9084de,
+    #8e7dd4,
+    #8c77c9,
+    #8970bf,
+    #866ab5
+  );
+  background-size: cover;
+  background-position: top;
+  // position: relative;
+  clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 15%);
+
+  h3,
+  p,
+  span {
+    color: $color-white !important;
+  }
+
+  .btn-grad {
+    box-shadow: none;
+  }
+}

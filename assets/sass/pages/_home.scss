@@ -115,66 +115,6 @@
       }
     }
   }
-
-  .section-cta {
-    .input-group {
-      // width: 45rem;
-
-      @include respond(phone) {
-        width: 30.5rem;
-      }
-
-      .form-control {
-        height: 6rem;
-        padding: 1rem 2rem;
-        // border-radius: 5rem;
-        border-top-left-radius: 5rem;
-        border-bottom-left-radius: 5rem;
-        border: 1px solid $color-grey-light--1;
-        font-size: 1.8rem;
-        line-height: 1.5;
-        font-weight: 600;
-
-        @include respond(phone) {
-          height: 4.5rem;
-        }
-      }
-
-      button {
-        font-size: 1.6rem;
-        font-weight: 800;
-        // border-radius: 5rem;
-        border-top-right-radius: 5rem;
-        border-bottom-right-radius: 5rem;
-        border: none;
-        padding: 0 1.5rem;
-
-        &:hover {
-          transform: scale(1) !important;
-        }
-      }
-    }
-  }
-
-  .google-signup,
-  .facebook-signup {
-    img {
-      height: 2.5rem;
-    }
-
-    .btn-google-login,
-    .btn-facebook-login {
-      height: 5rem;
-      border-radius: 3rem;
-      border: 1px solid $color-grey-light--3;
-
-      font-size: 1.6rem;
-      font-weight: 800;
-      color: $color-blue-dark;
-
-      background-color: $color-white;
-    }
-  }
 }
 
 .section-categories {
@@ -323,23 +263,23 @@
   }
 
   ul li:nth-child(1) a {
-    background-color: #3b5999;
+    background-color: #4fce5d;
   }
 
   ul li:nth-child(2) a {
-    background-color: #55acee;
+    background-color: #229ed9;
   }
 
   ul li:nth-child(3) a {
-    background-color: #dd4b39;
+    background-color: #00b2ff;
   }
 
   ul li:nth-child(4) a {
-    background-color: #0077b5;
+    background-color: #00aff0;
   }
 
   ul li:nth-child(5) a {
-    background-color: #e4405f;
+    background-color: $color-primary;
   }
 
   ul:hover li:nth-child(1) a {
@@ -370,5 +310,65 @@
     // transform: translatex(340px) rotate(360deg);
     transform: translatex(25rem) rotate(360deg);
     transition-delay: 0s;
+  }
+}
+
+.section-cta {
+  .input-group {
+    // width: 45rem;
+
+    @include respond(phone) {
+      width: 30.5rem;
+    }
+
+    .form-control {
+      height: 6rem;
+      padding: 1rem 2rem;
+      // border-radius: 5rem;
+      border-top-left-radius: 5rem;
+      border-bottom-left-radius: 5rem;
+      border: 1px solid $color-grey-light--1;
+      font-size: 1.8rem;
+      line-height: 1.5;
+      font-weight: 600;
+
+      @include respond(phone) {
+        height: 4.5rem;
+      }
+    }
+
+    button {
+      font-size: 1.6rem;
+      font-weight: 800;
+      // border-radius: 5rem;
+      border-top-right-radius: 5rem;
+      border-bottom-right-radius: 5rem;
+      border: none;
+      padding: 0 1.5rem;
+
+      &:hover {
+        transform: scale(1) !important;
+      }
+    }
+  }
+}
+
+.google-signup,
+.facebook-signup {
+  img {
+    height: 2.5rem;
+  }
+
+  .btn-google-login,
+  .btn-facebook-login {
+    height: 5rem;
+    border-radius: 3rem;
+    border: 1px solid $color-grey-light--3;
+
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: $color-blue-dark;
+
+    background-color: $color-white;
   }
 }
