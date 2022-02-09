@@ -150,6 +150,7 @@
         display: inline-block;
       }
     }
+
     &:hover,
     &:active {
       background-position: 100%;
@@ -195,6 +196,7 @@
     &::before {
       top: -0.8rem;
     }
+
     &::after {
       top: 0.8rem;
     }

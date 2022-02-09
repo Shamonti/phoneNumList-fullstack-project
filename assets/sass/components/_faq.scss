@@ -20,6 +20,7 @@
       }
     }
   }
+
   &-button {
     background-color: transparent;
     font-weight: 700 !important;
@@ -31,10 +32,12 @@
       font-size: 1.8rem;
       margin-right: 1rem;
     }
+
     span {
       padding: 0;
     }
   }
+
   &-body {
     padding: 2rem 1.5rem;
     text-align: left;

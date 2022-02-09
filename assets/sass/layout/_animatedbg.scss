@@ -1,11 +1,9 @@
 .section-login--left,
 .section-signup--left {
   height: 100vh;
-  background: radial-gradient(
-    ellipse at bottom,
-    rgba($color-purple-dark--2, 0.65) 0%,
-    $color-purple-dark--2 100%
-  );
+  background: radial-gradient(ellipse at bottom,
+      rgba($color-purple-dark--2, 0.65) 0%,
+      $color-purple-dark--2 100%);
   overflow: hidden;
 }
 
@@ -567,6 +565,7 @@
   from {
     transform: translateY(0px);
   }
+
   to {
     transform: translateY(-2000px);
   }

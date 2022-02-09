@@ -116,6 +116,7 @@ button {
   &:checked {
     background-color: $color-primary !important;
   }
+
   &:focus {
     box-shadow: none;
   }

@@ -8,6 +8,7 @@
         font-weight: 400;
         font-size: 1.8rem;
       }
+
       .bi-caret-down-fill {
         font-weight: 400;
         font-size: 1rem;
@@ -16,6 +17,7 @@
       }
     }
   }
+
   &-row {
     cursor: pointer;
 
@@ -28,6 +30,7 @@
       }
     }
   }
+
   .person-name {
     color: $color-primary !important;
     font-weight: 500;

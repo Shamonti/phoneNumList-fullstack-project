@@ -31,6 +31,7 @@
 
       .active {
         box-shadow: inset 0 -2px 0 0 $color-primary;
+
         .nav-link {
           color: $color-primary;
         }
@@ -49,6 +50,7 @@
           }
         }
       }
+
       .nav-link {
         font-weight: 300;
         font-size: 1.4rem;
@@ -91,6 +93,7 @@
 
   &__card {
     padding: 4rem;
+
     @include respond(phone) {
       padding: 2rem;
     }
@@ -164,6 +167,7 @@
 
 .section-main {
   width: calc(100vw - 2.2rem);
+
   .card {
     .card-title {
       font-weight: 600;
@@ -171,6 +175,7 @@
       color: $color-grey-dark--2;
       border-bottom: 1px solid $color-grey-light--3;
     }
+
     .card-body {
       form {
         label {
@@ -178,15 +183,18 @@
           font-size: 1.2rem;
           color: $color-grey-dark--3;
         }
+
         input {
           font-size: 1.4rem;
           color: $color-grey-dark--2;
         }
+
         .form {
           &-control:focus {
             box-shadow: none;
             border-color: $color-primary;
           }
+
           &-span {
             font-weight: 700;
             font-size: 1.4rem;
