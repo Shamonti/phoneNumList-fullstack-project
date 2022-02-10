@@ -9,6 +9,10 @@
 html {
   font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
 
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12, 12/16
+  }
+
   @include respond(tab-land) {
     // width < 1200?
     font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
@@ -19,15 +23,14 @@ html {
     font-size: 50%; //1 rem = 8px, 8/16 = 50%
   }
 
-  @include respond(big-desktop) {
-    font-size: 75%; //1rem = 12, 12/16
+  @include respond(phone) {
+    font-size: 46%;
   }
 }
 
 body {
   box-sizing: border-box;
-  // background-color: $color-grey-light--2;
-  // overflow: auto;
+  overflow: auto;
 }
 
 a {
