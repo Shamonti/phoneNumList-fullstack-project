@@ -1,26 +1,14 @@
-@include respond(tab-land) {
-  .navbar-brand {
-    display: none;
-  }
-}
-
-// @include respond(phone) {
-//   .navbar-brand,
-//   .navbar i {
-//     display: none;
-//   }
-// }
-
 @include respond(tab-port) {
+  .navbar__logo {
+    margin: 1.8rem 1.8rem 0 1.8rem !important;
+    padding-bottom: 0 !important;
+  }
   .hide {
     display: none !important;
-    // z-index: 10000;
   }
 
   .show {
     display: flex;
-    // z-index: 10001;
-    // position: absolute;
   }
 
   .navbar-nav .nav-item .nav-link.active {
