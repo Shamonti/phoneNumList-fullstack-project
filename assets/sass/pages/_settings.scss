@@ -1,0 +1,55 @@
+.section-settings {
+  .section-sidebar {
+    border-right: 1px solid rgba($color-secondary, 0.3);
+    width: 20rem;
+    height: calc(100vh - 5rem);
+
+    .nav {
+      span {
+        font-weight: 800;
+        font-size: 1.2rem;
+        color: $color-grey-dark--2;
+      }
+
+      .nav-item .nav-link {
+        font-weight: 600;
+        font-size: 1.4rem;
+        color: $color-secondary;
+      }
+    }
+    .nav-pills .nav-link.active,
+    .nav-pills .show > .nav-link {
+      font-weight: 900;
+      background-color: transparent !important;
+      color: $color-grey-dark--2;
+    }
+  }
+
+  .section-main {
+    .card {
+      &-title {
+        font-weight: 700;
+      }
+
+      &-body {
+        .form-label {
+          font-weight: 700;
+        }
+      }
+    }
+    .btn-change {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: $color-grey-dark--3;
+
+      border: 1px solid #ced4da;
+      border-radius: 0.3rem;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+      padding: 0.2rem 0.6rem;
+
+      &:hover {
+        box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}
