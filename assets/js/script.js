@@ -1,12 +1,5 @@
 'user strict';
 
-// //MAKE TABLE ROWS CLICKABLE
-// $(document).ready(function ($) {
-//   $('.table-row').click(function () {
-//     window.document.location = $(this).data('href');
-//   });
-// });
-
 //SEE MORE BUTTON
 function readMore() {
   let dots = document.getElementById('dots');
@@ -21,5 +14,15 @@ function readMore() {
     dots.style.display = 'none';
     btnText.innerHTML = 'See less';
     moreText.style.display = 'inline';
+  }
+}
+
+//SHOW PASSWORD
+function showPassword() {
+  var x = document.getElementById('password');
+  if (x.type === 'password') {
+    x.type = 'text';
+  } else {
+    x.type = 'password';
   }
 }

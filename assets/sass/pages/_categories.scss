@@ -2,13 +2,23 @@
   .searchBar {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   }
+  .btn-purple {
+    border-radius: 0.3rem !important;
+  }
+
   #searchCountry {
     .dropdown {
       padding: 0.5rem;
 
+      position: relative;
+
       &-menu {
         height: 37.5rem;
+        width: 100%;
         overflow-x: hidden;
+
+        position: absolute;
+        right: 0;
       }
 
       &-item {

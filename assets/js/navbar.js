@@ -2,19 +2,28 @@
 
 //SHOW USER MENU ON BUTTON CLICK
 const userBtn = document.querySelector('.user-btn');
+const userName = document.querySelector('.user-name');
 const userMenu = document.querySelector('.user-div');
 let timesClicked = 0;
 
 userBtn.addEventListener('click', function () {
   timesClicked++;
+  userBtn.style.backgroundColor = '#8979e8';
+  userName.style.color = '#ffffff';
 
   if (timesClicked % 2 == 0) {
     userMenu.classList.remove('show-block');
     userMenu.classList.add('hide');
+    userBtn.style.backgroundColor = '#E8EEF4';
+    userName.style.color = '#242d3e';
   } else {
     userMenu.classList.remove('hide');
     userMenu.classList.add('show-block');
+    userBtn.style.backgroundColor = '#8979e8';
+    userName.style.color = '#ffffff';
   }
+
+  userBtn.style.color = '#ffffff';
 });
 
 //SHOW PHONE CALL ACTION ON BUTTON CLICK

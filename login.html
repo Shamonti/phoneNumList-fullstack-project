@@ -48,15 +48,15 @@
       <!-- START LOGIN LEFT SIDE -->
       <section class="section-login--left">
         <div class="login-text-box row">
-          <a class="col-12 company-logo" href="index.html">
+          <a class="col-12 company-logo" href="/">
             <img
               class="img-fluid"
               src="assets/images/logo--company-name.svg"
-              alt="logo"
+              alt="phone list"
             />
           </a>
           <div class="col-12">
-            <a type="button" class="btn btn-home pt-3" href="index.html">
+            <a type="button" class="btn btn-home pt-3" href="/">
               Back to the homepage
             </a>
           </div>
@@ -72,13 +72,13 @@
 
       <!-- START LOGIN RIGHT SIDE -->
       <section class="section-login--right d-flex flex-column">
-        <div class="col-12 company-logo">
+        <a class="col-12 company-logo" href="/">
           <img
             class="img-fluid"
             src="assets/images/logo--company-name-dark.svg"
             alt="phone list"
           />
-        </div>
+        </a>
 
         <!-- START LOGIN FORM -->
         <div class="login-form">
@@ -119,6 +119,7 @@
                   <div class="divider--line ms-5"></div>
                 </div>
               </div>
+
               <form action="">
                 <div class="mb-5">
                   <label for="email" class="form-label">Email</label>
@@ -139,7 +140,24 @@
                     placeholder="Enter Your Password"
                     required
                   />
+                  <div id="error-text">
+                    <i
+                      class="bi bi-exclamation-circle-fill text-danger pe-2"
+                    ></i>
+                    <p class="text-danger">
+                      Email and/or password don't match with any of our records.
+                    </p>
+                  </div>
+
+                  <!-- An element to toggle between password visibility -->
+                  <div class="input-group align-items-center my-1">
+                    <input type="checkbox" onclick="showPassword()" />
+                    <label for="checkbox" class="ps-2" style="line-height: 1">
+                      Show Password
+                    </label>
+                  </div>
                 </div>
+
                 <button
                   type="submit"
                   class="btn btn-login rounded-3 u-box-shadow-2 mb-5"

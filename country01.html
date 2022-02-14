@@ -43,7 +43,7 @@
     <nav class="navbar navbar--user navbar-expand-md navbar-light">
       <div class="container-fluid justify-content-end">
         <a class="navbar-brand" href="home.html">
-          <img class="img-fluid" src="assets/images/logo.svg" alt="logo" />
+          <img class="img-fluid" src="assets/images/logo.svg" alt="phone list" />
         </a>
 
         <button class="navbar-toggler me-auto" type="button" data-bs-toggle="collapse"
@@ -77,11 +77,11 @@
           </div>
 
           <div class="user--menu">
-            <a class="user--menu-item" href="settings.html">
+            <a class="user--menu-item" href="settings/account.html">
               <i class="bi bi-gear"></i>
               <span>Settings</span>
             </a>
-            <a class="user--menu-item" href="packages.html">
+            <a class="user--menu-item" href="pricing/packages.html">
               <i class="bi bi-trophy"></i>
               <span>Upgrade Plan</span>
             </a>
@@ -96,8 +96,8 @@
       </div>
 
       <!-- START RIGHT NAV ITEMS -->
-      <div class="d-flex nav-right__box">
-        <a class="btn btn-purple mx-4" href="packages.html">Get unlimited leads
+      <div class="d-flex align-items-center nav-right__box">
+        <a class="btn btn-purple mx-4" href="pricing/packages.html">Get unlimited leads
         </a>
         <button type="button" class="btn">
           <i class="bi bi-telephone phone-btn"></i>
@@ -153,18 +153,24 @@
     <section class="section-searchbar pt-md-5 pb-md-4 py-2 mt-md-0 mt-5 ">
       <div class="container">
         <div class="row">
-          <div class="col-md-3 col-6 ms-auto">
-            <input type="text" name="search" id="searchPeople"
-              class="searchBar w-100 bg-white border-5 text-dark fw-normal" onkeyup="searchPeople()"
-              placeholder="Search Person by Name..." />
+          <div class="col-lg-3 col-md-4 col-6 ms-md-auto">
+            <div class="row">
+              <div class="col-12">
+                <input type="text" name="search" id="searchPeople"
+                  class="searchBar bg-white border-5 text-dark fw-normal col-md-8 col-7" onkeyup="searchPeople()"
+                  placeholder="Search by Name..." />
+                <button type="button" class="btn btn-purple ms-1 col-md-3 col-4">Search</button>
+              </div>
+            </div>
           </div>
-          <div class="col-md-3 col-6">
+          <div class="col-lg-2 col-md-3 col-4 pe-2">
             <div class="dropdown" id="searchCountry">
-              <input class="searchBar w-100 bg-white text-dark fw-normal" id="countryDropdown" type="text"
-                placeholder="Search Person by Country..." data-toggle="dropdown" data-bs-toggle="dropdown" />
+              <input class="searchBar bg-white text-dark fw-normal col-12" id="countryDropdown" type="text"
+                placeholder="Search by Country..." data-toggle="dropdown" data-bs-toggle="dropdown" />
+
               <span class="caret"></span>
 
-              <ul class="dropdown-menu w-100 bg-white text-dark fw-bold p-3" aria-labelledby="countryDropdown">
+              <ul class="dropdown-menu bg-white text-dark fw-bold p-3" aria-labelledby="countryDropdown">
                 <li class="dropdown-item"><a href="#">Afghanistan</a></li>
                 <li class="dropdown-item"><a href="#">Åland Islands</a></li>
                 <li class="dropdown-item"><a href="#">Albania</a></li>
@@ -499,6 +505,9 @@
                 <li class="dropdown-item"><a href="#">Zimbabwe</a></li>
               </ul>
             </div>
+          </div>
+          <div class="col-md-1 col-2 d-flex align-items-center px-0">
+            <button type="button" class="btn btn-purple ms-1 col-10">Search</button>
           </div>
         </div>
       </div>

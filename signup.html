@@ -48,15 +48,15 @@
       <!-- START SIGNUP LEFT SIDE -->
       <section class="section-signup--left">
         <div class="signup-text-box row">
-          <a class="col-12 company-logo" href="index.html">
+          <a class="col-12 company-logo" href="/">
             <img
               class="img-fluid"
               src="assets/images/logo--company-name.svg"
-              alt="logo"
+              alt="phone list"
             />
           </a>
           <div class="col-12">
-            <a type="button" class="btn btn-home pt-3" href="index.html">
+            <a type="button" class="btn btn-home pt-3" href="/">
               Back to the homepage
             </a>
           </div>
@@ -72,13 +72,13 @@
 
       <!-- START SIGNUP RIGHT SIDE -->
       <section class="section-signup--right d-flex flex-column">
-        <div class="col-12 company-logo">
+        <a class="col-12 company-logo" href="/">
           <img
             class="img-fluid"
             src="assets/images/logo--company-name-dark.svg"
-            alt="logo"
+            alt="phone list"
           />
-        </div>
+        </a>
 
         <!-- START SIGNUP FORM -->
         <div class="signup-form">
@@ -130,14 +130,21 @@
                   />
                 </div>
                 <div class="mb-4">
-                  <label for="psw" class="form-label">Password</label>
+                  <label for="password" class="form-label">Password</label>
                   <input
                     type="password"
                     class="form-control u-box-shadow-2"
-                    id="psw"
+                    id="password"
                     placeholder="Enter Your Password"
                     required
                   />
+                  <!-- An element to toggle between password visibility -->
+                  <div class="input-group align-items-center my-1">
+                    <input type="checkbox" onclick="showPassword()" />
+                    <label for="checkbox" class="ps-2" style="line-height: 1">
+                      Show Password
+                    </label>
+                  </div>
                 </div>
                 <div class="mb-4">
                   <label for="firstName" class="form-label">First Name</label>
@@ -524,7 +531,7 @@
       <!-- END SIGNUP RIGHT SIDE -->
     </main>
     <!-- Custom JS -->
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 
     <!-- Bootstrap JS -->
     <script
