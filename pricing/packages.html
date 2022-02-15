@@ -18,7 +18,7 @@
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
 
-  
+
   <!-- Font awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
@@ -51,29 +51,96 @@
         <nav class="navbar navbar--center d-lg-flex d-none">
           <ul class="navbar__ul">
             <li class="navbar__li">
-              <a href="product.html" class="navbar__a"> Product </a>
+              <a href="../product.html" class="navbar__a"> Product </a>
             </li>
             <li class="navbar__li">
-              <a href="packages.html" class="navbar__a"> Pricing </a>
+              <a href="../pricing/packages.html" class="navbar__a"> Pricing </a>
             </li>
             <li class="navbar__li">
               <a href="https://blog.phonelist.io" class="navbar__a"> Blog </a>
             </li>
             <li class="navbar__li">
-              <a href="careers.html" class="navbar__a"> Careers </a>
+              <a href="../careers.html" class="navbar__a"> Careers </a>
             </li>
           </ul>
         </nav>
         <nav class="navbar navbar--right d-lg-flex d-none">
           <ul class="navbar__ul align-items-center">
-            <li class="navbar__li">
-              <a href="login.html" class="navbar__a" id="login"> Login </a>
-            </li>
+            <li class="navbar__li d-flex align-items-center me-5">
+              <!-- START TRANSLATOR -->
+              <a href="#" onclick="doGTranslate('en|en');return false;" title="English" class="gflag nturl"
+                style="background-position:-0px -0px;"><img src="//gtranslate.net/flags/blank.png" height="16"
+                  width="16" alt="English" /></a>
 
+              <br /><select id="translator" onchange="doGTranslate(this);">
+                <option value="">English</option>
+                <option value="en|af">Afrikaans</option>
+                <option value="en|sq">Albanian</option>
+                <option value="en|ar">Arabic</option>
+                <option value="en|hy">Armenian</option>
+                <option value="en|az">Azerbaijani</option>
+                <option value="en|eu">Basque</option>
+                <option value="en|be">Belarusian</option>
+                <option value="en|bg">Bulgarian</option>
+                <option value="en|ca">Catalan</option>
+                <option value="en|zh-CN">Chinese (Simplified)</option>
+                <option value="en|zh-TW">Chinese (Traditional)</option>
+                <option value="en|hr">Croatian</option>
+                <option value="en|cs">Czech</option>
+                <option value="en|da">Danish</option>
+                <option value="en|nl">Dutch</option>
+                <option value="en|en">English</option>
+                <option value="en|et">Estonian</option>
+                <option value="en|tl">Filipino</option>
+                <option value="en|fi">Finnish</option>
+                <option value="en|fr">French</option>
+                <option value="en|gl">Galician</option>
+                <option value="en|ka">Georgian</option>
+                <option value="en|de">German</option>
+                <option value="en|el">Greek</option>
+                <option value="en|ht">Haitian Creole</option>
+                <option value="en|iw">Hebrew</option>
+                <option value="en|hi">Hindi</option>
+                <option value="en|hu">Hungarian</option>
+                <option value="en|is">Icelandic</option>
+                <option value="en|id">Indonesian</option>
+                <option value="en|ga">Irish</option>
+                <option value="en|it">Italian</option>
+                <option value="en|ja">Japanese</option>
+                <option value="en|ko">Korean</option>
+                <option value="en|lv">Latvian</option>
+                <option value="en|lt">Lithuanian</option>
+                <option value="en|mk">Macedonian</option>
+                <option value="en|ms">Malay</option>
+                <option value="en|mt">Maltese</option>
+                <option value="en|no">Norwegian</option>
+                <option value="en|fa">Persian</option>
+                <option value="en|pl">Polish</option>
+                <option value="en|pt">Portuguese</option>
+                <option value="en|ro">Romanian</option>
+                <option value="en|ru">Russian</option>
+                <option value="en|sr">Serbian</option>
+                <option value="en|sk">Slovak</option>
+                <option value="en|sl">Slovenian</option>
+                <option value="en|es">Spanish</option>
+                <option value="en|sw">Swahili</option>
+                <option value="en|sv">Swedish</option>
+                <option value="en|th">Thai</option>
+                <option value="en|tr">Turkish</option>
+                <option value="en|uk">Ukrainian</option>
+                <option value="en|ur">Urdu</option>
+                <option value="en|vi">Vietnamese</option>
+                <option value="en|cy">Welsh</option>
+                <option value="en|yi">Yiddish</option>
+              </select>
+              <div id="google_translate_element2"></div>
+
+
+              <!-- END TRANSLATOR -->
+            </li>
             <li class="navbar__li">
-              <a href="signup.html" class="btn btn-grad rounded-pill text-white">
-                Sign up for free
-              </a>
+              <a href="../login.html" class="navbar__a">
+                Account </a>
             </li>
           </ul>
         </nav>
@@ -101,7 +168,7 @@
       <nav class="navigation__nav">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="product.html" class="navigation__link">Product</a>
+            <a href="../product.html" class="navigation__link">Product</a>
           </li>
           <li class="navigation__item">
             <a href="packages.html" class="navigation__link">Pricing</a>
@@ -112,13 +179,78 @@
           <li class="navigation__item">
             <a href="#" class="navigation__link">Careers</a>
           </li>
-          <li class="navigation__item">
-            <a href="login.html" class="navigation__link">Login</a>
+          <li class="navigation__item d-flex justify-content-center">
+            <!-- START TRANSLATOR -->
+            <a href="#" onclick="doGTranslate('en|en');return false;" title="English" class="gflag nturl my-auto"
+              style="background-position:-0px -0px;"><img src="//gtranslate.net/flags/blank.png" height="16" width="16"
+                alt="English" /></a>
+
+            <br /><select id="translator" onchange="doGTranslate(this);">
+              <option value="">English</option>
+              <option value="en|af">Afrikaans</option>
+              <option value="en|sq">Albanian</option>
+              <option value="en|ar">Arabic</option>
+              <option value="en|hy">Armenian</option>
+              <option value="en|az">Azerbaijani</option>
+              <option value="en|eu">Basque</option>
+              <option value="en|be">Belarusian</option>
+              <option value="en|bg">Bulgarian</option>
+              <option value="en|ca">Catalan</option>
+              <option value="en|zh-CN">Chinese (Simplified)</option>
+              <option value="en|zh-TW">Chinese (Traditional)</option>
+              <option value="en|hr">Croatian</option>
+              <option value="en|cs">Czech</option>
+              <option value="en|da">Danish</option>
+              <option value="en|nl">Dutch</option>
+              <option value="en|en">English</option>
+              <option value="en|et">Estonian</option>
+              <option value="en|tl">Filipino</option>
+              <option value="en|fi">Finnish</option>
+              <option value="en|fr">French</option>
+              <option value="en|gl">Galician</option>
+              <option value="en|ka">Georgian</option>
+              <option value="en|de">German</option>
+              <option value="en|el">Greek</option>
+              <option value="en|ht">Haitian Creole</option>
+              <option value="en|iw">Hebrew</option>
+              <option value="en|hi">Hindi</option>
+              <option value="en|hu">Hungarian</option>
+              <option value="en|is">Icelandic</option>
+              <option value="en|id">Indonesian</option>
+              <option value="en|ga">Irish</option>
+              <option value="en|it">Italian</option>
+              <option value="en|ja">Japanese</option>
+              <option value="en|ko">Korean</option>
+              <option value="en|lv">Latvian</option>
+              <option value="en|lt">Lithuanian</option>
+              <option value="en|mk">Macedonian</option>
+              <option value="en|ms">Malay</option>
+              <option value="en|mt">Maltese</option>
+              <option value="en|no">Norwegian</option>
+              <option value="en|fa">Persian</option>
+              <option value="en|pl">Polish</option>
+              <option value="en|pt">Portuguese</option>
+              <option value="en|ro">Romanian</option>
+              <option value="en|ru">Russian</option>
+              <option value="en|sr">Serbian</option>
+              <option value="en|sk">Slovak</option>
+              <option value="en|sl">Slovenian</option>
+              <option value="en|es">Spanish</option>
+              <option value="en|sw">Swahili</option>
+              <option value="en|sv">Swedish</option>
+              <option value="en|th">Thai</option>
+              <option value="en|tr">Turkish</option>
+              <option value="en|uk">Ukrainian</option>
+              <option value="en|ur">Urdu</option>
+              <option value="en|vi">Vietnamese</option>
+              <option value="en|cy">Welsh</option>
+              <option value="en|yi">Yiddish</option>
+            </select>
+            <div id="google_translate_element2"></div>
+            <!-- END TRANSLATOR -->
           </li>
-          <li class="navigation__item d-flex justify-content-center mt-5">
-            <a href="signup.html" class="btn btn-grad rounded-pill">
-              Sign up for free
-            </a>
+          <li class="navigation__item">
+            <a href="../login.html" class="navigation__link">Account</a>
           </li>
         </ul>
       </nav>
@@ -142,181 +274,179 @@
     </section>
     <!-- END SECTION HEADER -->
 
-      <!-- START PACKAGES -->
-      <section
-        class="section-packages u-padding-lg pt-5 px-sm-0 d-flex justify-content-center"
-      >
-        <div class="container mx-md-5 px-md-5">
-          <div class="row mx-lg-5 mb-md-5 justify-content-center">
-            <div class="col-md-4 col-sm-6 col-9">
-              <div class="pricingTable">
-                <div class="pricingTable-header">
-                  <i class="bi bi-send-fill"></i>
-                  <div class="price-value">
-                    $0 <span class="month">per month</span>
-                  </div>
-                </div>
-                <h3 class="heading">Free</h3>
-                <div class="pricing-content">
-                  <ul>
-                    <li><i class="bi bi-check2"></i>20 Credits</li>
-                    <li><i class="bi bi-check2"></i>20 Phone Numbers</li>
-                    <li><i class="bi bi-check2"></i>Basic Filters</li>
-                    <li><i class="bi bi-check2"></i>CSV Export</li>
-                  </ul>
-                </div>
-                <div class="pricingTable-signup">
-                  <a href="#">sign up</a>
+    <!-- START PACKAGES -->
+    <section class="section-packages u-padding-lg pt-5 px-sm-0 d-flex justify-content-center">
+      <div class="container mx-md-5 px-md-5">
+        <div class="row mx-lg-5 mb-md-5 justify-content-center">
+          <div class="col-md-4 col-sm-6 col-9">
+            <div class="pricingTable">
+              <div class="pricingTable-header">
+                <i class="bi bi-send-fill"></i>
+                <div class="price-value">
+                  $0 <span class="month">per month</span>
                 </div>
               </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 col-9">
-              <div class="pricingTable green">
-                <div class="pricingTable-header">
-                  <i class="bi bi-file-earmark-fill"></i>
-
-                  <div class="price-value">
-                    $100 <span class="month">per month</span>
-                  </div>
-                </div>
-                <h3 class="heading">Basic</h3>
-                <div class="pricing-content">
-                  <ul>
-                    <li><i class="bi bi-check2"></i>5K Credits</li>
-                    <li><i class="bi bi-check2"></i>5K Phone Numbers</li>
-                    <li><i class="bi bi-check2"></i>Data Filters</li>
-                    <li><i class="bi bi-check2"></i>CSV Export</li>
-                  </ul>
-                </div>
-                <div class="pricingTable-signup">
-                  <a href="#">sign up</a>
-                </div>
+              <h3 class="heading">Free</h3>
+              <div class="pricing-content">
+                <ul>
+                  <li><i class="bi bi-check2"></i>20 Credits</li>
+                  <li><i class="bi bi-check2"></i>20 Phone Numbers</li>
+                  <li><i class="bi bi-check2"></i>Basic Filters</li>
+                  <li><i class="bi bi-check2"></i>CSV Export</li>
+                </ul>
               </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 col-9">
-              <div class="pricingTable blue">
-                <div class="pricingTable-header">
-                  <i class="bi bi-award-fill"></i>
-                  <div class="price-value">
-                    $190 <span class="month">per month</span>
-                  </div>
-                </div>
-                <h3 class="heading">Professional</h3>
-                <div class="pricing-content">
-                  <ul>
-                    <li><i class="bi bi-check2"></i>10K Credits</li>
-                    <li><i class="bi bi-check2"></i>10K Phone Numbers</li>
-                    <li><i class="bi bi-check2"></i>Data Filters</li>
-                    <li><i class="bi bi-check2"></i>CSV Export</li>
-                  </ul>
-                </div>
-                <div class="pricingTable-signup">
-                  <a href="#">sign up</a>
-                </div>
+              <div class="pricingTable-signup">
+                <a href="#">sign up</a>
               </div>
             </div>
           </div>
 
-          <div class="row mx-lg-5 mt-md-5 justify-content-center">
-            <div class="col-md-4 col-sm-6 col-9 mt-md-3">
-              <div class="pricingTable red">
-                <div class="pricingTable-header">
-                  <i class="bi bi-briefcase-fill"></i>
-                  <div class="price-value">
-                    $400 <span class="month">per month</span>
-                  </div>
-                </div>
-                <h3 class="heading">Business</h3>
-                <div class="pricing-content">
-                  <ul>
-                    <li><i class="bi bi-check2"></i>50K Credits</li>
-                    <li><i class="bi bi-check2"></i>50K Phone Numbers</li>
-                    <li><i class="bi bi-check2"></i>Data Filters</li>
-                    <li><i class="bi bi-check2"></i>CSV Export</li>
-                  </ul>
-                </div>
-                <div class="pricingTable-signup">
-                  <a href="#">sign up</a>
+          <div class="col-md-4 col-sm-6 col-9">
+            <div class="pricingTable green">
+              <div class="pricingTable-header">
+                <i class="bi bi-file-earmark-fill"></i>
+
+                <div class="price-value">
+                  $100 <span class="month">per month</span>
                 </div>
               </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 col-9 mt-md-3">
-              <div class="pricingTable red">
-                <div class="pricingTable-header">
-                  <i class="bi bi-briefcase-fill"></i>
-                  <div class="price-value">
-                    $1000 <span class="month">per month</span>
-                  </div>
-                </div>
-                <h3 class="heading">Business Pro</h3>
-                <div class="pricing-content">
-                  <ul>
-                    <li><i class="bi bi-check2"></i>300K Credits</li>
-                    <li><i class="bi bi-check2"></i>300K Phone Numbers</li>
-                    <li><i class="bi bi-check2"></i>Data Filters</li>
-                    <li><i class="bi bi-check2"></i>CSV Export</li>
-                  </ul>
-                </div>
-                <div class="pricingTable-signup">
-                  <a href="#">sign up</a>
-                </div>
+              <h3 class="heading">Basic</h3>
+              <div class="pricing-content">
+                <ul>
+                  <li><i class="bi bi-check2"></i>5K Credits</li>
+                  <li><i class="bi bi-check2"></i>5K Phone Numbers</li>
+                  <li><i class="bi bi-check2"></i>Data Filters</li>
+                  <li><i class="bi bi-check2"></i>CSV Export</li>
+                </ul>
               </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 col-9 mt-3">
-              <div class="pricingTable red">
-                <div class="pricingTable-header">
-                  <i class="bi bi-handbag-fill"></i>
-                  <div class="price-value">
-                    $1500<span class="month">&nbsp;</span>
-                  </div>
-                </div>
-                <h3 class="heading">Enterprise</h3>
-                <div class="pricing-content">
-                  <ul>
-                    <li><i class="bi bi-check2"></i>1M Credits</li>
-                    <li><i class="bi bi-check2"></i>1M Phone Numbers</li>
-                    <li><i class="bi bi-check2"></i>Data Filters</li>
-                    <li><i class="bi bi-check2"></i>CSV Export</li>
-                  </ul>
-                </div>
-                <div class="pricingTable-signup">
-                  <a href="#">Sign uP</a>
-                </div>
+              <div class="pricingTable-signup">
+                <a href="#">sign up</a>
               </div>
             </div>
           </div>
 
-          <div class="row mx-lg-5 mt-md-5 justify-content-center">
-            <div class="col-md-4 col-sm-6 col-9 mt-3">
-              <div class="pricingTable red">
-                <div class="pricingTable-header">
-                  <i class="bi bi-handbag-fill"></i>
-                  <div class="price-value">
-                    Talk to Sales<span class="month">&nbsp;</span>
-                  </div>
+          <div class="col-md-4 col-sm-6 col-9">
+            <div class="pricingTable blue">
+              <div class="pricingTable-header">
+                <i class="bi bi-award-fill"></i>
+                <div class="price-value">
+                  $190 <span class="month">per month</span>
                 </div>
-                <h3 class="heading">Custom</h3>
-                <div class="pricing-content">
-                  <ul>
-                    <li><i class="bi bi-check2"></i>Unlimited Credits</li>
-                    <li><i class="bi bi-check2"></i>Unlimited Phone Numbers</li>
-                    <li><i class="bi bi-check2"></i>Data Filters</li>
-                    <li><i class="bi bi-check2"></i>CSV Export</li>
-                  </ul>
-                </div>
-                <div class="pricingTable-signup">
-                  <a href="../contact.html">Contact Us</a>
-                </div>
+              </div>
+              <h3 class="heading">Professional</h3>
+              <div class="pricing-content">
+                <ul>
+                  <li><i class="bi bi-check2"></i>10K Credits</li>
+                  <li><i class="bi bi-check2"></i>10K Phone Numbers</li>
+                  <li><i class="bi bi-check2"></i>Data Filters</li>
+                  <li><i class="bi bi-check2"></i>CSV Export</li>
+                </ul>
+              </div>
+              <div class="pricingTable-signup">
+                <a href="#">sign up</a>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <!-- END PACKAGES -->
+
+        <div class="row mx-lg-5 mt-md-5 justify-content-center">
+          <div class="col-md-4 col-sm-6 col-9 mt-md-3">
+            <div class="pricingTable red">
+              <div class="pricingTable-header">
+                <i class="bi bi-briefcase-fill"></i>
+                <div class="price-value">
+                  $400 <span class="month">per month</span>
+                </div>
+              </div>
+              <h3 class="heading">Business</h3>
+              <div class="pricing-content">
+                <ul>
+                  <li><i class="bi bi-check2"></i>50K Credits</li>
+                  <li><i class="bi bi-check2"></i>50K Phone Numbers</li>
+                  <li><i class="bi bi-check2"></i>Data Filters</li>
+                  <li><i class="bi bi-check2"></i>CSV Export</li>
+                </ul>
+              </div>
+              <div class="pricingTable-signup">
+                <a href="#">sign up</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-9 mt-md-3">
+            <div class="pricingTable red">
+              <div class="pricingTable-header">
+                <i class="bi bi-briefcase-fill"></i>
+                <div class="price-value">
+                  $1000 <span class="month">per month</span>
+                </div>
+              </div>
+              <h3 class="heading">Business Pro</h3>
+              <div class="pricing-content">
+                <ul>
+                  <li><i class="bi bi-check2"></i>300K Credits</li>
+                  <li><i class="bi bi-check2"></i>300K Phone Numbers</li>
+                  <li><i class="bi bi-check2"></i>Data Filters</li>
+                  <li><i class="bi bi-check2"></i>CSV Export</li>
+                </ul>
+              </div>
+              <div class="pricingTable-signup">
+                <a href="#">sign up</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-9 mt-3">
+            <div class="pricingTable red">
+              <div class="pricingTable-header">
+                <i class="bi bi-handbag-fill"></i>
+                <div class="price-value">
+                  $1500<span class="month">&nbsp;</span>
+                </div>
+              </div>
+              <h3 class="heading">Enterprise</h3>
+              <div class="pricing-content">
+                <ul>
+                  <li><i class="bi bi-check2"></i>1M Credits</li>
+                  <li><i class="bi bi-check2"></i>1M Phone Numbers</li>
+                  <li><i class="bi bi-check2"></i>Data Filters</li>
+                  <li><i class="bi bi-check2"></i>CSV Export</li>
+                </ul>
+              </div>
+              <div class="pricingTable-signup">
+                <a href="#">Sign uP</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mx-lg-5 mt-md-5 justify-content-center">
+          <div class="col-md-4 col-sm-6 col-9 mt-3">
+            <div class="pricingTable red">
+              <div class="pricingTable-header">
+                <i class="bi bi-handbag-fill"></i>
+                <div class="price-value">
+                  Talk to Sales<span class="month">&nbsp;</span>
+                </div>
+              </div>
+              <h3 class="heading">Custom</h3>
+              <div class="pricing-content">
+                <ul>
+                  <li><i class="bi bi-check2"></i>Unlimited Credits</li>
+                  <li><i class="bi bi-check2"></i>Unlimited Phone Numbers</li>
+                  <li><i class="bi bi-check2"></i>Data Filters</li>
+                  <li><i class="bi bi-check2"></i>CSV Export</li>
+                </ul>
+              </div>
+              <div class="pricingTable-signup">
+                <a href="../contact.html">Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END PACKAGES -->
 
     <!-- START Frequently Asked Questions -->
     <section class="section-packages-faq my-5">
@@ -832,7 +962,7 @@
               <i class="fab fa-instagram"></i>
             </a>
           </div>
-          
+
           <!-- START SOCIAL MEDIA BUTTON -->
           <div class="social-media-button mt-3">
             <ul>
@@ -867,10 +997,6 @@
   <!-- END FOOTER -->
   </main>
 
-  <!-- Custom JS -->
-  <script src="../assets/js/navbar.js"></script>
-  <script src="../assets/js/script.js"></script>
-
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
@@ -880,6 +1006,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
     integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+  <!-- Custom JS -->
+  <script src="../assets/js/navbar.js"></script>
+  <script src="../assets/js/script.js"></script>
+
+  <!-- TRANSLATOR JS  -->
+  <script type="text/javascript"
+    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+  <script src="../assets/js/translator.js"></script>
 </body>
 
 </html>
