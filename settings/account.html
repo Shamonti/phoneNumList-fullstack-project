@@ -73,7 +73,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item pl-4">
                 <a
-                  class="nav-link active"
+                  class="nav-link"
                   aria-current="page"
                   href="../home.html"
                 >
@@ -174,35 +174,45 @@
     </header>
 
     <main>
-      <div class="section-settings d-flex">
-        <div class="d-flex flex-column flex-shrink-0 p-4 section-sidebar">
+      <section class="section-settings d-flex">
+        <!-- START SIDEBAR -->
+        <section class="d-flex flex-column flex-shrink-0 p-4 section-sidebar">
           <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item">
               <span class="text-uppercase">Personal Profile</span>
-              <a href="#" class="nav-link active" aria-current="page">
+              <a
+                href="account.html"
+                class="nav-link active"
+                aria-current="page"
+              >
                 <h2 class="fs-4 m-0 fw-bold">You</h2>
               </a>
             </li>
             <li class="nav-item mt-4">
               <span class="text-uppercase">Admin Settings</span>
-              <a href="#" class="nav-link"> Manage Plan </a>
+              <a href="plans.html" class="nav-link"> Manage Plan </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link"> Users </a>
+              <a href="users.html" class="nav-link"> Users </a>
             </li>
             <li class="nav-item mt-4">
               <span class="text-uppercase">System Activity</span>
-              <a href="#" class="nav-link">Exports</a>
+              <a href="exports/exports.html" class="nav-link">Exports</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link"> Data Request History </a>
+              <a href="data-requests.html" class="nav-link">
+                Data Request History
+              </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link"> Credit Usage </a>
+              <a href="credits/current.html" class="nav-link"> Credit Usage </a>
             </li>
           </ul>
-        </div>
-        <div class="section-main">
+        </section>
+        <!-- END SIDEBAR -->
+
+        <!-- START MAIN -->
+        <section class="section-main">
           <div class="card u-box-shadow-2 m-4 border rounded-3">
             <h1 class="card-title p-4 text-capitalize">Account Info</h1>
             <div class="card-body p-4">
@@ -246,8 +256,9 @@
               </form>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+        <!-- END MAIN -->
+      </section>
     </main>
 
     <!-- Bootstrap JS -->
