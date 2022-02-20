@@ -11,10 +11,19 @@
         color: $color-grey-dark--2;
       }
 
-      .nav-item .nav-link {
-        font-weight: 600;
-        font-size: 1.4rem;
-        color: $color-secondary;
+      .nav-item {
+        span {
+          font-size: 1.2rem;
+        }
+        .nav-link {
+          font-weight: 600;
+          font-size: 1.4rem;
+          color: $color-secondary;
+        }
+
+        .active h2 {
+          font-size: 1.4rem;
+        }
       }
     }
 
@@ -88,7 +97,8 @@
     }
   }
 
-  .section-settings-plan {
+  .section-settings-plan,
+  .section-current-credit {
     .card {
       &-bg {
         background-color: $color-grey-light--2;
@@ -138,6 +148,8 @@
 
   .section-csv-exports-table {
     .table {
+      margin: 0;
+
       thead {
         background-color: $color-grey-light--2;
 
@@ -151,9 +163,16 @@
       }
 
       tbody {
+        tr {
+          &:hover {
+            background-color: $color-grey-light--2;
+            cursor: pointer;
+          }
+        }
         td {
           vertical-align: middle;
           padding: 1.5rem;
+          border-bottom: 1px solid #dee2e6;
 
           p {
             margin-bottom: 0;
@@ -166,14 +185,140 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 3rem;
-            width: 3rem;
+            height: 2.5rem;
+            width: 2.5rem;
             border-radius: 50%;
 
             background-color: $color-grey-dark--2;
+
+            &:hover {
+              .user-details {
+                display: block;
+              }
+            }
+          }
+
+          .user-details {
+            display: none;
+            border-radius: 0.3rem;
+
+            position: absolute;
+            right: 12vw;
+          }
+        }
+
+        .progress {
+          height: 1.5rem;
+          border-radius: 2rem;
+
+          &-bar {
+            background-color: $color-green;
           }
         }
       }
+
+      tfoot {
+        display: flex;
+        justify-content: space-between;
+
+        border-bottom: transparent;
+
+        span {
+          color: $color-grey-dark--3;
+          font-size: 1.3rem;
+        }
+
+        .pagination {
+          .page-link {
+            color: $color-grey-dark--1;
+            padding: 0.1rem 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .section-csv-export-settings {
+    .card {
+      width: 50rem;
+
+      @include respond(phone) {
+        width: 30rem;
+      }
+    }
+    .csv-export-box {
+      padding: 1.75rem 2rem;
+      border-radius: 0.5rem;
+      border: 1px solid $color-grey-light--3;
+
+      i {
+        color: $color-grey-light--5;
+      }
+
+      .csv-export-title {
+        font-weight: 700;
+        color: $color-grey-dark--2;
+      }
+
+      .btn-access {
+        color: $color-grey-dark--1;
+        font-weight: 600;
+        height: 3rem;
+
+        i {
+          color: $color-primary;
+        }
+
+        &:hover {
+          border: 1px solid $color-grey-light--3;
+          box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
+        }
+      }
+
+      .btn-purple {
+        border-radius: 0.3rem;
+      }
+
+      .modal {
+        .modal-dialog {
+          max-width: 75rem;
+        }
+
+        .field-name-box {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          border: 1px solid $color-grey-light--3;
+          border-radius: 0.3rem;
+          padding: 0.3rem 0.75rem;
+
+          h5 {
+            margin: 0rem;
+            color: $color-grey-dark--2;
+            font-weight: 600;
+            line-height: 1;
+          }
+
+          .form-check {
+            padding: 0;
+            align-self: center;
+
+            &-input {
+              border-radius: 0.3rem;
+              border: 1px solid $color-grey-light--5;
+
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .section-credit-history {
+    span {
+      color: $color-grey-dark--2;
     }
   }
 }
