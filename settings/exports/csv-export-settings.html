@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="li data," />
+
+    <title>Exports | Phone List</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../assets/images/icons/favicon.ico" />
+  </head>
+
+  <body>
+    <header>
+      <!-- START NAVBAR -->
+      <nav
+        class="navbar navbar--user navbar-expand-md navbar-light"
+        id="user-nav"
+      >
+        <div class="container-fluid justify-content-end">
+          <a class="navbar-brand" href="../../index.html">
+            <img
+              class="img-fluid"
+              src="../../assets/images/logo.svg"
+              alt="phone list"
+            />
+          </a>
+
+          <button
+            class="navbar-toggler me-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-between"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item pl-4">
+                <a class="nav-link" aria-current="page" href="../../home.html">
+                  <i class="bi bi-house-door"></i>
+                  Dashboard
+                </a>
+              </li>
+              <li class="nav-item" id="search">
+                <a class="nav-link" href="../../people.html">
+                  <i class="bi bi-search"></i>
+                  Data Search
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../../product.html">
+                  <i class="bi bi-box-seam"></i>
+                  Product
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- START SHOW ELEMENT ON CLICKING USER -->
+          <div class="user-div hide u-box-shadow-1">
+            <h4 class="px-4 pt-5">Shamonti Haque</h4>
+            <div class="user--label mx-4">
+              <span>Admin</span>
+            </div>
+
+            <div class="user--menu">
+              <a class="user--menu-item" href="../account.html">
+                <i class="bi bi-gear"></i>
+                <span>Settings</span>
+              </a>
+              <a class="user--menu-item" href="../upgrade.html">
+                <i class="bi bi-trophy"></i>
+                <span>Upgrade Plan</span>
+              </a>
+
+              <a class="user--menu-item mb-3" href="../../login.html">
+                <i class="bi bi-power"></i>
+                <span>Logout</span>
+              </a>
+            </div>
+          </div>
+          <!-- END SHOW ELEMENT ON CLICKING USER -->
+        </div>
+
+        <!-- START RIGHT NAV ITEMS -->
+        <div class="d-flex align-items-center nav-right__box">
+          <a class="btn btn-purple mx-4" href="../../settings/upgrade.html"
+            >Get unlimited leads
+          </a>
+          <button type="button" class="btn">
+            <a href="#">
+              <i class="bi bi-telephone phone-btn"></i>
+            </a>
+          </button>
+
+          <!-- Link to Blog site -->
+          <a class="btn" href="http://help.phonelist.io/">
+            <i class="bi bi-question-circle"></i>
+          </a>
+
+          <button type="button" class="btn notification-btn">
+            <i class="bi bi-bell"></i>
+          </button>
+          <button
+            type="button"
+            id="userBtn"
+            class="user user-btn circle-element mx-3"
+          >
+            <p class="user-name">SH</p>
+          </button>
+        </div>
+        <!-- END RIGHT NAV ITEMS -->
+      </nav>
+      <!-- END NAVBAR -->
+
+      <!-- START SHOW WHEN CLICKED ON NOTIFICATION -->
+      <div
+        class="u-box-shadow-1 notification__sidebar hide animate__animated animate__fadeInRightBig"
+      >
+        <div class="notification--header">
+          <div class="notification--header-title">
+            <h5>NOTIFICATIONS</h5>
+          </div>
+          <div class="notification--header-icons">
+            <div class="btn"><i class="bi bi-arrow-clockwise"></i></div>
+            <div class="btn close-btn">
+              <i class="bi bi-x-lg"></i>
+            </div>
+          </div>
+        </div>
+        <div class="notification--body"></div>
+      </div>
+      <!-- END SHOW WHEN CLICKED ON NOTIFICATION -->
+    </header>
+
+    <main>
+      <section class="section-settings d-flex">
+        <!-- START SIDEBAR -->
+        <section class="d-flex flex-column flex-shrink-0 p-4 section-sidebar">
+          <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+              <span class="text-uppercase">Personal Profile</span>
+              <a href="../account.html" class="nav-link" aria-current="page">
+                You
+              </a>
+            </li>
+            <li class="nav-item mt-4">
+              <span class="text-uppercase">Admin Settings</span>
+              <a href="../plans.html" class="nav-link"> Manage Plan </a>
+            </li>
+            <li class="nav-item mt-4">
+              <span class="text-uppercase">System Activity</span>
+              <a href="exports.html" class="nav-link active">
+                <h2 class="fs-4 m-0 fw-bold">Exports</h2>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="../data-requests.html" class="nav-link">
+                Data Request History
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="../credits/current.html" class="nav-link">
+                Credit Usage
+              </a>
+            </li>
+          </ul>
+        </section>
+        <!-- END SIDEBAR -->
+
+        <!-- START MAIN -->
+        <section class="section-main">
+          <!-- START SECOND NAVBAR -->
+          <section class="second-navbar">
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a href="exports.html" class="nav-link">CSV Exports</a>
+              </li>
+              <li class="nav-item">
+                <a href="csv-export-settings.html" class="nav-link active"
+                  >CSV Export Settings</a
+                >
+              </li>
+            </ul>
+          </section>
+          <!-- END SECOND NAVBAR -->
+
+          <!-- START CSV EXPORT SETTINGS -->
+          <section
+            class="section-csv-export-settings u-padding-lg d-flex flex-column align-items-center"
+          >
+            <h3 class="fw-bold text-dark">CSV Export Settings</h3>
+            <div class="card border-0 u-box-shadow-1">
+              <div class="card-body p-4">
+                <h4 class="card-title border-0">
+                  What is the CSV Export settings for?
+                </h4>
+                <p class="card-text text-secondary">
+                  You can customize the default fields you want to download
+                  every time you export a CSV file.
+                </p>
+                <div class="csv-export-box d-flex justify-content-between">
+                  <div class="csv-export-icon-box d-flex align-items-center">
+                    <i class="bi bi-people-fill px-3"></i>
+                    <div class="csv-export-title">Contact CSV Export</div>
+                  </div>
+
+                  <!-- BUTTON TRIGGER MODAL -->
+                  <button
+                    type="button"
+                    class="csv-export-button btn btn-access fw-bold"
+                    data-bs-toggle="modal"
+                    data-bs-target="#contactCSVExport"
+                  >
+                    <i class="bi bi-gear pe-1"></i>
+                    Edit Settings
+                  </button>
+
+                  <!-- Modal -->
+                  <div
+                    class="modal fade"
+                    id="contactCSVExport"
+                    tabindex="-1"
+                    aria-labelledby="contactCSVExportLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h4
+                            class="modal-title fw-bold text-dark"
+                            id="contactCSVExportLabel"
+                          >
+                            Contact CSV Export
+                          </h4>
+                          <div>
+                            <button
+                              type="button"
+                              class="btn btn-access text-dark"
+                              data-bs-dismiss="modal"
+                            >
+                              Cancel
+                            </button>
+                            <button type="button" class="btn btn-purple">
+                              Save settings
+                            </button>
+                          </div>
+                        </div>
+                        <div class="modal-body">
+                          <div
+                            class="modal-body--header border-bottom py-3 d-flex align-items-center justify-content-between"
+                          >
+                            <h4 class="text-dark fw-bold">Standard Fields</h4>
+                            <a href="#" class="fs-4">Select All</a>
+                          </div>
+                          <div class="modal-body--content py-4">
+                            <div class="container">
+                              <div class="row">
+                                <div class="col-md-4 p-2">
+                                  <div class="field-name-box">
+                                    <h5>First Name</h5>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="fname"
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="fname"
+                                      >
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-4 p-2">
+                                  <div class="field-name-box">
+                                    <h5>Last Name</h5>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="fname"
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="fname"
+                                      >
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-4 p-2">
+                                  <div class="field-name-box">
+                                    <h5>Facebook Profile</h5>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="fname"
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="fname"
+                                      >
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-4 p-2">
+                                  <div class="field-name-box">
+                                    <h5>Gender</h5>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="fname"
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="fname"
+                                      >
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-4 p-2">
+                                  <div class="field-name-box">
+                                    <h5>Relationship Status</h5>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="fname"
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="fname"
+                                      >
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-4 p-2">
+                                  <div class="field-name-box">
+                                    <h5>Work Place</h5>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="fname"
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="fname"
+                                      >
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-4 p-2">
+                                  <div class="field-name-box">
+                                    <h5>Last Education Year</h5>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="fname"
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="fname"
+                                      >
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-4 p-2">
+                                  <div class="field-name-box">
+                                    <h5>Current Address</h5>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="fname"
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="fname"
+                                      >
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-4 p-2">
+                                  <div class="field-name-box">
+                                    <h5>Home Town</h5>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="fname"
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="fname"
+                                      >
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-4 p-2">
+                                  <div class="field-name-box">
+                                    <h5>Country</h5>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="fname"
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="fname"
+                                      >
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- END CSV EXPORT SETTINGS -->
+        </section>
+        <!-- END MAIN -->
+      </section>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- CUSTOM JS -->
+    <script src="../../assets/js/navbar.js"></script>
+    <script src="../../assets/js/script.js"></script>
+  </body>
+</html>

@@ -8,7 +8,7 @@
     <meta name="description" content="" />
     <meta name="keywords" content="li data," />
 
-    <title>You | Phone List</title>
+    <title>Manage Plan | Phone List</title>
 
     <!-- Bootstrap CSS -->
     <link
@@ -176,17 +176,15 @@
           <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item">
               <span class="text-uppercase">Personal Profile</span>
-              <a
-                href="account.html"
-                class="nav-link active"
-                aria-current="page"
-              >
-                <h2 class="fs-4 m-0 fw-bold">You</h2>
+              <a href="account.html" class="nav-link" aria-current="page">
+                You
               </a>
             </li>
             <li class="nav-item mt-4">
               <span class="text-uppercase">Admin Settings</span>
-              <a href="plans.html" class="nav-link"> Manage Plan </a>
+              <a href="plans.html" class="nav-link active">
+                <h2 class="fs-4 m-0 fw-bold">Manage Plan</h2>
+              </a>
             </li>
             <li class="nav-item mt-4">
               <span class="text-uppercase">System Activity</span>
@@ -206,49 +204,123 @@
 
         <!-- START MAIN -->
         <section class="section-main">
-          <div class="card u-box-shadow-2 m-4 border rounded-3">
-            <h1 class="card-title p-4 text-capitalize">Account Info</h1>
-            <div class="card-body p-4">
-              <form action="">
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="mb-3">
-                      <label for="fname" class="form-label">First Name</label>
-                      <input type="text" class="form-control" id="fname" />
+          <!-- START SECOND NAVBAR -->
+          <section class="second-navbar">
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a href="plans.html" class="nav-link">Plan Overview</a>
+              </li>
+              <li class="nav-item">
+                <a href="billing.html" class="nav-link active">Billing</a>
+              </li>
+            </ul>
+          </section>
+          <!-- END SECOND NAVBAR -->
+          <section class="section-settings-billing">
+            <div class="card m-4 border-0 rounded-3">
+              <div
+                class="card-title m-0 d-flex justify-content-between align-items-center"
+              >
+                <h1 class="py-4 text-capitalize fs-2 fw-bold">
+                  Credit Card Information
+                </h1>
+
+                <!-- Button trigger modal -->
+                <button
+                  type="button"
+                  class="btn btn-purple me-4"
+                  data-bs-toggle="modal"
+                  data-bs-target="#creditCardModal"
+                >
+                  <i class="bi bi-pen pe-1"></i>
+                  Update Credit Card
+                </button>
+              </div>
+
+              <!-- WHEN NO CREDIT CARD INFO FOUND -->
+              <div class="card-body text-secondary">
+                <span
+                  >You have not entered any credit card information yet.</span
+                >
+              </div>
+
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="creditCardModal"
+                tabindex="-1"
+                aria-labelledby="creditCardModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="creditCardModalLabel">
+                        Modal title
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
                     </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="mb-3">
-                      <label for="lname" class="form-label">Last Name</label>
-                      <input type="text" class="form-control" id="lname" />
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="mb-3">
-                      <label for="title" class="form-label">Title</label>
-                      <input type="text" class="form-control" id="title" />
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="mb-3">
-                      <label for="email" class="form-label">Email</label>
-                      <span class="form-span d-block" id="email"
-                        >shamonti.haque98@gmail.com</span
+                    <div class="modal-body">...</div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
                       >
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        Save changes
+                      </button>
                     </div>
                   </div>
-                  <div class="col-md-4 d-flex align-items-center">
-                    <button type="button" class="btn btn-change mt-3">
-                      <i class="bi bi-shield-lock"></i>
-                      Change Email
-                    </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-settings-plan">
+            <div class="card u-box-shadow-2 m-4 border rounded-3">
+              <div
+                class="card-title d-flex justify-content-between align-items-center"
+              >
+                <h3 class="p-4 text-capitalize">
+                  Credits Usage <span> (Jan 21, 2022 - Feb 21, 2022) </span>
+                </h3>
+                <a
+                  href="upgrade.html"
+                  type="button"
+                  class="btn btn-access me-4"
+                >
+                  Buy More Credits
+                </a>
+              </div>
+              <div class="card-body">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h3 class="fs-3">
+                        Email Credits
+                        <i
+                          class="bi bi-question-circle-fill text-secondary"
+                        ></i>
+                        <p class="mt-4">
+                          You have used <span class="text-primary">0</span> of
+                          <span class="text-dark">80</span> available email
+                          credits this billing cycle.
+                        </p>
+                      </h3>
+                    </div>
                   </div>
                 </div>
-              </form>
+              </div>
             </div>
-          </div>
+          </section>
         </section>
         <!-- END MAIN -->
       </section>
