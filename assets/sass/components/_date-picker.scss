@@ -7,4 +7,20 @@
 
   font-family: 'Nunito Sans' !important;
   font-size: 1.6rem !important;
+
+  .drp-selected {
+    display: none;
+  }
+
+  .btn-primary {
+    background-color: $color-primary;
+    border: none;
+  }
+
+  td.active,
+  .daterangepicker td.active:hover,
+  td.active,
+  .daterangepicker td.active {
+    background-color: $color-primary !important;
+  }
 }

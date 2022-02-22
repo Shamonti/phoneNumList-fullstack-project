@@ -128,3 +128,23 @@ button {
 .page-link:focus {
   box-shadow: none;
 }
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+select {
+  border-radius: 0.3rem;
+
+  &:focus-visible {
+    outline: 1px solid $color-primary;
+  }
+}
