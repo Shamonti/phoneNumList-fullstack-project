@@ -8,7 +8,7 @@
     <meta name="description" content="" />
     <meta name="keywords" content="li data," />
 
-    <title>Exports | Phone List</title>
+    <title>Historical Credit Usage | Phone List</title>
 
     <!-- Bootstrap CSS -->
     <link
@@ -30,6 +30,13 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap"
       rel="stylesheet"
+    />
+
+    <!-- CALENDAR CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
     />
 
     <!-- Custom CSS -->
@@ -84,9 +91,9 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../../product.html">
+                <a class="nav-link" href="../upgrade.html">
                   <i class="bi bi-box-seam"></i>
-                  Product
+                  Products
                 </a>
               </li>
             </ul>
@@ -186,12 +193,7 @@
             </li>
             <li class="nav-item mt-4">
               <span class="text-uppercase">System Activity</span>
-              <a href="exports.html" class="nav-link"> Exports </a>
-            </li>
-            <li class="nav-item">
-              <a href="../data-requests.html" class="nav-link">
-                Data Request History
-              </a>
+              <a href="../exports/exports.html" class="nav-link"> Exports </a>
             </li>
             <li class="nav-item">
               <a href="../credits/current.html" class="nav-link active">
@@ -211,7 +213,9 @@
                 <a href="current.html" class="nav-link">Current Credit Usage</a>
               </li>
               <li class="nav-item">
-                <a href="history.html" class="nav-link active">History</a>
+                <a href="history.html" class="nav-link active"
+                  >Credit Usage History</a
+                >
               </li>
             </ul>
           </section>
@@ -283,11 +287,6 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
     ></script>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
-    />
     <script>
       $(function () {
         $('input[name="daterange"]').daterangepicker(

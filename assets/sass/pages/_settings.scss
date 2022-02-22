@@ -15,6 +15,7 @@
         span {
           font-size: 1.2rem;
         }
+
         .nav-link {
           font-weight: 600;
           font-size: 1.4rem;
@@ -169,6 +170,7 @@
             cursor: pointer;
           }
         }
+
         td {
           vertical-align: middle;
           padding: 1.5rem;
@@ -246,6 +248,7 @@
         width: 30rem;
       }
     }
+
     .csv-export-box {
       padding: 1.75rem 2rem;
       border-radius: 0.5rem;
@@ -319,6 +322,85 @@
   .section-credit-history {
     span {
       color: $color-grey-dark--2;
+    }
+  }
+
+  .section-settings-billing {
+    .credit-card-info {
+      max-width: 35rem;
+
+      .card-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+
+      .card-text {
+        margin: 0;
+        font-size: 1.6rem;
+      }
+    }
+    .modal {
+      &-dialog {
+        max-width: 65rem;
+      }
+
+      &-content {
+        border-radius: 0.5rem;
+      }
+
+      &-header {
+        border-bottom: transparent;
+
+        .btn-close {
+          background: transparent
+            url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e")
+            center/0.75em auto no-repeat;
+        }
+      }
+
+      &-body {
+        h5 {
+          font-weight: 700;
+          font-size: 1.5rem;
+        }
+
+        .card {
+          &-body {
+            padding: 2rem;
+
+            label {
+              font-size: 1.4rem;
+            }
+
+            .form-control {
+              padding: 0.575rem 0.75rem;
+              font-size: 1.3rem;
+            }
+
+            ::placeholder {
+              color: $color-secondary;
+              font-weight: 600;
+              font-size: 1.3rem;
+              line-height: 1.5;
+            }
+
+            .country-dropdown {
+              select {
+                border: 1px solid #ced4da;
+                height: 3.4rem;
+              }
+            }
+
+            .btn-purple {
+              height: 5rem;
+              width: 100%;
+              border-radius: 0.3rem;
+              font-size: 1.75rem;
+              font-weight: 600;
+            }
+          }
+        }
+      }
     }
   }
 }
