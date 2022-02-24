@@ -24,6 +24,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
+  <!-- CALENDAR CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
   <!-- CUSTOM CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
 
@@ -119,70 +122,350 @@
     <!-- START MAIN BODY -->
     <section class="section-dashboard--main section-dashboard--orderHistory">
       <div class="container">
-          <div class="row">
-            <div class="col-md-4 p-0">
-              <div class="card d-flex flex-row align-items-center justify-content-center p-5">
-                <i class="bi bi-file-earmark-bar-graph"></i>
-                <div class="card-body">
-                  <h4 class="card-title">Total Sales</h4>
-                  <p class="card-text">$1500</p>
+        <div class="row">
+          <div class="offset-md-4 col-md-5">
+            <div id="reportrange"
+              style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+              <i class="bi bi-calendar-week-fill"></i>&nbsp;&nbsp;&nbsp;
+              <span></span>
+            </div>
+          </div>
+          <!-- START PEOPLE SEARCHBAR -->
+          <div class="col-md-3 d-flex justify-content-end">
+            <input type="text" name="search" class="searchBar w-100"
+              placeholder="Search Invoice ID..." />
+          </div>
+          <!-- END PEOPLE SEARCHBAR -->
+        </div>
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-6 p-0">
+                <div class="card d-flex flex-row align-items-center justify-content-center p-3">
+                  <i class="bi bi-file-earmark-bar-graph"></i>
+                  <div class="card-body">
+                    <h4 class="card-title">Total Sales</h4>
+                    <p class="card-text">$1500</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 p-0 px-4">
+                <div class="card d-flex flex-row align-items-center justify-content-center p-3">
+                  <i class="bi bi-credit-card-2-back-fill"></i>
+                  <div class="card-body">
+                    <h4 class="card-title">Card Total</h4>
+                    <p class="card-text">$900</p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4 p-0 ps-4">
-              <div class="card d-flex flex-row align-items-center justify-content-center p-5">
-                <i class="bi bi-credit-card-2-back-fill"></i>
-                <div class="card-body">
-                  <h4 class="card-title">Card Total</h4>
-                  <p class="card-text">$900</p>
+
+            <div class="row mt-4">
+              <div class="col-md-6 p-0 ">
+                <div class="card d-flex flex-row align-items-center justify-content-center p-3">
+                  <i class="bi bi-paypal"></i>
+                  <div class="card-body">
+                    <h4 class="card-title">PayPal Total</h4>
+                    <p class="card-text">$600</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-4 p-0 ps-4">
-              <div class="card d-flex flex-row align-items-center justify-content-center p-5">
-                <i class="bi bi-paypal"></i>
-                <div class="card-body">
-                  <h4 class="card-title">PayPal Total</h4>
-                  <p class="card-text">$600</p>
+              <div class="col-md-6 p-0 px-4">
+                <div class="card d-flex flex-row align-items-center justify-content-center p-3">
+                  <i class="bi bi-cart-fill"></i>
+                  <div class="card-body">
+                    <h4 class="card-title">Total Orders</h4>
+                    <p class="card-text">574</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row mt-4">
-            <div class="offset-md-2 col-md-4 p-0">
-              <div class="card d-flex flex-row align-items-center justify-content-center p-5">
-                <i class="bi bi-cart-fill"></i>
-                <div class="card-body">
-                  <h4 class="card-title">Total Orders</h4>
-                  <p class="card-text">574</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 p-0 ps-4">
-              <div class="card d-flex flex-row align-items-center justify-content-center p-5">
-                <i class="bi bi-truck"></i>
-                <div class="card-body">
-                  <h4 class="card-title">Total Delivery</h4>
-                  <p class="card-text">324</p>
-                </div>
-              </div>
-            </div>
+
+          <div class="col-md-6 card rounded-3">
+            <h4 class="heading--main pt-4 pb-0 px-3 mt-2 fs-2">
+              Sales Report
+            </h4>
+            <canvas id="salesChart" height="183rem"></canvas>
           </div>
-          <div class="row mt-4">
-            <div class="col-md-12 card rounded-3">
-              <h2 class="heading--main pt-4 pb-0 px-3 mt-2">
-                Sales Report
-              </h2>
-              <canvas id="salesChart" height="500rem"></canvas>
-            </div>            
+        </div>
+
+        
+        <!-- START TABLE -->
+        <div class="row mt-5 pb-4 custom-scrollbar">
+          <div class="col-md-12 table-scrollable px-0" style="max-height: 54vh;">
+            <table class="table table-hover table-bordered table-responsive" id="table">
+              <thead>
+                <tr>
+                  <th>Invoice ID</th>
+                  <th>Name</th>
+                  <th>Purchased Plan</th>
+                  <th>Paid By</th>
+                  <th>Amount</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table-row">
+                  <td scope="row">
+                    <div>
+                      Invoice 9809073
+                    </div>
+                    <div class="fs-5">
+                      Paid on
+                      <span>3:01 pm</span>
+                    </div>
+                  </td>
+                  <td  class="name">
+                    Shamonti Haque
+                  </td>
+                  <td>
+                    Business
+                  </td>
+                  <td>
+                    <div>
+                    Credit Card
+                    </div>
+                    <div class="fs-5">
+                      <span>**** **** 1234</span>
+                    </div>
+                  </td>
+                  <td>$400.00</td>
+                  <td>
+                    <div class="d-flex justify-content-center">
+                      <button type="button" class="btn btn-delete bg-success px-4">
+                        <i class="bi bi-download"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="table-row">
+                  <td scope="row">
+                    <div>
+                      Invoice 9809073
+                    </div>
+                    <div class="fs-5">
+                      Paid on
+                      <span>Feb 19</span>
+                    </div>
+                  </td>
+                  <td  class="name">
+                    Shamonti Haque
+                  </td>
+                  <td>
+                    Business
+                  </td>
+                  <td>
+                    <div>
+                    Credit Card
+                    </div>
+                    <div class="fs-5">
+                      <span>**** **** 1234</span>
+                    </div>
+                  </td>
+                  <td>$400.00</td>
+                  <td>
+                    <div class="d-flex justify-content-center">
+                      <button type="button" class="btn btn-delete bg-success px-4">
+                        <i class="bi bi-download"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="table-row">
+                  <td scope="row">
+                    <div>
+                      Invoice 9809073
+                    </div>
+                    <div class="fs-5">
+                      Paid on
+                      <span>Jun 20, 2020</span>
+                    </div>
+                  </td>
+                  <td  class="name">
+                    Shamonti Haque
+                  </td>
+                  <td>
+                    Business
+                  </td>
+                  <td>
+                    <div>
+                    PayPal
+                    </div>
+                  </td>
+                  <td>$400.00</td>
+                  <td>
+                    <div class="d-flex justify-content-center">
+                      <button type="button" class="btn btn-delete bg-success px-4">
+                        <i class="bi bi-download"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="table-row">
+                  <td scope="row">
+                    <div>
+                      Invoice 9809073
+                    </div>
+                    <div class="fs-5">
+                      Paid on
+                      <span>3:01 pm</span>
+                    </div>
+                    
+                  </td>
+                  <td  class="name">
+                    Shamonti Haque
+                  </td>
+                  <td>
+                    Business
+                  </td>
+                  <td>
+                    <div>
+                    Bit Coins
+                    </div>
+                  </td>
+                  <td>$400.00</td>
+                  <td>
+                    <div class="d-flex justify-content-center">
+                      <button type="button" class="btn btn-delete bg-success px-4">
+                        <i class="bi bi-download"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="table-row">
+                  <td scope="row">
+                    <div>
+                      Invoice 9809073
+                    </div>
+                    <div class="fs-5">
+                      Paid on
+                      <span>3:01 pm</span>
+                    </div>
+                    
+                  </td>
+                  <td  class="name">
+                    Shamonti Haque
+                  </td>
+                  <td>
+                    Business
+                  </td>
+                  <td>
+                    <div>
+                    Credit Card
+                    </div>
+                    <div class="fs-5">
+                      <span>**** **** 1234</span>
+                    </div>
+                  </td>
+                  <td>$400.00</td>
+                  <td>
+                    <div class="d-flex justify-content-center">
+                      <button type="button" class="btn btn-delete bg-success px-4">
+                        <i class="bi bi-download"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="table-row">
+                  <td scope="row">
+                    <div>
+                      Invoice 9809073
+                    </div>
+                    <div class="fs-5">
+                      Paid on
+                      <span>3:01 pm</span>
+                    </div>
+                    
+                  </td>
+                  <td  class="name">
+                    Shamonti Haque
+                  </td>
+                  <td>
+                    Business
+                  </td>
+                  <td>
+                    <div>
+                    Credit Card
+                    </div>
+                    <div class="fs-5">
+                      <span>**** **** 1234</span>
+                    </div>
+                  </td>
+                  <td>$400.00</td>
+                  <td>
+                    <div class="d-flex justify-content-center">
+                      <button type="button" class="btn btn-delete bg-success px-4">
+                        <i class="bi bi-download"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="table-row">
+                  <td scope="row">
+                    <div>
+                      Invoice 9809073
+                    </div>
+                    <div class="fs-5">
+                      Paid on
+                      <span>3:01 pm</span>
+                    </div>
+                    
+                  </td>
+                  <td  class="name">
+                    Shamonti Haque
+                  </td>
+                  <td>
+                    Business
+                  </td>
+                  <td>
+                    <div>
+                    Credit Card
+                    </div>
+                    <div class="fs-5">
+                      <span>**** **** 1234</span>
+                    </div>
+                  </td>
+                  <td>$400.00</td>
+                  <td>
+                    <div class="d-flex justify-content-center">
+                      <button type="button" class="btn btn-delete bg-success px-4">
+                        <i class="bi bi-download"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
+        </div>
+        <!-- END TABLE -->
+        
+        <!-- START PAGINATION -->
+        <div class="row">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-end">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- END PAGINATION -->
       </div>
     </section>
     <!-- END MAIN BODY -->
   </section>
-
-  <!-- jQuery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
 
   <!-- BOOTSTRAP JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -191,6 +474,43 @@
 
   <!-- Chart JS -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- CALENDAR JS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+
+      let start = moment().subtract(29, 'days');
+      let end = moment();
+
+      function cb(start, end) {
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+      }
+
+      $('#reportrange').daterangepicker({
+        startDate: start,
+        endDate: end,
+        opens: 'left',
+        ranges: {
+          'Today': [moment(), moment()],
+          'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+          'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+          'This Month': [moment().startOf('month'), moment().endOf('month')],
+          'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf(
+            'month')]
+        }
+      }, cb);
+
+      cb(start, end);
+
+    });
+  </script>
 
   <!-- Custom JS -->
   <script src="assets/js/chart.js"></script>

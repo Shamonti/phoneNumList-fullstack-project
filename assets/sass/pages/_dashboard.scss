@@ -105,20 +105,73 @@
         font-size: 2.3rem;
       }
     }
+
+    .table-scrollable {
+      overflow: auto;
+      max-width: 100%;
+      max-height: 78.6vh;
+      // box-shadow: inset 0 0 5px rgba(150, 150, 150, 0.35);
+      margin: auto;
+    }
+
+    .table {
+      height: 33rem;
+
+      font-size: 1.6rem;
+
+      thead {
+        background-color: $color-dashboard--dark;
+        color: $color-grey-light--4;
+      }
+
+      tbody {
+        background-color: $color-dashboard--light--1;
+        color: $color-grey-light--5;
+
+        tr .name {
+          transition: all 0.3s;
+          a {
+            color: $color-grey-light--5;
+            text-decoration: underline;
+          }
+
+          &:hover {
+            font-weight: 400;
+            transform: scale(1.01);
+            transform: translateY(-1px);
+          }
+        }
+
+        tr:hover {
+          color: $color-white;
+          a {
+            color: $color-white;
+          }
+        }
+
+        td {
+          white-space: normal;
+        }
+      }
+    }
+
+    .searchBar {
+      background-color: $color-dashboard--light--1;
+      color: $color-grey-light--5;
+    }
   }
 
   &--orderHistory {
     .card {
       i {
         font-size: 4rem;
-        padding: 0 0 0 2.75rem;
+        padding: 0 0 0 0.3rem;
       }
 
       &-body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0;
       }
 
       &-title {
@@ -133,61 +186,41 @@
       }
     }
   }
-}
 
-.section-viewalldata {
-  .table-scrollable {
-    overflow: auto;
-    max-width: 100%;
-    max-height: 78.6vh;
-    // box-shadow: inset 0 0 5px rgba(150, 150, 150, 0.35);
-    margin: auto;
-  }
-
-  .table {
-    height: 33rem;
-
-    font-size: 1.6rem;
-
-    thead {
-      background-color: $color-dashboard--dark;
-      color: $color-grey-light--4;
-    }
-
-    tbody {
-      background-color: $color-dashboard--light--1;
-      color: $color-grey-light--5;
-
-      tr .name {
-        transition: all 0.3s;
-        a {
-          color: $color-grey-light--5;
-          text-decoration: underline;
-        }
-
-        &:hover {
-          font-weight: 400;
-          transform: scale(1.01);
-          transform: translateY(-1px);
-        }
+  &--paymentSettings {
+    .modal {
+      .btn-close {
+        color: $color-white !important;
       }
 
-      tr:hover {
-        color: $color-white;
-        a {
+      &-header {
+        border-bottom: 1px solid $color-text;
+      }
+
+      &-content {
+        background-color: $color-dashboard--light;
+
+        .container {
+          padding: 1rem;
+        }
+
+        input {
+          font-size: 1.4rem;
           color: $color-white;
+          background-color: $color-dashboard--light--1;
+
+          &::placeholder {
+            font-size: 1.4rem;
+            color: $color-grey-light--5;
+          }
+        }
+        .country-dropdown {
+          select {
+            height: 3.1rem;
+          }
         }
       }
-
-      td {
-        white-space: normal;
-      }
     }
-  }
-
-  .searchBar {
-    background-color: $color-dashboard--light--1;
-    color: $color-grey-light--5;
   }
 }
 
