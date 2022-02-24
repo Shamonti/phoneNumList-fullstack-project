@@ -139,7 +139,7 @@
               <!-- END TRANSLATOR -->
             </li>
             <li class="navbar__li">
-              <a href="login.html" class="navbar__a"> 
+              <a href="login.html" class="navbar__a">
                 Account </a>
             </li>
           </ul>
@@ -147,6 +147,22 @@
       </div>
     </div>
     <!-- END NAVBAR -->
+
+    <!-- START BREADCRUMB -->
+    <hr class="mt-lg-0 mt-5 text-secondary" />
+    <div class="container">
+      <div class="row">
+        <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Terms of service
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <!-- END BREADCRUMB -->
   </header>
 
   <!-- START NAVBAR FOR SMALL SCREEN -->
@@ -182,8 +198,8 @@
           <li class="navigation__item d-flex justify-content-center">
             <!-- START TRANSLATOR -->
             <a href="#" onclick="doGTranslate('en|en');return false;" title="English" class="gflag nturl my-auto"
-              style="background-position:-0px -0px;"><img src="//gtranslate.net/flags/blank.png" height="16"
-                width="16" alt="English" /></a>
+              style="background-position:-0px -0px;"><img src="//gtranslate.net/flags/blank.png" height="16" width="16"
+                alt="English" /></a>
 
             <br /><select id="translator" onchange="doGTranslate(this);">
               <option value="">English</option>
@@ -977,4 +993,5 @@
     src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
   <script src="assets/js/translator.js"></script>
 </body>
+
 </html>

@@ -9,7 +9,7 @@
   <meta name="description" content="Displaying Sales Report and Recent Credit History from Phone List's Database" />
   <meta name="keywords" content="phone list, " />
 
-  <title>Sales Report | Phone List</title>
+  <title>Order History | Phone List</title>
 
   <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,8 +44,8 @@
               <img class="img-fluid" src="assets/images/logo--company-name.svg" alt="phone list" />
             </a>
           </li>
-          <li class="menu-item active">
-            <a href="">
+          <li class="menu-item">
+            <a href="admin.html">
               <i class="bi bi-collection menu-item--icon "></i>
               <span class="menu-item--text ">
                 Dashboard
@@ -68,7 +68,7 @@
               </span>
             </a>
           </li>
-          <li class="menu-item">
+          <li class="menu-item active">
             <a href="orderHistory.html">
               <i class="bi bi-bar-chart menu-item--icon"></i>
               <span class="menu-item--text">
@@ -117,64 +117,65 @@
     <!-- END SIDEBAR -->
 
     <!-- START MAIN BODY -->
-    <section class="section-dashboard--main">
+    <section class="section-dashboard--main section-dashboard--orderHistory">
       <div class="container">
-        <div class="row">
-          <div class="col-md-8">
-            <div class="card rounded-3">
-              <div class="card-body">
-                <h1 class="display-6">
-                  Hi, Shamonti Haque. Welcome to your dashboard!
-                </h1>
-                <p class="mt-2 text-end mb-0 pe-3 text-info fw-bold" id="file-upload-filename">
-                  &nbsp;
-                </p>
+          <div class="row">
+            <div class="col-md-4 p-0">
+              <div class="card d-flex flex-row align-items-center justify-content-center p-5">
+                <i class="bi bi-file-earmark-bar-graph"></i>
+                <div class="card-body">
+                  <h4 class="card-title">Total Sales</h4>
+                  <p class="card-text">$1500</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 p-0 ps-4">
+              <div class="card d-flex flex-row align-items-center justify-content-center p-5">
+                <i class="bi bi-credit-card-2-back-fill"></i>
+                <div class="card-body">
+                  <h4 class="card-title">Card Total</h4>
+                  <p class="card-text">$900</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 p-0 ps-4">
+              <div class="card d-flex flex-row align-items-center justify-content-center p-5">
+                <i class="bi bi-paypal"></i>
+                <div class="card-body">
+                  <h4 class="card-title">PayPal Total</h4>
+                  <p class="card-text">$600</p>
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="col-md-4 d-flex align-items-center justify-content-start">
-
-            <form action="" class="d-flex">
-              <!-- START UPLOAD BTN -->
-              <div class="col-md-6 px-2">
-                <input id='fileid' type='file' hidden />
-                <input id='buttonid' type='button' class="btn btn-upload" value='Upload' />
+          <div class="row mt-4">
+            <div class="offset-md-2 col-md-4 p-0">
+              <div class="card d-flex flex-row align-items-center justify-content-center p-5">
+                <i class="bi bi-cart-fill"></i>
+                <div class="card-body">
+                  <h4 class="card-title">Total Orders</h4>
+                  <p class="card-text">574</p>
+                </div>
               </div>
-              <!-- END UPLOAD BTN -->
-
-              <!-- START IMPORT BTN -->
-              <div class="col-md-6 px-2">
-
-                <input type='button' class="btn btn-upload" value='Import' />
+            </div>
+            <div class="col-md-4 p-0 ps-4">
+              <div class="card d-flex flex-row align-items-center justify-content-center p-5">
+                <i class="bi bi-truck"></i>
+                <div class="card-body">
+                  <h4 class="card-title">Total Delivery</h4>
+                  <p class="card-text">324</p>
+                </div>
               </div>
-              <!-- END IMPORT  BTN -->
-            </form>
+            </div>
           </div>
-        </div>
-
-        <div class="container px-2">
-          <div class="row">
+          <div class="row mt-4">
             <div class="col-md-12 card rounded-3">
               <h2 class="heading--main pt-4 pb-0 px-3 mt-2">
                 Sales Report
               </h2>
-              <canvas id="salesChart" height="300rem"></canvas>
-            </div>
+              <canvas id="salesChart" height="500rem"></canvas>
+            </div>            
           </div>
-        </div>
-
-        <div class="container px-2">
-          <div class="row">
-            <div class="col-md-12 card rounded-3">
-              <h2 class="heading--main pt-4 pb-0 px-3 mt-2">
-                Recent Credit History
-              </h2>
-              <canvas id="creditChart" height="300rem"></canvas>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
     <!-- END MAIN BODY -->
