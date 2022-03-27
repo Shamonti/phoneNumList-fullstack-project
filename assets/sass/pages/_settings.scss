@@ -52,10 +52,9 @@
         }
       }
 
-      &-body {
-        .form-label {
-          font-weight: 700;
-        }
+      .form-label {
+        font-weight: 700;
+        font-size: 1.2rem;
       }
     }
 
@@ -94,6 +93,30 @@
         color: $color-primary;
         border-color: transparent;
         border-bottom: 1px solid $color-primary;
+      }
+    }
+
+    .modal {
+      &-title {
+        font-weight: 800;
+        font-size: $default-font-size;
+        color: $color-grey-dark--2;
+      }
+
+      .btn-close {
+        font-size: 1rem;
+      }
+
+      &-body .form-label {
+        font-weight: 700;
+      }
+
+      &-footer {
+        justify-content: flex-start;
+
+        .btn {
+          font-size: 1.4rem;
+        }
       }
     }
   }
