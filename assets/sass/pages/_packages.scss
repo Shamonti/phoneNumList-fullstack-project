@@ -117,7 +117,7 @@ a {
   }
 }
 
-.pricingTable .pricingTable-signup a {
+.pricingTable .pricingTable-signup .btn-default {
   display: inline-block;
   font-size: 1.5rem;
   color: #fff;
@@ -126,10 +126,10 @@ a {
   background: $color-primary;
   text-transform: uppercase;
   transition: all 0.3s ease 0s;
-}
 
-.pricingTable .pricingTable-signup a:hover {
-  box-shadow: 0 0 10px $color-primary;
+  &:hover {
+    box-shadow: 0 0 10px $color-primary;
+  }
 }
 
 @media screen and (max-width: 990px) {
