@@ -9,3 +9,21 @@
     transform: translateX(0);
   }
 }
+
+@keyframes dissappear {
+  0% {
+    opacity: 1;
+    transform: translateY(-3rem);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}

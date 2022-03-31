@@ -205,3 +205,19 @@
     }
   }
 }
+
+.pop-up-message--box {
+  position: relative;
+
+  .card {
+    position: absolute;
+    right: 0;
+
+    background-color: $color-secondary !important;
+    animation: dissappear 3s forwards;
+
+    &-body {
+      color: $color-black !important;
+    }
+  }
+}
