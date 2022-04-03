@@ -83,6 +83,22 @@
       }
     }
   }
+
+  .message-box {
+    background-color: $color-dashboard--light;
+    border-radius: 0.5rem;
+    color: $color-white;
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem;
+
+    position: fixed;
+    top: 17.5rem;
+    left: 55vw;
+  }
+
+  .hide-text {
+    display: none;
+  }
 }
 
 .section-history {

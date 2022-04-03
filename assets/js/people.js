@@ -1,21 +1,5 @@
 'use strict';
 
-//JOB TITLE FILTER
-// const jobList = document.querySelector('.jobList');
-// const body = document.querySelector('body');
-
-// const inputJob = document.getElementById('job');
-
-// inputJob.addEventListener('keyup', function () {
-//   jobList.classList.remove('hide');
-//   jobList.classList.add('show');
-// });
-
-// body.addEventListener('click', function () {
-//   jobList.classList.remove('show');
-//   jobList.classList.add('hide');
-// });
-
 // PEOPLE NAME SEARCH FILTER
 function searchPeople() {
   let input, filter, table, tr, td, i, txtValue;
@@ -36,4 +20,20 @@ function searchPeople() {
       }
     }
   }
+}
+
+//Access data via button
+let accessDataBtn, buttonGroup, messageBox;
+accessDataBtn = document.getElementById('accessBtn');
+buttonGroup = document.getElementById('buttonGroup');
+messageBox = document.getElementById('message');
+
+accessDataBtn.addEventListener('click', showBtns);
+
+function showBtns() {
+  accessDataBtn.classList.add('hide');
+  buttonGroup.classList.remove('hide');
+
+  document.getElementById('messagePhone').innerHTML = '+880 1234 345 45';
+  document.getElementById('messageEmail').innerHTML = 'a@gamail.com';
 }

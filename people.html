@@ -331,20 +331,47 @@
                         </a>
                       </td>
                       <td>
-                        <a
+                        <button
+                          type="button"
                           class="btn btn-access btn-access--phone"
-                          href="settings/upgrade.html"
+                          id="accessBtn"
                         >
-                          <i class="bi bi-phone"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <a
-                          class="btn btn-access btn-access--email"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-envelope"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
+                          Access Phone Number
+                        </button>
+
+                        <div class="message-box hide-text">
+                          Verified number costs one credit.
+                        </div>
+
+                        <div class="button-group hide" id="buttonGroup">
+                          <a
+                            class="btn btn-access btn-access--phone"
+                            href="settings/upgrade.html"
+                          >
+                            <i class="bi bi-phone"></i>
+                            <i class="bi bi-caret-down-fill"></i>
+                          </a>
+
+                          <div
+                            class="message-box message-box--phone hide-text"
+                            id="messagePhone"
+                          ></div>
+
+                          <a
+                            class="btn btn-access btn-access--email"
+                            href="settings/upgrade.html"
+                          >
+                            <i class="bi bi-envelope"></i>
+                            <i class="bi bi-caret-down-fill"></i>
+                          </a>
+
+                          <div
+                            class="message-box message-box--email hide-text"
+                            id="messageEmail"
+                          >
+                            <!-- Email not available -->
+                          </div>
+                        </div>
                       </td>
                       <td>Female</td>
                       <td>Single</td>
