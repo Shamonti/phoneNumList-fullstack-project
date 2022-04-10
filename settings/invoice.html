@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="li data," />
+
+    <title>Invoice | Phone List</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/images/icons/favicon.ico" />
+  </head>
+  <body>
+    <header>
+      <div class="container u-padding-lg pb-5 ps-2">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="invoice-title--large">Invoice</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-invoice">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="company-details">
+                <h2 class="company-name">Phone List</h2>
+                <p class="company-address">
+                  123 Our Street <br />
+                  City, State, country <br />
+                  ZIP Code
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row pt-4">
+            <div class="col-md-4">
+              <h3 class="invoice-title">Bill To</h3>
+              <div class="customer-details">
+                <p class="customer-address">
+                  123 Our Street <br />
+                  City, State, country <br />
+                  ZIP Code
+                </p>
+              </div>
+            </div>
+            <div class="offset-2 col-md-2">
+              <h4 class="invoice-title">Invoice#</h4>
+              <h4 class="invoice-title">Invoice Date</h4>
+            </div>
+            <div class="offset-2 col-md-2 text-end">
+              <p>101</p>
+              <p>10/04/2022</p>
+            </div>
+          </div>
+
+          <div class="row pt-4">
+            <div class="col-md-2">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th class="invoice-title" colspan="1">Description</th>
+                    <th class="invoice-title" colspan="2">Paid By</th>
+                    <th class="invoice-title text-left" colspan="2">Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="row" colspan="1">
+                      You have purchased the Basic plan which includes 5K
+                      credits, 5K phone numbers, Data Filters and CSV Export.
+                    </td>
+                    <td colspan="2">Stripe</td>
+                    <td></td>
+                    <td class="text-left">100.00</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">
+                      You have purchased the Professional plan which includes
+                      10K credits, 10K phone numbers, Data Filters and CSV
+                      Export.
+                    </td>
+                    <td colspan="2">Paypal</td>
+                    <td></td>
+                    <td class="text-left">190.00</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">
+                      You have purchased the Business plan which includes 50K
+                      credits, 50K phone numbers, Data Filters and CSV Export.
+                    </td>
+                    <td colspan="2">Paypal</td>
+                    <td></td>
+                    <td class="text-left">400.00</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">
+                      You have purchased the Business Pro plan which includes
+                      300K credits, 300K phone numbers, Data Filters and CSV
+                      Export.
+                    </td>
+                    <td colspan="2">Paypal</td>
+                    <td></td>
+                    <td class="text-left">1000.00</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">
+                      You have purchased the Enterprise plan which includes 1M
+                      credits, 1M phone numbers, Data Filters and CSV Export.
+                    </td>
+                    <td colspan="2">Paypal</td>
+                    <td></td>
+                    <td class="text-left">1500.00</td>
+                  </tr>
+                  <tr>
+                    <td class="invoice-title text-left">Total</td>
+                    <td colspan="2"></td>
+                    <td></td>
+                    <td class="text-left">&#36;3190</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
