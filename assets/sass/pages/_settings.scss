@@ -351,6 +351,11 @@
     span {
       color: $color-grey-dark--2;
     }
+    .form-control {
+      height: 3.2rem;
+      background-color: transparent;
+      font-size: $default-font-size;
+    }
   }
 
   .section-settings-billing {
