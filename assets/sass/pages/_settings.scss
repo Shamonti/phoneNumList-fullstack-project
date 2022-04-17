@@ -123,6 +123,14 @@
         }
       }
     }
+
+    #country {
+      flex: 0 0 auto;
+      width: 100%;
+      height: 3rem !important;
+      border: 1px solid #ced4da;
+      color: $color-grey-dark--2;
+    }
   }
 
   .section-settings-plan,
@@ -263,8 +271,20 @@
             color: $color-grey-dark--1;
             padding: 0.1rem 0.5rem;
           }
+
+          .page-item.active .page-link {
+            background-color: $color-grey-light--1;
+            border: 1px solid $color-grey-light--3;
+            height: 2.8rem;
+
+            line-height: 1.6;
+          }
         }
       }
+    }
+
+    .page-link {
+      height: 2.6rem;
     }
   }
 
