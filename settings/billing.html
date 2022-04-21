@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <meta name="description" content="" />
-  <meta name="keywords" content="li data," />
+  <meta name="keywords" content="phone list," />
 
   <title>Manage Plan | Phone List</title>
 
@@ -945,15 +945,32 @@
                   </div>
 
                   <!-- WHEN CREDIT CARD INFO FOUND -->
-                  <button class="credit-card-info u-box-shadow-2 mt-4 bg-white text-start">
-                    <div class="card-body p-4">
-                      <h4 class="card-title py-3 mb-3">Card Information</h4>
-                      <p class="card-text">Card Number:</p>
-                      <p class="card-text">**** **** 1203</p>
-                      <p class="card-text">Expiration Date:</p>
-                      <p class="card-text">2/2025</p>
+                  <div class="credit-card-info u-box-shadow-2 mt-4">
+                    <button class="credit-card-info mt-4 bg-white text-start w-100" data-bs-toggle="modal" data-bs-target="#errorModal">
+                      <div class="card-body p-4">
+                        <h4 class="card-title pb-3 mb-3">Card Information</h4>
+                        <p class="card-text">Card Number:</p>
+                        <p class="card-text">**** **** 1203</p>
+                        <p class="card-text">Expiration Date:</p>
+                        <p class="card-text">2/2025</p>
+                      </div>
+                    </button>
+                  </div>
+
+                  <!-- WHEN THERE IS ERROR -->
+                  <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <h5 class="modal-title text-center" id="errorModalLabel">Payment submission failed</h5>
+                          <p class="text-center mt-4 mb-5 text-dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo assumenda sapiente dolor nostrum voluptatum ullam in totam, quos unde culpa minima doloremque asperiores ex numquam debitis officiis? Nisi, voluptatem saepe?</p>
+                        </div>
+                      </div>
                     </div>
-                  </button>
+                  </div>
                 </div>
                 <!-- END Credit Card Information -->
               </div>

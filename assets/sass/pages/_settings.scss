@@ -108,7 +108,7 @@
       }
 
       .btn-close {
-        font-size: 1rem;
+        font-size: $default-font-size;
       }
 
       &-body .form-label {
@@ -120,6 +120,19 @@
 
         .btn {
           font-size: 1.4rem;
+        }
+      }
+    }
+
+    #errorModal {
+      .modal-title {
+        font-size: $default-font-size;
+        font-weight: 800;
+      }
+      .modal-body {
+        p {
+          font-size: $default-font-size;
+          font-weight: 500;
         }
       }
     }

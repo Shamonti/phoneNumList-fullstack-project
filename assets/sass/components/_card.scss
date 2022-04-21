@@ -103,7 +103,6 @@
     &__box {
       display: flex;
       // align-items: flex-end;
-
       margin-top: 1.5rem;
     }
 
@@ -160,6 +159,7 @@
         font-size: 1.4rem;
         line-height: 1;
         color: $color-grey-dark--3;
+        text-align: start;
       }
     }
   }

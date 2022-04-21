@@ -1,36 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="noindex" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Invoice</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="phone list," />
 
-    <!-- Bootstrap core CSS -->
+    <title>Invoice | Phone List</title>
+
+    <!-- Bootstrap CSS -->
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
     />
 
-    <style>
-      .text-right {
-        text-align: right;
-      }
-    </style>
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/images/icons/favicon.ico" />
   </head>
+
   <body class="login-page" style="background: white">
     <div>
       <div class="row">
-        <div class="col-xs-7">
+        <div class="col-xs-7 col-8">
           <h4>From:</h4>
-          <strong>Company Inc.</strong><br />
+          <strong>Phone List</strong><br />
           123 Company Ave. <br />
           Toronto, Ontario - L2R 5A4<br />
-          P: (416) 123-4567 <br />
-          E: copmany@company.com <br />
+          Phone: (416) 123-4567 <br />
+          Email: noreply@phonelist.io <br />
 
           <br />
+        </div>
+
+        <div class="col-3 p-4">
+          <img
+            src="../assets/images/logo--company-name-dark.svg"
+            class="img-fluid"
+            alt=""
+          />
         </div>
       </div>
 
@@ -40,38 +65,27 @@
         <div class="col-xs-6">
           <h4>To:</h4>
           <address>
-            <strong>Andre Madarang</strong><br />
-            <span>andre@andre.com</span> <br />
+            <strong>Shamonti Haque</strong><br />
+            <span>shamonti.haque98@gmail.com</span> <br />
             <span>123 Address St.</span>
           </address>
         </div>
 
-        <div class="col-xs-4">
-          <table style="width: 100%">
+        <div class="col-xs-4 pt-5">
+          <table style="width: 30%">
             <tbody>
               <tr>
-                <th>Invoice Num:</th>
+                <th>Invoice#</th>
                 <td class="text-right">56</td>
               </tr>
               <tr>
-                <th>Invoice Date:</th>
-                <td class="text-right">Oct 1, 2018</td>
+                <th>Date:</th>
+                <td class="text-right">Apr 21, 2022</td>
               </tr>
             </tbody>
           </table>
 
           <div style="margin-bottom: 0px">&nbsp;</div>
-
-          <table style="width: 100%; margin-bottom: 20px">
-            <tbody>
-              <tr class="well" style="padding: 5px">
-                <th style="padding: 5px"><div>Balance Due (CAD)</div></th>
-                <td style="padding: 5px" class="text-right">
-                  <strong> $600 </strong>
-                </td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </div>
 
@@ -86,61 +100,76 @@
         <tbody>
           <tr>
             <td>
-              <div><strong>Service</strong></div>
+              <div><strong>Basic Plan</strong></div>
               <p>
-                Description here. Lorem ipsum dolor sit amet, consectetur
-                adipisicing elit. Incidunt maiores placeat similique nisi. Nisi
-                ratione, molestias exercitationem illo reiciendis cumque?
+                Includes 5K credits, 5K phone numbers, data filters and csv
+                export features.
               </p>
             </td>
             <td></td>
-            <td class="text-right">$600</td>
+            <td class="text-right">$100</td>
           </tr>
           <tr>
             <td>
-              <div><strong>Service</strong></div>
+              <div><strong>Professional Plan</strong></div>
               <p>
-                Description here. Lorem ipsum dolor sit amet, consectetur
-                adipisicing elit. Incidunt maiores placeat similique nisi. Nisi
-                ratione, molestias exercitationem illo reiciendis cumque?
+                Includes 10K credits, 10K phone numbers, data filters and csv
+                export features.
               </p>
             </td>
             <td></td>
-            <td class="text-right">$600</td>
+            <td class="text-right">$190</td>
+          </tr>
+          <tr>
+            <td>
+              <div><strong>Business Plan</strong></div>
+              <p>
+                Includes 50K credits, 50K phone numbers, data filters and csv
+                export features.
+              </p>
+            </td>
+            <td></td>
+            <td class="text-right">$400</td>
+          </tr>
+          <tr>
+            <td>
+              <div><strong>Business Pro Plan</strong></div>
+              <p>
+                Includes 300K credits, 300K phone numbers, data filters and csv
+                export features.
+              </p>
+            </td>
+            <td></td>
+            <td class="text-right">$1000</td>
+          </tr>
+          <tr>
+            <td>
+              <div><strong>Enterprise Plan</strong></div>
+              <p>
+                Includes 1M credits, 1M phone numbers, data filters and csv
+                export features.
+              </p>
+            </td>
+            <td></td>
+            <td class="text-right">$1500</td>
           </tr>
         </tbody>
       </table>
 
       <div class="row">
-        <div class="col-xs-6"></div>
-        <div class="col-xs-5">
-          <table style="width: 100%">
-            <tbody>
-              <tr class="well" style="padding: 5px">
-                <th style="padding: 5px"><div>Balance Due (CAD)</div></th>
-                <td style="padding: 5px" class="text-right">
-                  <strong> $600 </strong>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="col-xs-5 text-end pe-5">
+          <div>
+            <b>Invoice Total</b>
+            <br />
+            <b style="font-size: 1.8rem">$3190</b>
+          </div>
         </div>
       </div>
 
       <div style="margin-bottom: 0px">&nbsp;</div>
 
       <div class="row">
-        <div class="col-xs-8 invbody-terms">
-          Thank you for your business. <br />
-          <br />
-          <h4>Payment Terms</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eius
-            quia, aut doloremque, voluptatibus quam ipsa sit sed enim nam dicta.
-            Soluta eaque rem necessitatibus commodi, autem facilis iusto
-            impedit!
-          </p>
-        </div>
+        <div class="col-xs-8">Thank you for your business.</div>
       </div>
     </div>
   </body>

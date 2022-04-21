@@ -35,8 +35,6 @@
     font-weight: 800;
     text-transform: none;
 
-    padding: 1rem 3rem;
-
     @include respond(phone) {
       padding: 0;
     }
