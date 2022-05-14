@@ -40,6 +40,14 @@
       }
     }
   }
+
+  #searchPeopleByName {
+    .dropdown-menu {
+      font-size: $default-font-size !important;
+      border: 1px solid $color-grey-light--1 !important;
+      width: 24.75rem;
+    }
+  }
 }
 
 .section-people-cards {

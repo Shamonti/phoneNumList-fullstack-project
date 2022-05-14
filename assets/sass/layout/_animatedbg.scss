@@ -6,6 +6,13 @@
       $color-purple-dark--2 100%);
   overflow: hidden;
 }
+.section-login--admin{
+  height: 100vh;
+  background: radial-gradient(ellipse at bottom,
+      rgba($color-blue-dark, 0.65) 0%,
+      $color-blue-dark 100%);
+  overflow: hidden;
+}
 
 #stars {
   width: 1.75px;

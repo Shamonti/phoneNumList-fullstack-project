@@ -354,7 +354,6 @@
 
                           <div
                             class="message-box message-box--phone hide-text"
-                            id="messagePhone"
                           ></div>
 
                           <a
@@ -365,10 +364,7 @@
                             <i class="bi bi-caret-down-fill"></i>
                           </a>
 
-                          <div
-                            class="message-box message-box--email hide-text"
-                            id="messageEmail"
-                          >
+                          <div class="message-box message-box--email hide-text">
                             <!-- Email not available -->
                           </div>
                         </div>
@@ -1655,18 +1651,5 @@
     <script src="assets/js/navbar.js"></script>
     <script src="assets/js/people.js"></script>
     <script src="assets/js/script.js"></script>
-
-    <!-- TODO Remove if unused -->
-    <!-- JOB TITLE FILTER -->
-    <!-- <script>
-    $(document).ready(function () {
-      $('#job').on('keyup', function () {
-        var value = $(this).val().toLowerCase();
-        $('#jobList li').filter(function () {
-          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-        });
-      });
-    });
-  </script> -->
   </body>
 </html>

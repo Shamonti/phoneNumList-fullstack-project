@@ -125,6 +125,20 @@
     font-size: 1.4rem;
     color: $color-white;
 
+    &--admin {
+      width: 100%;
+      background-color: $color-blue-dark;
+
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: $color-white;
+
+      &:hover {
+        background-color: rgba($color-blue-dark, 0.85);
+        color: $color-white;
+      }
+    }
+
     &:hover {
       background-color: rgba($color-purple--1, 0.85);
       color: $color-white;
