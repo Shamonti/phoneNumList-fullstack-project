@@ -23,18 +23,18 @@ function searchPeople() {
 }
 
 //Access data via button
-// let accessDataBtn, buttonGroup, messageBox;
-// accessDataBtn = document.getElementById('accessBtn');
-// buttonGroup = document.getElementById('buttonGroup');
-// messageBox = document.getElementById('message');
+let accessDataBtn, buttonGroup, messageBox;
+accessDataBtn = document.getElementById('accessBtn');
+buttonGroup = document.getElementById('buttonGroup');
+messageBox = document.getElementById('message');
 
-// accessDataBtn.addEventListener('click', showBtns);
+accessDataBtn.addEventListener('click', showBtns);
 
-// function showBtns() {
-//   accessDataBtn.classList.add('hide');
-//   buttonGroup.classList.remove('hide');
+function showBtns() {
+  accessDataBtn.classList.add('hide');
+  buttonGroup.classList.remove('hide');
 
-//   document.getElementsByClassName('message-box')[1].innerHTML =
-//     '+880 1234 345 45';
-//   document.getElementsByClassName('message-box')[2].innerHTML = 'a@gmail.com';
-// }
+  document.getElementsByClassName('message-box')[1].innerHTML =
+    '+880 1234 345 45';
+  document.getElementsByClassName('message-box')[2].innerHTML = 'a@gmail.com';
+}

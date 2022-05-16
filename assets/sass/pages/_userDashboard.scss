@@ -36,6 +36,27 @@
       font-weight: 700;
       color: $color-primary;
     }
+
+    .dropdown {
+      .show {
+        justify-content: center;
+        align-items: center;
+      }
+      &-menu {
+        max-width: 21rem;
+      }
+      &-item {
+        font-size: 1.4rem;
+        &:active {
+          background-color: $color-primary;
+        }
+      }
+    }
+    .btn-purple {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &--main {
@@ -43,9 +64,12 @@
     height: calc(100vh - 5rem);
 
     .selectAll {
+      display: flex !important;
+      width: max-content !important;
       color: $color-grey-dark--3 !important;
       font-weight: 700;
       font-size: 1.5rem;
+      background-color: transparent !important;
 
       &:hover {
         color: $color-primary !important;
@@ -55,7 +79,7 @@
     .section-table {
       display: flex;
       width: calc(100vw -30rem);
-      height: calc(100vh - 15rem);
+      height: calc(100vh - 25rem);
       overflow-y: scroll;
 
       // border: 1px solid $color-grey-light--1;
@@ -88,6 +112,10 @@
     }
   }
 
+  #message {
+    position: relative;
+  }
+
   .message-box {
     background-color: $color-dashboard--light;
     border-radius: 0.5rem;
@@ -95,9 +123,9 @@
     font-size: 1.3rem;
     padding: 0.5rem 1rem;
 
-    position: fixed;
-    top: 17.5rem;
-    left: 55vw;
+    position: absolute;
+    top: -3vh;
+    left: 0vw;
   }
 
   .hide-text {

@@ -193,37 +193,15 @@
               type="text"
               name="name"
               id="searchPeople"
+              class="w-100"
               placeholder="Enter name..."
               onkeyup="searchPeople()"
             />
-          </div>
-
-          <!-- INPUT GENDER -->
-          <div class="input-gender u-border-bottom py-4 px-4">
-            <div class="input-title pb-2">
-              <i class="bi bi-gender-ambiguous pe-2"></i>
-              Gender
-            </div>
-            <input
-              type="text"
-              name="gender"
-              id="gender"
-              placeholder="Enter gender..."
-            />
-          </div>
-
-          <!-- INPUT RELATIONSHIP STATUS -->
-          <div class="input-relationship u-border-bottom py-4 px-4">
-            <div class="input-title pb-2">
-              <i class="bi bi-heart-fill pe-2"></i>
-              Relationship Status
-            </div>
-            <input
-              type="text"
-              name="relationship"
-              id="relationship"
-              placeholder="Enter relationship status..."
-            />
+            <form action="" class="d-flex justify-content-end mt-2">
+              <button type="submit" class="btn btn-purple rounded-1 w-100">
+                Apply
+              </button>
+            </form>
           </div>
 
           <!-- INPUT CURRENT ADDRESS -->
@@ -236,8 +214,14 @@
               type="text"
               name="currentAdd"
               id="currentAdd"
+              class="w-100"
               placeholder="Enter current address..."
             />
+            <form action="" class="d-flex justify-content-end mt-2">
+              <button type="submit" class="btn btn-purple rounded-1 w-100">
+                Apply
+              </button>
+            </form>
           </div>
 
           <!-- INPUT HOMETOWN -->
@@ -250,12 +234,18 @@
               type="text"
               name="hometown"
               id="hometown"
+              class="w-100"
               placeholder="Enter hometown..."
             />
+            <form action="" class="d-flex justify-content-end mt-2">
+              <button type="submit" class="btn btn-purple rounded-1 w-100">
+                Apply
+              </button>
+            </form>
           </div>
 
           <!-- INPUT COUNTRY -->
-          <div class="input-country py-4 px-4">
+          <div class="input-country u-border-bottom py-4 px-4">
             <div class="input-title pb-2">
               <i class="bi bi-globe2 pe-2"></i>
               Country
@@ -264,8 +254,50 @@
               type="text"
               name="country"
               id="country"
+              class="w-100"
               placeholder="Enter country..."
             />
+            <form action="" class="d-flex justify-content-end mt-2">
+              <button type="submit" class="btn btn-purple rounded-1 w-100">
+                Apply
+              </button>
+            </form>
+          </div>
+
+          <!-- INPUT GENDER -->
+          <div class="dropdown u-border-bottom py-4 px-4">
+            <button
+              class="btn btn-purple rounded-1 dropdown-toggle w-100"
+              type="submit"
+              id="gender"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="bi bi-gender-ambiguous pe-2"></i>
+              Gender
+            </button>
+            <ul class="dropdown-menu w-100" aria-labelledby="gender">
+              <li><a class="dropdown-item" href="#">Male</a></li>
+              <li><a class="dropdown-item" href="#">Female</a></li>
+            </ul>
+          </div>
+
+          <!-- INPUT RELATIONSHIP STATUS -->
+          <div class="dropdown py-4 px-4">
+            <button
+              class="btn btn-purple rounded-1 dropdown-toggle w-100"
+              type="submit"
+              id="relationship"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="bi bi-heart-fill pe-2"></i>
+              Relationship Status
+            </button>
+            <ul class="dropdown-menu w-100" aria-labelledby="relationship">
+              <li><a class="dropdown-item" href="#">Single</a></li>
+              <li><a class="dropdown-item" href="#">Married</a></li>
+            </ul>
           </div>
         </section>
         <!-- END SIDEBAR -->
@@ -274,13 +306,10 @@
         <section class="section-user-dashboard--main">
           <div class="container">
             <div class="row">
-              <div class="col-md-2 d-flex align-items-end ps-5">
-                <a href="#" class="selectAll"> Select All </a>
-              </div>
-              <div class="col-md-3 offset-7 d-flex justify-content-end mt-4">
+              <div class="col-md-4 ms-auto d-flex justify-content-end mt-4">
                 <button type="button" class="btn btn-download border-3">
                   <i class="bi bi-download"></i>
-                  &nbsp; Download Data CSV
+                  &nbsp; Download Selected Data
                 </button>
               </div>
             </div>
@@ -298,8 +327,10 @@
                 >
                   <thead>
                     <tr>
+                      <th class="px-4">
+                        <a href="#" class="selectAll"> Select All </a>
+                      </th>
                       <th>Name</th>
-                      <th>Facebook Profile</th>
                       <th>Quick Actions</th>
                       <th>Gender</th>
                       <th>Relationship Status</th>
@@ -319,18 +350,13 @@
                           type="checkbox"
                           value=""
                         />
+                      </td>
+                      <td>
                         <a href="user01.html" class="person-name">
                           Shamonti Haque
                         </a>
                       </td>
-                      <td>
-                        <a
-                          href="https://www.facebook.com/1234
-                  "
-                          >https://www.facebook.com/1234
-                        </a>
-                      </td>
-                      <td>
+                      <td id="message">
                         <button
                           type="button"
                           class="btn btn-access btn-access--phone"
@@ -384,15 +410,70 @@
                           type="checkbox"
                           value=""
                         />
+                      </td>
+                      <td>
                         <a href="user01.html" class="person-name">
                           Shamonti Haque
                         </a>
                       </td>
+                      <td id="message">
+                        <button
+                          type="button"
+                          class="btn btn-access btn-access--phone"
+                          id="accessBtn"
+                        >
+                          Access Phone Number
+                        </button>
+
+                        <div class="message-box hide-text">
+                          Verified number costs one credit.
+                        </div>
+
+                        <div class="button-group hide" id="buttonGroup">
+                          <a
+                            class="btn btn-access btn-access--phone"
+                            href="settings/upgrade.html"
+                          >
+                            <i class="bi bi-phone"></i>
+                            <i class="bi bi-caret-down-fill"></i>
+                          </a>
+
+                          <div
+                            class="message-box message-box--phone hide-text"
+                          ></div>
+
+                          <a
+                            class="btn btn-access btn-access--email"
+                            href="settings/upgrade.html"
+                          >
+                            <i class="bi bi-envelope"></i>
+                            <i class="bi bi-caret-down-fill"></i>
+                          </a>
+
+                          <div class="message-box message-box--email hide-text">
+                            <!-- Email not available -->
+                          </div>
+                        </div>
+                      </td>
+                      <td>Female</td>
+                      <td>Single</td>
+                      <td>SEO Exparte Bangladesh</td>
+                      <td>2019</td>
+                      <td>Bogra, Bangladesh</td>
+                      <td>Dinajpur, Bangladesh</td>
+                      <td>Bangladesh</td>
+                    </tr>
+                    <tr class="table-row">
                       <td>
-                        <a
-                          href="https://www.facebook.com/1234
-                  "
-                          >https://www.facebook.com/1234
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                        />
+                      </td>
+                      <td>
+                        <a href="user01.html" class="person-name">
+                          Shamonti Haque
                         </a>
                       </td>
                       <td>
@@ -426,1149 +507,10 @@
                           type="checkbox"
                           value=""
                         />
+                      </td>
+                      <td>
                         <a href="user01.html" class="person-name">
                           Shamonti Haque
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href="https://www.facebook.com/1234
-                  "
-                          >https://www.facebook.com/1234
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          class="btn btn-access btn-access--phone"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-phone"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <a
-                          class="btn btn-access btn-access--email"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-envelope"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                      </td>
-                      <td>Female</td>
-                      <td>Single</td>
-                      <td>SEO Exparte Bangladesh</td>
-                      <td>2019</td>
-                      <td>Bogra, Bangladesh</td>
-                      <td>Dinajpur, Bangladesh</td>
-                      <td>Bangladesh</td>
-                    </tr>
-                    <tr class="table-row">
-                      <td>
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-                        <a href="user01.html" class="person-name">
-                          Shamonti Haque
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href="https://www.facebook.com/1234
-                  "
-                          >https://www.facebook.com/1234
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          class="btn btn-access btn-access--phone"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-phone"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <a
-                          class="btn btn-access btn-access--email"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-envelope"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                      </td>
-                      <td>Female</td>
-                      <td>Single</td>
-                      <td>SEO Exparte Bangladesh</td>
-                      <td>2019</td>
-                      <td>Bogra, Bangladesh</td>
-                      <td>Dinajpur, Bangladesh</td>
-                      <td>Bangladesh</td>
-                    </tr>
-                    <tr class="table-row">
-                      <td>
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-                        <a href="user01.html" class="person-name">
-                          Shamonti Haque
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href="https://www.facebook.com/1234
-                  "
-                          >https://www.facebook.com/1234
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          class="btn btn-access btn-access--phone"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-phone"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <a
-                          class="btn btn-access btn-access--email"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-envelope"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                      </td>
-                      <td>Female</td>
-                      <td>Single</td>
-                      <td>SEO Exparte Bangladesh</td>
-                      <td>2019</td>
-                      <td>Bogra, Bangladesh</td>
-                      <td>Dinajpur, Bangladesh</td>
-                      <td>Bangladesh</td>
-                    </tr>
-                    <tr class="table-row">
-                      <td>
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-                        <a href="user01.html" class="person-name">
-                          Shamonti Haque
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href="https://www.facebook.com/1234
-                  "
-                          >https://www.facebook.com/1234
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          class="btn btn-access btn-access--phone"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-phone"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <a
-                          class="btn btn-access btn-access--email"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-envelope"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                      </td>
-                      <td>Female</td>
-                      <td>Single</td>
-                      <td>SEO Exparte Bangladesh</td>
-                      <td>2019</td>
-                      <td>Bogra, Bangladesh</td>
-                      <td>Dinajpur, Bangladesh</td>
-                      <td>Bangladesh</td>
-                    </tr>
-                    <tr class="table-row">
-                      <td>
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-                        <a href="user01.html" class="person-name">
-                          Shamonti Haque
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href="https://www.facebook.com/1234
-                  "
-                          >https://www.facebook.com/1234
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          class="btn btn-access btn-access--phone"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-phone"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <a
-                          class="btn btn-access btn-access--email"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-envelope"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                      </td>
-                      <td>Female</td>
-                      <td>Single</td>
-                      <td>SEO Exparte Bangladesh</td>
-                      <td>2019</td>
-                      <td>Bogra, Bangladesh</td>
-                      <td>Dinajpur, Bangladesh</td>
-                      <td>Bangladesh</td>
-                    </tr>
-                    <tr class="table-row">
-                      <td>
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-                        <a href="user01.html" class="person-name">
-                          Shamonti Haque
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href="https://www.facebook.com/1234
-                  "
-                          >https://www.facebook.com/1234
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          class="btn btn-access btn-access--phone"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-phone"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <a
-                          class="btn btn-access btn-access--email"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-envelope"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                      </td>
-                      <td>Female</td>
-                      <td>Single</td>
-                      <td>SEO Exparte Bangladesh</td>
-                      <td>2019</td>
-                      <td>Bogra, Bangladesh</td>
-                      <td>Dinajpur, Bangladesh</td>
-                      <td>Bangladesh</td>
-                    </tr>
-                    <tr class="table-row">
-                      <td>
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-                        <a href="user01.html" class="person-name">
-                          Shamonti Haque
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href="https://www.facebook.com/1234
-                  "
-                          >https://www.facebook.com/1234
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          class="btn btn-access btn-access--phone"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-phone"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <a
-                          class="btn btn-access btn-access--email"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-envelope"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                      </td>
-                      <td>Female</td>
-                      <td>Single</td>
-                      <td>SEO Exparte Bangladesh</td>
-                      <td>2019</td>
-                      <td>Bogra, Bangladesh</td>
-                      <td>Dinajpur, Bangladesh</td>
-                      <td>Bangladesh</td>
-                    </tr>
-                    <tr class="table-row">
-                      <td>
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-                        <a href="user01.html" class="person-name">
-                          Shamonti Haque
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href="https://www.facebook.com/1234
-                  "
-                          >https://www.facebook.com/1234
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          class="btn btn-access btn-access--phone"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-phone"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <a
-                          class="btn btn-access btn-access--email"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-envelope"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                      </td>
-                      <td>Female</td>
-                      <td>Single</td>
-                      <td>SEO Exparte Bangladesh</td>
-                      <td>2019</td>
-                      <td>Bogra, Bangladesh</td>
-                      <td>Dinajpur, Bangladesh</td>
-                      <td>Bangladesh</td>
-                    </tr>
-                    <tr class="table-row">
-                      <td>
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-                        <a href="user01.html" class="person-name">
-                          Shamonti Haque
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href="https://www.facebook.com/1234
-                  "
-                          >https://www.facebook.com/1234
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          class="btn btn-access btn-access--phone"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-phone"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <a
-                          class="btn btn-access btn-access--email"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-envelope"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                      </td>
-                      <td>Female</td>
-                      <td>Single</td>
-                      <td>SEO Exparte Bangladesh</td>
-                      <td>2019</td>
-                      <td>Bogra, Bangladesh</td>
-                      <td>Dinajpur, Bangladesh</td>
-                      <td>Bangladesh</td>
-                    </tr>
-                    <tr class="table-row">
-                      <td>
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-                        <a href="user01.html" class="person-name">
-                          Shamonti Haque
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href="https://www.facebook.com/1234
-                  "
-                          >https://www.facebook.com/1234
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          class="btn btn-access btn-access--phone"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-phone"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <a
-                          class="btn btn-access btn-access--email"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-envelope"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                      </td>
-                      <td>Female</td>
-                      <td>Single</td>
-                      <td>SEO Exparte Bangladesh</td>
-                      <td>2019</td>
-                      <td>Bogra, Bangladesh</td>
-                      <td>Dinajpur, Bangladesh</td>
-                      <td>Bangladesh</td>
-                    </tr>
-                    <tr class="table-row">
-                      <td>
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-                        <a href="user01.html" class="person-name">
-                          Shamonti Haque
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href="https://www.facebook.com/1234
-                  "
-                          >https://www.facebook.com/1234
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          class="btn btn-access btn-access--phone"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-phone"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <a
-                          class="btn btn-access btn-access--email"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-envelope"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                      </td>
-                      <td>Female</td>
-                      <td>Single</td>
-                      <td>SEO Exparte Bangladesh</td>
-                      <td>2019</td>
-                      <td>Bogra, Bangladesh</td>
-                      <td>Dinajpur, Bangladesh</td>
-                      <td>Bangladesh</td>
-                    </tr>
-                    <tr class="table-row">
-                      <td>
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-                        <a href="user01.html" class="person-name">
-                          Shamonti Haque
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href="https://www.facebook.com/1234
-                  "
-                          >https://www.facebook.com/1234
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          class="btn btn-access btn-access--phone"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-phone"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <a
-                          class="btn btn-access btn-access--email"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-envelope"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                      </td>
-                      <td>Female</td>
-                      <td>Single</td>
-                      <td>SEO Exparte Bangladesh</td>
-                      <td>2019</td>
-                      <td>Bogra, Bangladesh</td>
-                      <td>Dinajpur, Bangladesh</td>
-                      <td>Bangladesh</td>
-                    </tr>
-                    <tr class="table-row">
-                      <td>
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-                        <a href="user01.html" class="person-name">
-                          Shamonti Haque
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href="https://www.facebook.com/1234
-                  "
-                          >https://www.facebook.com/1234
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          class="btn btn-access btn-access--phone"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-phone"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <a
-                          class="btn btn-access btn-access--email"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-envelope"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                      </td>
-                      <td>Female</td>
-                      <td>Single</td>
-                      <td>SEO Exparte Bangladesh</td>
-                      <td>2019</td>
-                      <td>Bogra, Bangladesh</td>
-                      <td>Dinajpur, Bangladesh</td>
-                      <td>Bangladesh</td>
-                    </tr>
-                    <tr class="table-row">
-                      <td>
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-                        <a href="user01.html" class="person-name">
-                          Shamonti Haque
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href="https://www.facebook.com/1234
-                  "
-                          >https://www.facebook.com/1234
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          class="btn btn-access btn-access--phone"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-phone"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <a
-                          class="btn btn-access btn-access--email"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-envelope"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                      </td>
-                      <td>Female</td>
-                      <td>Single</td>
-                      <td>SEO Exparte Bangladesh</td>
-                      <td>2019</td>
-                      <td>Bogra, Bangladesh</td>
-                      <td>Dinajpur, Bangladesh</td>
-                      <td>Bangladesh</td>
-                    </tr>
-                    <tr class="table-row">
-                      <td>
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-                        <a href="user01.html" class="person-name">
-                          Shamonti Haque
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href="https://www.facebook.com/1234
-                  "
-                          >https://www.facebook.com/1234
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          class="btn btn-access btn-access--phone"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-phone"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <a
-                          class="btn btn-access btn-access--email"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-envelope"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                      </td>
-                      <td>Female</td>
-                      <td>Single</td>
-                      <td>SEO Exparte Bangladesh</td>
-                      <td>2019</td>
-                      <td>Bogra, Bangladesh</td>
-                      <td>Dinajpur, Bangladesh</td>
-                      <td>Bangladesh</td>
-                    </tr>
-                    <tr class="table-row">
-                      <td>
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-                        <a href="user01.html" class="person-name">
-                          Shamonti Haque
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href="https://www.facebook.com/1234
-                  "
-                          >https://www.facebook.com/1234
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          class="btn btn-access btn-access--phone"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-phone"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <a
-                          class="btn btn-access btn-access--email"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-envelope"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                      </td>
-                      <td>Female</td>
-                      <td>Single</td>
-                      <td>SEO Exparte Bangladesh</td>
-                      <td>2019</td>
-                      <td>Bogra, Bangladesh</td>
-                      <td>Dinajpur, Bangladesh</td>
-                      <td>Bangladesh</td>
-                    </tr>
-                    <tr class="table-row">
-                      <td>
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-                        <a href="user01.html" class="person-name">
-                          Shamonti Haque
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href="https://www.facebook.com/1234
-                  "
-                          >https://www.facebook.com/1234
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          class="btn btn-access btn-access--phone"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-phone"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <a
-                          class="btn btn-access btn-access--email"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-envelope"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                      </td>
-                      <td>Female</td>
-                      <td>Single</td>
-                      <td>SEO Exparte Bangladesh</td>
-                      <td>2019</td>
-                      <td>Bogra, Bangladesh</td>
-                      <td>Dinajpur, Bangladesh</td>
-                      <td>Bangladesh</td>
-                    </tr>
-                    <tr class="table-row">
-                      <td>
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-                        <a href="user01.html" class="person-name">
-                          Shamonti Haque
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href="https://www.facebook.com/1234
-                  "
-                          >https://www.facebook.com/1234
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          class="btn btn-access btn-access--phone"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-phone"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <a
-                          class="btn btn-access btn-access--email"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-envelope"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                      </td>
-                      <td>Female</td>
-                      <td>Single</td>
-                      <td>SEO Exparte Bangladesh</td>
-                      <td>2019</td>
-                      <td>Bogra, Bangladesh</td>
-                      <td>Dinajpur, Bangladesh</td>
-                      <td>Bangladesh</td>
-                    </tr>
-                    <tr class="table-row">
-                      <td>
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-                        <a href="user01.html" class="person-name">
-                          Shamonti Haque
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href="https://www.facebook.com/1234
-                  "
-                          >https://www.facebook.com/1234
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          class="btn btn-access btn-access--phone"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-phone"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <a
-                          class="btn btn-access btn-access--email"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-envelope"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                      </td>
-                      <td>Female</td>
-                      <td>Single</td>
-                      <td>SEO Exparte Bangladesh</td>
-                      <td>2019</td>
-                      <td>Bogra, Bangladesh</td>
-                      <td>Dinajpur, Bangladesh</td>
-                      <td>Bangladesh</td>
-                    </tr>
-                    <tr class="table-row">
-                      <td>
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-                        <a href="user01.html" class="person-name">
-                          Shamonti Haque
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href="https://www.facebook.com/1234
-                  "
-                          >https://www.facebook.com/1234
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          class="btn btn-access btn-access--phone"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-phone"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <a
-                          class="btn btn-access btn-access--email"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-envelope"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                      </td>
-                      <td>Female</td>
-                      <td>Single</td>
-                      <td>SEO Exparte Bangladesh</td>
-                      <td>2019</td>
-                      <td>Bogra, Bangladesh</td>
-                      <td>Dinajpur, Bangladesh</td>
-                      <td>Bangladesh</td>
-                    </tr>
-                    <tr class="table-row">
-                      <td>
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-                        <a href="user01.html" class="person-name">
-                          Shamonti Haque
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href="https://www.facebook.com/1234
-                  "
-                          >https://www.facebook.com/1234
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          class="btn btn-access btn-access--phone"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-phone"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <a
-                          class="btn btn-access btn-access--email"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-envelope"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                      </td>
-                      <td>Female</td>
-                      <td>Single</td>
-                      <td>SEO Exparte Bangladesh</td>
-                      <td>2019</td>
-                      <td>Bogra, Bangladesh</td>
-                      <td>Dinajpur, Bangladesh</td>
-                      <td>Bangladesh</td>
-                    </tr>
-                    <tr class="table-row">
-                      <td>
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-                        <a href="user01.html" class="person-name">
-                          Shamonti Haque
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href="https://www.facebook.com/1234
-                  "
-                          >https://www.facebook.com/1234
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          class="btn btn-access btn-access--phone"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-phone"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <a
-                          class="btn btn-access btn-access--email"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-envelope"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                      </td>
-                      <td>Female</td>
-                      <td>Single</td>
-                      <td>SEO Exparte Bangladesh</td>
-                      <td>2019</td>
-                      <td>Bogra, Bangladesh</td>
-                      <td>Dinajpur, Bangladesh</td>
-                      <td>Bangladesh</td>
-                    </tr>
-                    <tr class="table-row">
-                      <td>
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-                        <a href="user01.html" class="person-name">
-                          Shamonti Haque
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href="https://www.facebook.com/1234
-                  "
-                          >https://www.facebook.com/1234
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          class="btn btn-access btn-access--phone"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-phone"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <a
-                          class="btn btn-access btn-access--email"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-envelope"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                      </td>
-                      <td>Female</td>
-                      <td>Single</td>
-                      <td>SEO Exparte Bangladesh</td>
-                      <td>2019</td>
-                      <td>Bogra, Bangladesh</td>
-                      <td>Dinajpur, Bangladesh</td>
-                      <td>Bangladesh</td>
-                    </tr>
-                    <tr class="table-row">
-                      <td>
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-                        <a href="user01.html" class="person-name">
-                          Shamonti Haque
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href="https://www.facebook.com/1234
-                  "
-                          >https://www.facebook.com/1234
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          class="btn btn-access btn-access--phone"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-phone"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <a
-                          class="btn btn-access btn-access--email"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-envelope"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                      </td>
-                      <td>Female</td>
-                      <td>Single</td>
-                      <td>SEO Exparte Bangladesh</td>
-                      <td>2019</td>
-                      <td>Bogra, Bangladesh</td>
-                      <td>Dinajpur, Bangladesh</td>
-                      <td>Bangladesh</td>
-                    </tr>
-                    <tr class="table-row">
-                      <td>
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-                        <a href="user01.html" class="person-name">
-                          Shamonti Haque
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href="https://www.facebook.com/1234
-                  "
-                          >https://www.facebook.com/1234
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          class="btn btn-access btn-access--phone"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-phone"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <a
-                          class="btn btn-access btn-access--email"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-envelope"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                      </td>
-                      <td>Female</td>
-                      <td>Single</td>
-                      <td>SEO Exparte Bangladesh</td>
-                      <td>2019</td>
-                      <td>Bogra, Bangladesh</td>
-                      <td>Dinajpur, Bangladesh</td>
-                      <td>Bangladesh</td>
-                    </tr>
-                    <tr class="table-row">
-                      <td>
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-                        <a href="user01.html" class="person-name">
-                          Shamonti Haque
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href="https://www.facebook.com/1234
-                  "
-                          >https://www.facebook.com/1234
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          class="btn btn-access btn-access--phone"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-phone"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <a
-                          class="btn btn-access btn-access--email"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-envelope"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                      </td>
-                      <td>Female</td>
-                      <td>Single</td>
-                      <td>SEO Exparte Bangladesh</td>
-                      <td>2019</td>
-                      <td>Bogra, Bangladesh</td>
-                      <td>Dinajpur, Bangladesh</td>
-                      <td>Bangladesh</td>
-                    </tr>
-                    <tr class="table-row">
-                      <td>
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-                        <a href="user01.html" class="person-name">
-                          Shamonti Haque
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href="https://www.facebook.com/1234
-                  "
-                          >https://www.facebook.com/1234
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          class="btn btn-access btn-access--phone"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-phone"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                        <a
-                          class="btn btn-access btn-access--email"
-                          href="settings/upgrade.html"
-                        >
-                          <i class="bi bi-envelope"></i>
-                          <i class="bi bi-caret-down-fill"></i>
-                        </a>
-                      </td>
-                      <td>Female</td>
-                      <td>Single</td>
-                      <td>SEO Exparte Bangladesh</td>
-                      <td>2019</td>
-                      <td>Bogra, Bangladesh</td>
-                      <td>Dinajpur, Bangladesh</td>
-                      <td>Bangladesh</td>
-                    </tr>
-                    <tr class="table-row">
-                      <td>
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-                        <a href="user01.html" class="person-name">
-                          Shamonti Haque
-                        </a>
-                      </td>
-                      <td>
-                        <a
-                          href="https://www.facebook.com/1234
-                  "
-                          >https://www.facebook.com/1234
                         </a>
                       </td>
                       <td>
@@ -1601,6 +543,18 @@
             </div>
           </div>
           <!-- END TABLE -->
+
+          <!-- Download CSV Button -->
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 ms-auto py-4 d-flex justify-content-end">
+                <button type="button" class="btn btn-download border-3">
+                  <i class="bi bi-download"></i>
+                  &nbsp; Download Selected Data
+                </button>
+              </div>
+            </div>
+          </div>
 
           <!-- START PAGINATION -->
           <nav aria-label="User Dashboard All Data Page navigation">
