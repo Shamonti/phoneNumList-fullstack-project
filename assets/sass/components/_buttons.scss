@@ -274,7 +274,7 @@
       rgba(94, 68, 129, 0.15) 0 1px 2px, rgba(94, 68, 129, 0.15) 0 2px 4px,
       rgba(94, 68, 129, 0.15) 0 4px 8px, rgba(94, 68, 129, 0.15) 0 8px 16px,
       rgba(94, 68, 129, 0.15) 0 16px 32px;
-    color: purple;
+    // color: purple;
     cursor: pointer;
     display: inline-block;
     font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto,
@@ -289,7 +289,8 @@
     -webkit-user-select: none;
     touch-action: manipulation;
 
-    &:hover {
+    &:hover,
+    &:enabled {
       box-shadow: rgba(94, 68, 129, 0.35) 0 -25px 18px -14px inset,
         rgba(94, 68, 129, 0.25) 0 1px 2px, rgba(94, 68, 129, 0.25) 0 2px 4px,
         rgba(94, 68, 129, 0.25) 0 4px 8px, rgba(94, 68, 129, 0.25) 0 8px 16px,

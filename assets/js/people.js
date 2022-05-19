@@ -23,18 +23,51 @@ function searchPeople() {
 }
 
 //Access data via button
-let accessDataBtn, buttonGroup, messageBox;
-accessDataBtn = document.getElementById('accessBtn');
-buttonGroup = document.getElementById('buttonGroup');
-messageBox = document.getElementById('message');
+// let accessDataBtn, buttonGroup, messageBox;
+// accessDataBtn = document.getElementById('accessBtn');
+// buttonGroup = document.getElementById('buttonGroup');
+// messageBox = document.getElementById('message');
 
-accessDataBtn.addEventListener('click', showBtns);
+// accessDataBtn.addEventListener('click', showBtns);
 
-function showBtns() {
-  accessDataBtn.classList.add('hide');
-  buttonGroup.classList.remove('hide');
+// function showBtns() {
+//   accessDataBtn.classList.add('hide');
+//   buttonGroup.classList.remove('hide');
 
-  document.getElementsByClassName('message-box')[1].innerHTML =
-    '+880 1234 345 45';
-  document.getElementsByClassName('message-box')[2].innerHTML = 'a@gmail.com';
-}
+//   document.getElementsByClassName('message-box')[1].innerHTML =
+//     '+880 1234 345 45';
+//   document.getElementsByClassName('message-box')[2].innerHTML = 'a@gmail.com';
+// }
+
+//Access data via button for database
+// let collection,  buttonGroup, messageBox, buttonId;
+
+// messageBox = document.getElementById('message');
+
+// function accessPhoneNumber(id)
+// {
+
+//     $.ajax({
+//         url:"{{ route('peopleDataHistory') }}",
+//         method:"POST",
+//         data:{id:id, _token:"{{ csrf_token() }}"},
+//         dataType:"json",
+//         success:function(data)
+//         {
+//             collection = document.getElementById(id);
+//             buttonGroup = document.getElementById('buttonGroup'+id);
+//             buttonId = document.getElementById(id).value;
+//             collection.classList.add('hide');
+//             buttonGroup.classList.remove('hide');
+//             for(var count = 0; count < data.length; count++)
+//             {
+//                 $("#messagePhone"+id).text(data[count].phone);
+//                 if (data[count].email != null)
+//                     $("#messageEmail"+id).text(data[count].email);
+//                 else
+//                     $("#messageEmail"+id).text("N/A");
+//             }
+//         }
+//     })
+
+// }
