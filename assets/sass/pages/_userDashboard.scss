@@ -52,10 +52,46 @@
         }
       }
     }
+
     .btn-purple {
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+
+    #searchCountry {
+      .dropdown {
+        padding: 0.5rem;
+
+        position: relative;
+
+        &-menu {
+          height: 25rem;
+          width: 100%;
+          overflow-x: hidden;
+
+          position: absolute;
+          right: 0;
+        }
+
+        &-item {
+          font-size: 1.4rem;
+          font-weight: 500;
+          padding: 0.5rem;
+
+          &:hover,
+          &:visited,
+          &::selection {
+            cursor: pointer;
+            background-color: $color-grey-light--1;
+            font-weight: 600;
+          }
+
+          a:hover {
+            color: $color-black !important;
+          }
+        }
+      }
     }
   }
 
