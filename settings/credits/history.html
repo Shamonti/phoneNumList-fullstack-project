@@ -18,6 +18,12 @@
       crossorigin="anonymous"
     />
 
+    <!--Calendar CSS-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+    />
+
     <!-- Bootstrap Icons -->
     <link
       rel="stylesheet"
@@ -217,22 +223,29 @@
           <!-- START CREDIT HISTORY -->
           <section class="section-credit-history">
             <div class="container">
-              <div class="row m-4">
-                <div class="d-flex">
-                  <form action="#" class="col-md-4">
-                    <div class="form-group">
-                      <label for="input_from">From</label>
-                      <input type="text" class="form-control" id="input_from" />
-                    </div>
-                  </form>
-                  <form action="#" class="ms-5 col-md-4">
-                    <div class="form-group">
-                      <label for="input_to">To</label>
-                      <input type="text" class="form-control" id="input_to" />
-                    </div>
-                  </form>
+              <div class="row mt-4">
+                <div class="d-flex input-daterange m-4">
+                  <div class="col-md-4 form-group me-5">
+                    <label for="input_from">From</label>
+                    <input
+                      type="text"
+                      id="from_date"
+                      class="form-control"
+                      name="from_date"
+                    />
+                  </div>
+                  <div class="col-md-4 form-group">
+                    <label for="input_from">To</label>
+                    <input
+                      type="text"
+                      id="to_date"
+                      class="form-control"
+                      name="to_date"
+                    />
+                  </div>
                 </div>
               </div>
+
               <div class="row">
                 <div class="col-md-12">
                   <div class="card u-box-shadow-2 m-4 border rounded-3">
@@ -268,20 +281,59 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- jQuery -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <!-- CALENDAR JS -->
-    <script src="../../assets/js/picker.js"></script>
-    <script src="../../assets/js/picker.date.js"></script>
+    <!--Calendar JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 
     <!-- CUSTOM JS -->
-    <script src="../../assets/js/navbar.js"></script>
-    <script src="../../assets/js/script.js"></script>
+    <script src="{{asset('/')}}adminAsset/assets/js/navbar.js"></script>
+    <script src="{{asset('/')}}adminAsset/assets/js/script.js"></script>
+
+    <script>
+      let date = new Date();
+
+      $('.input-daterange').datepicker({
+        todayBtn: 'linked',
+        format: 'dd/mm/yyyy',
+        autoclose: true,
+      });
+
+      let _token = $('input[name="_token"]').val();
+
+      fetch_data();
+
+      function fetch_data(from_date = '', to_date = '') {
+        $.ajax({
+          url: "{{ route('historyDate') }}",
+          // method:"POST",
+          type: 'POST',
+          data: {
+            from_date: from_date,
+            to_date: to_date,
+            _token: '{{ csrf_token() }}',
+          },
+          dataType: 'json',
+          success: function (data) {
+            let usedCredit = 0;
+            for (let count = 0; count < data.length; count++) {
+              usedCredit = usedCredit + data[count].usedCredit;
+            }
+            $('#usedCredit').text(usedCredit);
+          },
+        });
+      }
+
+      function creditHistory() {
+        let from_date = $('#from_date').val();
+        let to_date = $('#to_date').val();
+        if (from_date != '' && to_date != '') {
+          fetch_data(from_date, to_date);
+        } else {
+          alert('Both Date is required');
+        }
+      }
+    </script>
   </body>
 </html>

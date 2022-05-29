@@ -1,5 +1,37 @@
-#date-picker {
-  border: 1px solid $color-grey-light--5;
+// #date-picker {
+//   border: 1px solid $color-grey-light--5;
+// }
+
+.datepicker {
+  min-width: 27.4vw;
+  font-size: $default-font-size;
+  font-weight: 100 !important;
+
+  table {
+    width: 100%;
+
+    th {
+      font-weight: 600;
+    }
+
+    .day {
+      &:hover {
+        background: #8a79e838 !important;
+      }
+    }
+
+    .selected {
+      background: $color-primary !important;
+      border-radius: 0 !important;
+
+      &:hover {
+        background: $color-primary !important;
+      }
+    }
+    .range {
+      background: #f5f5f5 !important;
+    }
+  }
 }
 
 .daterangepicker {

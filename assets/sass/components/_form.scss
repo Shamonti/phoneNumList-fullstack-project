@@ -97,12 +97,12 @@
               font-weight: 600;
               font-size: 1.4rem;
               color: $color-grey-dark--2;
-            }
 
-            ::-webkit-input-placeholder {
-              font-weight: 600;
-              font-size: 1.4rem;
-              color: $color-secondary;
+              &::placeholder {
+                font-weight: 600;
+                font-size: 1.4rem;
+                color: $color-secondary;
+              }
             }
 
             .form-check {
@@ -416,6 +416,136 @@
     .company-logo {
       img {
         width: 24rem;
+      }
+    }
+  }
+}
+
+.section-dashboard--addUser {
+  .signup-form,
+  .reset-form {
+    display: flex;
+    justify-content: center;
+
+    .card {
+      width: 36rem;
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: $color-grey-dark--3;
+
+      &-title {
+        width: 100%;
+        display: flex;
+
+        .signup {
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          text-transform: capitalize;
+          border-bottom: 1px solid $color-grey-light--3;
+
+          i {
+            color: $color-grey-dark--3;
+          }
+
+          &:hover {
+            color: $color-primary;
+            border-bottom: 1px solid $color-primary;
+
+            i {
+              color: $color-primary;
+            }
+          }
+        }
+      }
+
+      &-body {
+        .card-title {
+          display: flex;
+          flex-direction: column;
+        }
+
+        form {
+          label {
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: $color-white;
+          }
+
+          #error-text {
+            display: flex;
+
+            margin-top: 0.5rem;
+            align-items: center;
+
+            p {
+              font-size: 1rem;
+              line-height: 1;
+              margin: 0;
+            }
+          }
+
+          input {
+            height: 3rem;
+            padding: 0 1rem 0 1rem;
+
+            font-weight: 600;
+            font-size: 1.4rem;
+            color: $color-dashboard--dark;
+
+            &::placeholder {
+              font-weight: 600;
+              font-size: 1.4rem;
+              color: $color-dashboard--light--1;
+            }
+          }
+
+          .form-check {
+            display: flex;
+            justify-content: center;
+
+            &-input {
+              height: 1.6rem;
+
+              padding: 0 0.7rem;
+              margin: auto 0;
+              border-radius: 2px;
+            }
+
+            &-label {
+              font-weight: 600;
+              font-size: 1.4rem;
+            }
+          }
+
+          .form-control {
+            font-weight: 600;
+            font-size: 1.4rem;
+
+            &--option {
+              color: $color-grey-dark--2;
+            }
+
+            option {
+              font-weight: 600;
+              font-size: 1.4rem;
+              color: $color-grey-dark--2;
+            }
+          }
+
+          .btn-purple {
+            display: flex;
+          }
+        }
+      }
+
+      &-footer {
+        background-color: transparent;
+
+        span {
+          color: $color-white;
+          cursor: pointer;
+        }
       }
     }
   }
