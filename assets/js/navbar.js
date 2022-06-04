@@ -27,28 +27,37 @@ userBtn.addEventListener('click', function () {
 });
 
 //SHOW PHONE CALL ACTION ON BUTTON CLICK
-const phoneBtn = document.querySelector('.phone-btn');
-const phoneCallDiv = document.querySelector('.phone-call__div');
+// const phoneBtn = document.querySelector('.phone-btn');
+// const phoneCallDiv = document.querySelector('.phone-call__div');
 
-phoneBtn.addEventListener('click', function () {
-  timesClicked++;
+// phoneBtn.addEventListener('click', function () {
+//   timesClicked++;
 
-  if (timesClicked % 2 == 0) {
-    phoneCallDiv.classList.remove('visible');
-    phoneCallDiv.classList.add('invisible');
-  } else {
-    phoneCallDiv.classList.remove('invisible');
-    phoneCallDiv.classList.add('visible');
-  }
-});
+//   if (timesClicked % 2 == 0) {
+//     phoneCallDiv.classList.remove('visible');
+//     phoneCallDiv.classList.add('invisible');
+//   } else {
+//     phoneCallDiv.classList.remove('invisible');
+//     phoneCallDiv.classList.add('visible');
+//   }
+// });
 
 //SHOW NOTIFICATION MENU ON BUTTON CLICK
 const notificationBtn = document.querySelector('.notification-btn');
 const notificationBar = document.querySelector('.notification__sidebar');
 
 notificationBtn.addEventListener('click', function () {
-  notificationBar.classList.remove('hide');
-  notificationBar.classList.add('show-block');
+  timesClicked++;
+
+  if (timesClicked % 2 == 0) {
+    notificationBtn.classList.add('notification-btn-colored');
+    notificationBar.classList.remove('hide');
+    notificationBar.classList.add('show-block');
+  } else {
+    notificationBtn.classList.remove('notification-btn-colored');
+    notificationBar.classList.add('hide');
+    notificationBar.classList.remove('show-block');
+  }
 });
 
 //CLOSE NOTIFICATION MENU ON BUTTON CLICK

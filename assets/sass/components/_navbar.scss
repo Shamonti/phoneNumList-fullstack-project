@@ -346,9 +346,32 @@
 }
 
 .notification {
+  &-btn-colored i {
+    color: $color-primary !important;
+  }
+
+  &-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-btn--badge {
+    position: absolute;
+    top: 0.35rem;
+    right: 0.7rem;
+    background-color: red;
+    border-radius: 50%;
+    height: 0.9rem;
+    width: 0.9rem;
+  }
+
   &__sidebar {
     width: 42.5rem;
+    height: min-content !important;
     max-width: 40rem;
+    max-height: 72rem;
     background-color: $color-white;
     position: absolute;
     z-index: 1;
@@ -365,8 +388,8 @@
     align-items: center;
     border-bottom: 1px solid $color-grey-light--3;
 
-    &-title h3 {
-      font-size: 1.2rem;
+    &-title h5 {
+      font-size: 1.4rem;
       font-weight: 600;
       line-height: 4rem;
       padding: 0 1rem;
@@ -380,7 +403,43 @@
   }
 
   &--body {
-    height: calc(100vh - 8.85rem);
+    .card {
+      margin: 0.75rem;
+      border-radius: 0.75rem;
+      background-color: $color-grey-light--1;
+
+      &-body {
+        display: flex;
+      }
+
+      &-footer {
+        border-top: 0;
+        text-align: center;
+        color: $color-primary;
+      }
+    }
+  }
+
+  &-box {
+    line-height: 1.3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &-icon {
+    padding: 0 0.75rem;
+    color: $color-grey-dark--2;
+  }
+
+  &-text {
+    color: $color-grey-dark--2;
+  }
+
+  &-time {
+    font-size: 1.2rem;
+    color: $color-grey-dark--3;
   }
 }
 

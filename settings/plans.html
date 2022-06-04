@@ -1,319 +1,401 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="description" content="" />
-    <meta name="keywords" content="phone list," />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Manage Plan | Phone List</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="phone list," />
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+  <title>Manage Plan | Phone List</title>
 
-    <!-- Bootstrap Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
-    />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../assets/css/style.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap"
+    rel="stylesheet" />
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="../assets/images/icons/favicon.ico" />
-  </head>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
 
-  <body>
-    <header>
-      <!-- START NAVBAR -->
-      <nav
-        class="navbar navbar--user navbar-expand-md navbar-light"
-        id="user-nav"
-      >
-        <div class="container-fluid justify-content-end">
-          <a class="navbar-brand" href="../index.html">
-            <img
-              class="img-fluid"
-              src="../assets/images/logo.svg"
-              alt="phone list"
-            />
-          </a>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../assets/images/icons/favicon.ico" />
+</head>
 
-          <button
-            class="navbar-toggler me-auto"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <i class="bi bi-list"></i>
-          </button>
-          <div
-            class="collapse navbar-collapse justify-content-between"
-            id="navbarSupportedContent"
-          >
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item pl-4">
-                <a class="nav-link" aria-current="page" href="../home.html">
-                  <i class="bi bi-house-door"></i>
-                  Dashboard
-                </a>
-              </li>
-              <li class="nav-item" id="search">
-                <a class="nav-link" href="../people.html">
-                  <i class="bi bi-search"></i>
-                  Data Search
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../settings/upgrade.html">
-                  <i class="bi bi-box-seam"></i>
-                  Products
-                </a>
-              </li>
-            </ul>
-          </div>
+<body>
+  <header>
+    <!-- START NAVBAR -->
+    <nav class="navbar navbar--user navbar-expand-md navbar-light" id="user-nav">
+      <div class="container-fluid justify-content-end">
+        <a class="navbar-brand" href="../index.html">
+          <img class="img-fluid" src="../assets/images/logo.svg" alt="phone list" />
+        </a>
 
-          <!-- START SHOW ELEMENT ON CLICKING USER -->
-          <div class="user-div hide u-box-shadow-1">
-            <h4 class="px-4 pt-5">Shamonti Haque</h4>
-            <div class="user--label mx-4">
-              <span>Admin</span>
-            </div>
-
-            <div class="user--menu">
-              <a class="user--menu-item" href="../settings/account.html">
-                <i class="bi bi-gear"></i>
-                <span>Settings</span>
+        <button class="navbar-toggler me-auto" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="bi bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item pl-4">
+              <a class="nav-link" aria-current="page" href="../home.html">
+                <i class="bi bi-house-door"></i>
+                Dashboard
               </a>
-              <a class="user--menu-item" href="../settings/upgrade.html">
-                <i class="bi bi-trophy"></i>
-                <span>Upgrade Plan</span>
+            </li>
+            <li class="nav-item" id="search">
+              <a class="nav-link" href="../people.html">
+                <i class="bi bi-search"></i>
+                Data Search
               </a>
-
-              <a class="user--menu-item mb-3" href="../login.html">
-                <i class="bi bi-power"></i>
-                <span>Logout</span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../settings/upgrade.html">
+                <i class="bi bi-box-seam"></i>
+                Products
               </a>
-            </div>
-          </div>
-          <!-- END SHOW ELEMENT ON CLICKING USER -->
+            </li>
+          </ul>
         </div>
 
-        <!-- START RIGHT NAV ITEMS -->
-        <div class="d-flex align-items-center nav-right__box">
-          <a class="btn btn-purple mx-4" href="../settings/upgrade.html"
-            >Get unlimited leads
-          </a>
-          <button type="button" class="btn">
-            <a href="#">
-              <i class="bi bi-telephone phone-btn"></i>
+        <!-- START SHOW ELEMENT ON CLICKING USER -->
+        <div class="user-div hide u-box-shadow-1">
+          <h4 class="px-4 pt-5">Shamonti Haque</h4>
+          <div class="user--label mx-4">
+            <span>Admin</span>
+          </div>
+
+          <div class="user--menu">
+            <a class="user--menu-item" href="../settings/account.html">
+              <i class="bi bi-gear"></i>
+              <span>Settings</span>
             </a>
-          </button>
+            <a class="user--menu-item" href="../settings/upgrade.html">
+              <i class="bi bi-trophy"></i>
+              <span>Upgrade Plan</span>
+            </a>
 
-          <!-- Link to Blog site -->
-          <a class="btn" href="http://help.phonelist.io/">
-            <i class="bi bi-question-circle"></i>
-          </a>
-
-          <button type="button" class="btn notification-btn">
-            <i class="bi bi-bell"></i>
-          </button>
-          <button
-            type="button"
-            id="userBtn"
-            class="user user-btn circle-element mx-3"
-          >
-            <p class="user-name">SH</p>
-          </button>
-        </div>
-        <!-- END RIGHT NAV ITEMS -->
-      </nav>
-      <!-- END NAVBAR -->
-
-      <!-- START SHOW WHEN CLICKED ON NOTIFICATION -->
-      <div
-        class="u-box-shadow-1 notification__sidebar hide animate__animated animate__fadeInRightBig"
-      >
-        <div class="notification--header">
-          <div class="notification--header-title">
-            <h5>NOTIFICATIONS</h5>
+            <a class="user--menu-item mb-3" href="../login.html">
+              <i class="bi bi-power"></i>
+              <span>Logout</span>
+            </a>
           </div>
-          <div class="notification--header-icons">
-            <div class="btn"><i class="bi bi-arrow-clockwise"></i></div>
-            <div class="btn close-btn">
-              <i class="bi bi-x-lg"></i>
+        </div>
+        <!-- END SHOW ELEMENT ON CLICKING USER -->
+      </div>
+
+      <!-- START RIGHT NAV ITEMS -->
+      <div class="d-flex align-items-center nav-right__box">
+        <a class="btn btn-purple mx-4" href="../settings/upgrade.html">Get unlimited leads
+        </a>
+        <button type="button" class="btn">
+          <a href="#">
+            <i class="bi bi-telephone phone-btn"></i>
+          </a>
+        </button>
+
+        <!-- Link to Blog site -->
+        <a class="btn" href="http://help.phonelist.io/">
+          <i class="bi bi-question-circle"></i>
+        </a>
+
+        <button type="button" class="btn notification-btn">
+          <i class="bi bi-bell"></i>
+
+          <!-- Add the class hide to notification-btn--badge when there is no notifications -->
+          <span class="notification-btn--badge"></span>
+        </button>
+        <button type="button" id="userBtn" class="user user-btn circle-element mx-3">
+          <p class="user-name">SH</p>
+        </button>
+      </div>
+      <!-- END RIGHT NAV ITEMS -->
+    </nav>
+    <!-- END NAVBAR -->
+
+    <!-- START SHOW WHEN CLICKED ON NOTIFICATION -->
+    <div class="u-box-shadow-1 notification__sidebar hide animate__animated animate__fadeInRightBig">
+      <div class="notification--header">
+        <div class="notification--header-title">
+          <h5>NOTIFICATIONS</h5>
+        </div>
+        <div class="notification--header-icons">
+          <div class="btn close-btn">
+            <i class="bi bi-x-lg"></i>
+          </div>
+        </div>
+      </div>
+      <div class="notification--body">
+        <a class="card" href="#">
+          <div class="card-body">
+            <div class="notification-icon">
+              <i class="bi bi-shield-lock-fill"></i>
+            </div>
+            <div class="notification-box">
+              <div class="notification-text">You changed your password.</div>
+              <div class="notification-time">
+                <span> Today </span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="notification--body"></div>
+        </a>
+        <a class="card" href="#">
+          <div class="card-body">
+            <div class="notification-icon">
+              <i class="bi bi-lightning-fill"></i>
+            </div>
+            <div class="notification-box">
+              <div class="notification-text">You upgraded your plan.</div>
+              <div class="notification-time">
+                <span> Yesterday </span>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a class="card" href="#">
+          <div class="card-body">
+            <div class="notification-icon">
+              <i class="bi bi-receipt-cutoff"></i>
+            </div>
+            <div class="notification-box">
+              <div class="notification-text">You accessed phone number.</div>
+              <div class="notification-time">
+                <span> May 02 </span>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a class="card" href="#">
+          <div class="card-body">
+            <div class="notification-icon">
+              <i class="bi bi-download"></i>
+            </div>
+            <div class="notification-box">
+              <div class="notification-text">You downloaded csv data.</div>
+              <div class="notification-time">
+                <span> Apr 26 </span>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a class="card" href="#">
+          <div class="card-body">
+            <div class="notification-icon">
+              <i class="bi bi-envelope"></i>
+            </div>
+            <div class="notification-box">
+              <div class="notification-text">
+                You requested to change the email.
+              </div>
+              <div class="notification-time">
+                <span> Apr 20 </span>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a class="card" href="#">
+          <div class="card-body">
+            <div class="notification-icon">
+              <i class="bi bi-person-bounding-box"></i>
+            </div>
+            <div class="notification-box">
+              <div class="notification-text">You edited your profile.</div>
+              <div class="notification-time">
+                <span> Mar 24 </span>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a class="card" href="#">
+          <div class="card-body">
+            <div class="notification-icon">
+              <i class="bi bi-download"></i>
+            </div>
+            <div class="notification-box">
+              <div class="notification-text">You downloaded csv data.</div>
+              <div class="notification-time">
+                <span> Mar 20 </span>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a class="card" href="#">
+          <div class="card-body">
+            <div class="notification-icon">
+              <i class="bi bi-credit-card"></i>
+            </div>
+            <div class="notification-box">
+              <div class="notification-text">You added a credit card.</div>
+              <div class="notification-time">
+                <span> Feb 22 </span>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a class="card" href="#">
+          <div class="card-body">
+            <div class="notification-icon"><i class="bi bi-stars"></i></div>
+            <div class="notification-box">
+              <div class="notification-text">Welcome to Phone List!</div>
+              <div class="notification-time">
+                <span> Dec 2021 </span>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a class="card" href="./notifications.html">
+          <div class="card-footer">23 more unread notifications</div>
+        </a>
       </div>
-      <!-- END SHOW WHEN CLICKED ON NOTIFICATION -->
-    </header>
+    </div>
+    <!-- END SHOW WHEN CLICKED ON NOTIFICATION -->
+  </header>
 
-    <main>
-      <section class="section-settings d-flex">
-        <!-- START SIDEBAR -->
-        <section class="d-flex flex-column flex-shrink-0 p-4 section-sidebar">
-          <ul class="nav nav-pills flex-column mb-auto">
+  <main>
+    <section class="section-settings d-flex">
+      <!-- START SIDEBAR -->
+      <section class="d-flex flex-column flex-shrink-0 p-4 section-sidebar">
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li class="nav-item">
+            <span class="text-uppercase">Personal Profile</span>
+            <a href="account.html" class="nav-link" aria-current="page">
+              You
+            </a>
+          </li>
+          <li class="nav-item mt-4">
+            <span class="text-uppercase">Admin Settings</span>
+            <a href="plans.html" class="nav-link active">
+              <h2 class="m-0"> Manage Plan </h2>
+            </a>
+          </li>
+          <li class="nav-item mt-4">
+            <span class="text-uppercase">System Activity</span>
+            <a href="exports/exports.html" class="nav-link"> Exports </a>
+          </li>
+          <li class="nav-item">
+            <a href="credits/current.html" class="nav-link"> Credit Usage </a>
+          </li>
+          <li class="nav-item">
+            <a href="./../settings/notifications.html" class="nav-link ">
+              Notifications</h2>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!-- END SIDEBAR -->
+
+      <!-- START MAIN -->
+      <section class="section-main">
+        <!-- START SECOND NAVBAR -->
+        <section class="second-navbar">
+          <ul class="nav nav-tabs">
             <li class="nav-item">
-              <span class="text-uppercase">Personal Profile</span>
-              <a href="account.html" class="nav-link" aria-current="page">
-                You
-              </a>
-            </li>
-            <li class="nav-item mt-4">
-              <span class="text-uppercase">Admin Settings</span>
-              <a href="plans.html" class="nav-link active">
-                <h2 class="fs-4 m-0 fw-bold">Manage Plan</h2>
-              </a>
-            </li>
-            <li class="nav-item mt-4">
-              <span class="text-uppercase">System Activity</span>
-              <a href="exports/exports.html" class="nav-link">Exports</a>
+              <a href="plans.html" class="nav-link active">Plan Overview</a>
             </li>
             <li class="nav-item">
-              <a href="credits/current.html" class="nav-link"> Credit Usage </a>
+              <a href="billing.html" class="nav-link">Billing</a>
             </li>
           </ul>
         </section>
-        <!-- END SIDEBAR -->
-
-        <!-- START MAIN -->
-        <section class="section-main">
-          <!-- START SECOND NAVBAR -->
-          <section class="second-navbar">
-            <ul class="nav nav-tabs">
-              <li class="nav-item">
-                <a href="plans.html" class="nav-link active">Plan Overview</a>
-              </li>
-              <li class="nav-item">
-                <a href="billing.html" class="nav-link">Billing</a>
-              </li>
-            </ul>
-          </section>
-          <!-- END SECOND NAVBAR -->
-          <section class="section-settings-plan">
-            <div class="card u-box-shadow-2 m-4 border rounded-3">
-              <div
-                class="card-title m-0 d-flex justify-content-between align-items-center"
-              >
-                <h1 class="p-4 text-capitalize">Free Plan</h1>
-                <a
-                  href="upgrade.html"
-                  type="button"
-                  class="btn btn-purple me-4"
-                >
-                  Purchase Plan
-                </a>
-              </div>
-              <div class="card-body">
-                <div class="card-bg">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-md-10">
-                        <span> What's Included </span>
-                      </div>
-                      <div class="col-md-2 text-end">
-                        <span> Price </span>
-                      </div>
-                    </div>
-                    <div class="row border-bottom">
-                      <div class="col-md-4">
-                        <h3>Credits</h3>
-                      </div>
-                      <div class="col-md-4">
-                        <p>30 Reward Credits</p>
-                        <p>50 Email Credits / mo</p>
-                      </div>
-                      <div class="col-md-4 text-end">
-                        <p>Free</p>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-4">
-                        <h3>Monthly Total</h3>
-                      </div>
-                      <div class="col-md-4"></div>
-                      <div class="col-md-4 text-end">
-                        <p class="fw-bold">$0/mo</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <!-- END SECOND NAVBAR -->
+        <section class="section-settings-plan">
+          <div class="card u-box-shadow-2 m-4 border rounded-3">
+            <div class="card-title m-0 d-flex justify-content-between align-items-center">
+              <h1 class="p-4 text-capitalize">Free Plan</h1>
+              <a href="upgrade.html" type="button" class="btn btn-purple me-4">
+                Purchase Plan
+              </a>
             </div>
-          </section>
-
-          <section class="section-settings-plan">
-            <div class="card u-box-shadow-2 m-4 border rounded-3">
-              <div
-                class="card-title d-flex justify-content-between align-items-center"
-              >
-                <h3 class="p-4 text-capitalize">
-                  Credits Usage <span> (Jan 21, 2022 - Feb 21, 2022) </span>
-                </h3>
-                <a
-                  href="upgrade.html"
-                  type="button"
-                  class="btn btn-access me-4"
-                >
-                  Buy More Credits
-                </a>
-              </div>
-              <div class="card-body">
+            <div class="card-body">
+              <div class="card-bg">
                 <div class="container">
                   <div class="row">
-                    <div class="col-md-12">
-                      <h3 class="fs-3">
-                        Email Credits
-                        <i
-                          class="bi bi-question-circle-fill text-secondary"
-                        ></i>
-                        <p class="mt-4">
-                          You have used <span class="text-primary">0</span> of
-                          <span class="text-dark">80</span> available email
-                          credits this billing cycle.
-                        </p>
-                      </h3>
+                    <div class="col-md-10">
+                      <span> What's Included </span>
+                    </div>
+                    <div class="col-md-2 text-end">
+                      <span> Price </span>
+                    </div>
+                  </div>
+                  <div class="row border-bottom">
+                    <div class="col-md-4">
+                      <h3>Credits</h3>
+                    </div>
+                    <div class="col-md-4">
+                      <p>30 Reward Credits</p>
+                      <p>50 Email Credits / mo</p>
+                    </div>
+                    <div class="col-md-4 text-end">
+                      <p>Free</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <h3>Monthly Total</h3>
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4 text-end">
+                      <p class="fw-bold">$0/mo</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </section>
+          </div>
         </section>
-        <!-- END MAIN -->
+
+        <section class="section-settings-plan">
+          <div class="card u-box-shadow-2 m-4 border rounded-3">
+            <div class="card-title d-flex justify-content-between align-items-center">
+              <h3 class="p-4 text-capitalize">
+                Credits Usage <span> (Jan 21, 2022 - Feb 21, 2022) </span>
+              </h3>
+              <a href="upgrade.html" type="button" class="btn btn-access me-4">
+                Buy More Credits
+              </a>
+            </div>
+            <div class="card-body">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h3 class="fs-3">
+                      Email Credits
+                      <i class="bi bi-question-circle-fill text-secondary"></i>
+                      <p class="mt-4">
+                        You have used <span class="text-primary">0</span> of
+                        <span class="text-dark">80</span> available email
+                        credits this billing cycle.
+                      </p>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </section>
-    </main>
+      <!-- END MAIN -->
+    </section>
+  </main>
 
-    <!-- Bootstrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
 
-    <!-- CUSTOM JS -->
-    <script src="../assets/js/navbar.js"></script>
-    <script src="../assets/js/script.js"></script>
-  </body>
+  <!-- CUSTOM JS -->
+  <script src="../assets/js/navbar.js"></script>
+  <script src="../assets/js/script.js"></script>
+</body>
+
 </html>
