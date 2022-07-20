@@ -359,8 +359,9 @@
 
   &-btn--badge {
     position: absolute;
+    z-index: 10;
     top: 0.35rem;
-    right: 0.7rem;
+    right: 5.8rem;
     background-color: red;
     border-radius: 50%;
     height: 0.9rem;

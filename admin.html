@@ -128,11 +128,11 @@
     <section class="section-dashboard--main">
       <div class="container">
         <div class="row">
-          <div class="col-md-8">
+          <div class="col-md-6">
             <div class="card rounded-3">
               <div class="card-body">
                 <h1 class="display-6">
-                  Hi, Shamonti Haque. Welcome to your dashboard!
+                  Welcome to your dashboard!
                 </h1>
                 <p class="mt-2 text-end mb-0 pe-3 text-info fw-bold" id="file-upload-filename">
                   &nbsp;
@@ -141,44 +141,45 @@
             </div>
           </div>
 
-          <div class="col-md-4 d-flex align-items-center justify-content-start">
+          <div class="col-md-6 d-flex align-items-center justify-content-start">
 
             <form action="" class="d-flex">
               <!-- START UPLOAD BTN -->
-              <div class="col-md-6 px-2">
+              <div class="col-md-4 px-2">
                 <input id='fileid' type='file' hidden />
                 <input id='buttonid' type='button' class="btn btn-upload" value='Upload' />
               </div>
               <!-- END UPLOAD BTN -->
 
-              <!-- START IMPORT BTN -->
-              <div class="col-md-6 px-2">
+              <!-- START IMPORT & REFRESH BTN -->
+              <div class="col-md-8 px-2 d-flex">
 
-                <input type='button' class="btn btn-upload" value='Import' />
+                <input type='button' class="btn btn-upload me-4" value='Import' />
+                <input type='button' class="btn btn-upload" value='Refresh' />
               </div>
-              <!-- END IMPORT  BTN -->
+              <!-- END IMPORT & REFRESH BTN -->
             </form>
           </div>
         </div>
 
-        <div class="container px-2">
+        <div class="container px-3 pt-3">
           <div class="row">
             <div class="col-md-12 card rounded-3">
               <h2 class="heading--main pt-4 pb-0 px-3 mt-0">
                 Sales Report
               </h2>
-              <canvas id="salesChart" height="300rem"></canvas>
+              <canvas id="salesChart"></canvas>
             </div>
           </div>
         </div>
 
-        <div class="container px-2">
+        <div class="container px-3 pt-3">
           <div class="row">
             <div class="col-md-12 card rounded-3">
               <h2 class="heading--main pt-4 pb-0 px-3 mt-1">
                 Recent Credit History
               </h2>
-              <canvas id="creditChart" height="300rem"></canvas>
+              <canvas id="creditChart"></canvas>
             </div>
           </div>
         </div>

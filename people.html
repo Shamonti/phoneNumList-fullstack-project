@@ -306,468 +306,595 @@
         <section class="section-user-dashboard--sidebar">
           <div class="heading--sub py-3 ps-4 u-border-bottom">Filters</div>
 
-          <!-- INPUT NAME -->
-          <div class="input-name u-border-bottom py-4 px-4">
-            <div class="input-title pb-2">
-              <i class="bi bi-person-badge pe-2"></i>
-              Name
-            </div>
-            <input
-              type="text"
-              name="name"
-              id="searchPeople"
-              class="w-100"
-              placeholder="Enter name..."
-              onkeyup="searchPeople()"
-            />
-            <form action="" class="d-flex justify-content-end mt-2">
-              <button type="submit" class="btn btn-purple rounded-1 w-100">
-                Apply
-              </button>
-            </form>
-          </div>
-
-          <!-- INPUT CURRENT ADDRESS -->
-          <div class="input-currentAdd u-border-bottom py-4 px-4">
-            <div class="input-title pb-2">
-              <i class="bi bi-pin-map-fill"></i>
-              Current Address
-            </div>
-            <input
-              type="text"
-              name="currentAdd"
-              id="currentAdd"
-              class="w-100"
-              placeholder="Enter current address..."
-            />
-            <form action="" class="d-flex justify-content-end mt-2">
-              <button type="submit" class="btn btn-purple rounded-1 w-100">
-                Apply
-              </button>
-            </form>
-          </div>
-
-          <!-- INPUT HOMETOWN -->
-          <div class="input-hometown u-border-bottom py-4 px-4">
-            <div class="input-title pb-2">
-              <i class="bi bi-house-door-fill"></i>
-              Hometown
-            </div>
-            <input
-              type="text"
-              name="hometown"
-              id="hometown"
-              class="w-100"
-              placeholder="Enter hometown..."
-            />
-            <form action="" class="d-flex justify-content-end mt-2">
-              <button type="submit" class="btn btn-purple rounded-1 w-100">
-                Apply
-              </button>
-            </form>
-          </div>
-
-          <!-- INPUT COUNTRY -->
-          <div class="input-country u-border-bottom py-4 px-4">
-            <div class="input-title pb-2">
-              <i class="bi bi-globe2 pe-2"></i>
-              Country
-            </div>
-            <div class="dropdown" id="searchCountry">
+          <form action="" id="search">
+            <!-- INPUT NAME -->
+            <div class="input-name u-border-bottom py-4 px-4">
+              <div class="input-title pb-2">
+                <i class="bi bi-person-badge pe-2"></i>
+                Name
+              </div>
               <input
-                class="searchBar text-dark fw-normal col-12"
-                id="countryDropdown"
                 type="text"
-                placeholder="Search by Country..."
-                data-toggle="dropdown"
-                data-bs-toggle="dropdown"
+                name="name"
+                id="searchPeople"
+                class="w-100"
+                placeholder="Enter name..."
+                onkeyup="searchPeople()"
               />
-
-              <ul
-                class="dropdown-menu bg-white text-dark fw-bold p-3"
-                aria-labelledby="countryDropdown"
-              >
-                <li class="dropdown-item">
-                  <a href="#">Afghanistan</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Åland Islands</a></li>
-                <li class="dropdown-item"><a href="#">Albania</a></li>
-                <li class="dropdown-item"><a href="#">Algeria</a></li>
-                <li class="dropdown-item"><a href="#">American Samoa</a></li>
-                <li class="dropdown-item"><a href="#">Andorra</a></li>
-                <li class="dropdown-item"><a href="#">Angola</a></li>
-                <li class="dropdown-item"><a href="#">Anguilla</a></li>
-                <li class="dropdown-item"><a href="#">Antarctica</a></li>
-                <li class="dropdown-item">
-                  <a href="#">Antigua and Barbuda</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Argentina</a></li>
-                <li class="dropdown-item"><a href="#">Armenia</a></li>
-                <li class="dropdown-item"><a href="#">Aruba</a></li>
-                <li class="dropdown-item"><a href="#">Australia</a></li>
-                <li class="dropdown-item"><a href="#">Austria</a></li>
-                <li class="dropdown-item"><a href="#">Azerbaijan</a></li>
-                <li class="dropdown-item"><a href="#">Bahamas</a></li>
-                <li class="dropdown-item"><a href="#">Bahrain</a></li>
-                <li class="dropdown-item"><a href="#">Bangladesh</a></li>
-                <li class="dropdown-item"><a href="#">Barbados</a></li>
-                <li class="dropdown-item"><a href="#">Belarus</a></li>
-                <li class="dropdown-item"><a href="#">Belgium</a></li>
-                <li class="dropdown-item"><a href="#">Belize</a></li>
-                <li class="dropdown-item"><a href="#">Benin</a></li>
-                <li class="dropdown-item"><a href="#">Bermuda</a></li>
-                <li class="dropdown-item"><a href="#">Bhutan</a></li>
-                <li class="dropdown-item"><a href="#">Bolivia</a></li>
-                <li class="dropdown-item">
-                  <a href="#">Bosnia and Herzegovina</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Botswana</a></li>
-                <li class="dropdown-item"><a href="#">Bouvet Island</a></li>
-                <li class="dropdown-item"><a href="#">Brazil</a></li>
-                <li class="dropdown-item">
-                  <a href="#">British Indian Ocean Territory</a>
-                </li>
-                <li class="dropdown-item">
-                  <a href="#">Brunei Darussalam</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Bulgaria</a></li>
-                <li class="dropdown-item"><a href="#">Burkina Faso</a></li>
-                <li class="dropdown-item"><a href="#">Burundi</a></li>
-                <li class="dropdown-item"><a href="#">Cambodia</a></li>
-                <li class="dropdown-item"><a href="#">Cameroon</a></li>
-                <li class="dropdown-item"><a href="#">Canada</a></li>
-                <li class="dropdown-item"><a href="#">Cape Verde</a></li>
-                <li class="dropdown-item"><a href="#">Cayman Islands</a></li>
-                <li class="dropdown-item">
-                  <a href="#">Central African Republic</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Chad</a></li>
-                <li class="dropdown-item"><a href="#">Chile</a></li>
-                <li class="dropdown-item"><a href="#">China</a></li>
-                <li class="dropdown-item">
-                  <a href="#">Christmas Island</a>
-                </li>
-                <li class="dropdown-item">
-                  <a href="#">Cocos (Keeling) Islands</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Colombia</a></li>
-                <li class="dropdown-item"><a href="#">Comoros</a></li>
-                <li class="dropdown-item"><a href="#">Congo</a></li>
-                <li class="dropdown-item">
-                  <a href="#">Congo, The Democratic Republic of The</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Cook Islands</a></li>
-                <li class="dropdown-item"><a href="#">Costa Rica</a></li>
-                <li class="dropdown-item"><a href="#">Cote D'ivoire</a></li>
-                <li class="dropdown-item"><a href="#">Croatia</a></li>
-                <li class="dropdown-item"><a href="#">Cuba</a></li>
-                <li class="dropdown-item"><a href="#">Cyprus</a></li>
-                <li class="dropdown-item"><a href="#">Czech Republic</a></li>
-                <li class="dropdown-item"><a href="#">Denmark</a></li>
-                <li class="dropdown-item"><a href="#">Djibouti</a></li>
-                <li class="dropdown-item"><a href="#">Dominica</a></li>
-                <li class="dropdown-item">
-                  <a href="#">Dominican Republic</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Ecuador</a></li>
-                <li class="dropdown-item"><a href="#">Egypt</a></li>
-                <li class="dropdown-item"><a href="#">El Salvador</a></li>
-                <li class="dropdown-item">
-                  <a href="#">Equatorial Guinea</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Eritrea</a></li>
-                <li class="dropdown-item"><a href="#">Estonia</a></li>
-                <li class="dropdown-item"><a href="#">Ethiopia</a></li>
-                <li class="dropdown-item">
-                  <a href="#">Falkland Islands (Malvinas)</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Faroe Islands</a></li>
-                <li class="dropdown-item"><a href="#">Fiji</a></li>
-                <li class="dropdown-item"><a href="#">Finland</a></li>
-                <li class="dropdown-item"><a href="#">France</a></li>
-                <li class="dropdown-item"><a href="#">French Guiana</a></li>
-                <li class="dropdown-item">
-                  <a href="#">French Polynesia</a>
-                </li>
-                <li class="dropdown-item">
-                  <a href="#">French Southern Territories</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Gabon</a></li>
-                <li class="dropdown-item"><a href="#">Gambia</a></li>
-                <li class="dropdown-item"><a href="#">Georgia</a></li>
-                <li class="dropdown-item"><a href="#">Germany</a></li>
-                <li class="dropdown-item"><a href="#">Ghana</a></li>
-                <li class="dropdown-item"><a href="#">Gibraltar</a></li>
-                <li class="dropdown-item"><a href="#">Greece</a></li>
-                <li class="dropdown-item"><a href="#">Greenland</a></li>
-                <li class="dropdown-item"><a href="#">Grenada</a></li>
-                <li class="dropdown-item"><a href="#">Guadeloupe</a></li>
-                <li class="dropdown-item"><a href="#">Guam</a></li>
-                <li class="dropdown-item"><a href="#">Guatemala</a></li>
-                <li class="dropdown-item"><a href="#">Guernsey</a></li>
-                <li class="dropdown-item"><a href="#">Guinea</a></li>
-                <li class="dropdown-item"><a href="#">Guinea-bissau</a></li>
-                <li class="dropdown-item"><a href="#">Guyana</a></li>
-                <li class="dropdown-item"><a href="#">Haiti</a></li>
-                <li class="dropdown-item">
-                  <a href="#">Heard Island and Mcdonald Islands</a>
-                </li>
-                <li class="dropdown-item">
-                  <a href="#">Holy See (Vatican City State)</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Honduras</a></li>
-                <li class="dropdown-item"><a href="#">Hong Kong</a></li>
-                <li class="dropdown-item"><a href="#">Hungary</a></li>
-                <li class="dropdown-item"><a href="#">Iceland</a></li>
-                <li class="dropdown-item"><a href="#">India</a></li>
-                <li class="dropdown-item"><a href="#">Indonesia</a></li>
-                <li class="dropdown-item">
-                  <a href="#">Iran, Islamic Republic of</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Iraq</a></li>
-                <li class="dropdown-item"><a href="#">Ireland</a></li>
-                <li class="dropdown-item"><a href="#">Isle of Man</a></li>
-                <li class="dropdown-item"><a href="#">Israel</a></li>
-                <li class="dropdown-item"><a href="#">Italy</a></li>
-                <li class="dropdown-item"><a href="#">Jamaica</a></li>
-                <li class="dropdown-item"><a href="#">Japan</a></li>
-                <li class="dropdown-item"><a href="#">Jersey</a></li>
-                <li class="dropdown-item"><a href="#">Jordan</a></li>
-                <li class="dropdown-item"><a href="#">Kazakhstan</a></li>
-                <li class="dropdown-item"><a href="#">Kenya</a></li>
-                <li class="dropdown-item"><a href="#">Kiribati</a></li>
-                <li class="dropdown-item">
-                  <a href="#">Korea, Democratic People's Republic of</a>
-                </li>
-                <li class="dropdown-item">
-                  <a href="#">Korea, Republic of</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Kuwait</a></li>
-                <li class="dropdown-item"><a href="#">Kyrgyzstan</a></li>
-                <li class="dropdown-item">
-                  <a href="#">Lao People's Democratic Republic</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Latvia</a></li>
-                <li class="dropdown-item"><a href="#">Lebanon</a></li>
-                <li class="dropdown-item"><a href="#">Lesotho</a></li>
-                <li class="dropdown-item"><a href="#">Liberia</a></li>
-                <li class="dropdown-item">
-                  <a href="#">Libyan Arab Jamahiriya</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Liechtenstein</a></li>
-                <li class="dropdown-item"><a href="#">Lithuania</a></li>
-                <li class="dropdown-item"><a href="#">Luxembourg</a></li>
-                <li class="dropdown-item"><a href="#">Macao</a></li>
-                <li class="dropdown-item">
-                  <a href="#">Macedonia, The Former Yugoslav Republic of</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Madagascar</a></li>
-                <li class="dropdown-item"><a href="#">Malawi</a></li>
-                <li class="dropdown-item"><a href="#">Malaysia</a></li>
-                <li class="dropdown-item"><a href="#">Maldives</a></li>
-                <li class="dropdown-item"><a href="#">Mali</a></li>
-                <li class="dropdown-item"><a href="#">Malta</a></li>
-                <li class="dropdown-item">
-                  <a href="#">Marshall Islands</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Martinique</a></li>
-                <li class="dropdown-item"><a href="#">Mauritania</a></li>
-                <li class="dropdown-item"><a href="#">Mauritius</a></li>
-                <li class="dropdown-item"><a href="#">Mayotte</a></li>
-                <li class="dropdown-item"><a href="#">Mexico</a></li>
-                <li class="dropdown-item">
-                  <a href="#">Micronesia, Federated States of</a>
-                </li>
-                <li class="dropdown-item">
-                  <a href="#">Moldova, Republic of</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Monaco</a></li>
-                <li class="dropdown-item"><a href="#">Mongolia</a></li>
-                <li class="dropdown-item"><a href="#">Montenegro</a></li>
-                <li class="dropdown-item"><a href="#">Montserrat</a></li>
-                <li class="dropdown-item"><a href="#">Morocco</a></li>
-                <li class="dropdown-item"><a href="#">Mozambique</a></li>
-                <li class="dropdown-item"><a href="#">Myanmar</a></li>
-                <li class="dropdown-item"><a href="#">Namibia</a></li>
-                <li class="dropdown-item"><a href="#">Nauru</a></li>
-                <li class="dropdown-item"><a href="#">Nepal</a></li>
-                <li class="dropdown-item"><a href="#">Netherlands</a></li>
-                <li class="dropdown-item">
-                  <a href="#">Netherlands Antilles</a>
-                </li>
-                <li class="dropdown-item"><a href="#">New Caledonia</a></li>
-                <li class="dropdown-item"><a href="#">New Zealand</a></li>
-                <li class="dropdown-item"><a href="#">Nicaragua</a></li>
-                <li class="dropdown-item"><a href="#">Niger</a></li>
-                <li class="dropdown-item"><a href="#">Nigeria</a></li>
-                <li class="dropdown-item"><a href="#">Niue</a></li>
-                <li class="dropdown-item"><a href="#">Norfolk Island</a></li>
-                <li class="dropdown-item">
-                  <a href="#">Northern Mariana Islands</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Norway</a></li>
-                <li class="dropdown-item"><a href="#">Oman</a></li>
-                <li class="dropdown-item"><a href="#">Pakistan</a></li>
-                <li class="dropdown-item"><a href="#">Palau</a></li>
-                <li class="dropdown-item">
-                  <a href="#">Palestinian Territory, Occupied</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Panama</a></li>
-                <li class="dropdown-item">
-                  <a href="#">Papua New Guinea</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Paraguay</a></li>
-                <li class="dropdown-item"><a href="#">Peru</a></li>
-                <li class="dropdown-item"><a href="#">Philippines</a></li>
-                <li class="dropdown-item"><a href="#">Pitcairn</a></li>
-                <li class="dropdown-item"><a href="#">Poland</a></li>
-                <li class="dropdown-item"><a href="#">Portugal</a></li>
-                <li class="dropdown-item"><a href="#">Puerto Rico</a></li>
-                <li class="dropdown-item"><a href="#">Qatar</a></li>
-                <li class="dropdown-item"><a href="#">Reunion</a></li>
-                <li class="dropdown-item"><a href="#">Romania</a></li>
-                <li class="dropdown-item">
-                  <a href="#">Russian Federation</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Rwanda</a></li>
-                <li class="dropdown-item"><a href="#">Saint Helena</a></li>
-                <li class="dropdown-item">
-                  <a href="#">Saint Kitts and Nevis</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Saint Lucia</a></li>
-                <li class="dropdown-item">
-                  <a href="#">Saint Pierre and Miquelon</a>
-                </li>
-                <li class="dropdown-item">
-                  <a href="#">Saint Vincent and The Grenadines</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Samoa</a></li>
-                <li class="dropdown-item"><a href="#">San Marino</a></li>
-                <li class="dropdown-item">
-                  <a href="#">Sao Tome and Principe</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Saudi Arabia</a></li>
-                <li class="dropdown-item"><a href="#">Senegal</a></li>
-                <li class="dropdown-item"><a href="#">Serbia</a></li>
-                <li class="dropdown-item"><a href="#">Seychelles</a></li>
-                <li class="dropdown-item"><a href="#">Sierra Leone</a></li>
-                <li class="dropdown-item"><a href="#">Singapore</a></li>
-                <li class="dropdown-item"><a href="#">Slovakia</a></li>
-                <li class="dropdown-item"><a href="#">Slovenia</a></li>
-                <li class="dropdown-item"><a href="#">Solomon Islands</a></li>
-                <li class="dropdown-item"><a href="#">Somalia</a></li>
-                <li class="dropdown-item"><a href="#">South Africa</a></li>
-                <li class="dropdown-item">
-                  <a href="#">South Georgia and The South Sandwich Islands</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Spain</a></li>
-                <li class="dropdown-item"><a href="#">Sri Lanka</a></li>
-                <li class="dropdown-item"><a href="#">Sudan</a></li>
-                <li class="dropdown-item"><a href="#">Suriname</a></li>
-                <li class="dropdown-item">
-                  <a href="#">Svalbard and Jan Mayen</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Swaziland</a></li>
-                <li class="dropdown-item"><a href="#">Sweden</a></li>
-                <li class="dropdown-item"><a href="#">Switzerland</a></li>
-                <li class="dropdown-item">
-                  <a href="#">Syrian Arab Republic</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Taiwan (ROC)</a></li>
-                <li class="dropdown-item"><a href="#">Tajikistan</a></li>
-                <li class="dropdown-item">
-                  <a href="#">Tanzania, United Republic of</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Thailand</a></li>
-                <li class="dropdown-item"><a href="#">Timor-leste</a></li>
-                <li class="dropdown-item"><a href="#">Togo</a></li>
-                <li class="dropdown-item"><a href="#">Tokelau</a></li>
-                <li class="dropdown-item"><a href="#">Tonga</a></li>
-                <li class="dropdown-item">
-                  <a href="#">Trinidad and Tobago</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Tunisia</a></li>
-                <li class="dropdown-item"><a href="#">Turkey</a></li>
-                <li class="dropdown-item"><a href="#">Turkmenistan</a></li>
-                <li class="dropdown-item">
-                  <a href="#">Turks and Caicos Islands</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Tuvalu</a></li>
-                <li class="dropdown-item"><a href="#">Uganda</a></li>
-                <li class="dropdown-item"><a href="#">Ukraine</a></li>
-                <li class="dropdown-item">
-                  <a href="#">United Arab Emirates</a>
-                </li>
-                <li class="dropdown-item"><a href="#">United Kingdom</a></li>
-                <li class="dropdown-item"><a href="#">United States</a></li>
-                <li class="dropdown-item">
-                  <a href="#">United States Minor Outlying Islands</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Uruguay</a></li>
-                <li class="dropdown-item"><a href="#">Uzbekistan</a></li>
-                <li class="dropdown-item"><a href="#">Vanuatu</a></li>
-                <li class="dropdown-item"><a href="#">Venezuela</a></li>
-                <li class="dropdown-item"><a href="#">Viet Nam</a></li>
-                <li class="dropdown-item">
-                  <a href="#">Virgin Islands, British</a>
-                </li>
-                <li class="dropdown-item">
-                  <a href="#">Virgin Islands, U.S.</a>
-                </li>
-                <li class="dropdown-item">
-                  <a href="#">Wallis and Futuna</a>
-                </li>
-                <li class="dropdown-item"><a href="#">Western Sahara</a></li>
-                <li class="dropdown-item"><a href="#">Yemen</a></li>
-                <li class="dropdown-item"><a href="#">Zambia</a></li>
-                <li class="dropdown-item"><a href="#">Zimbabwe</a></li>
-              </ul>
+              <form action="" class="d-flex justify-content-end mt-2">
+                <button type="submit" class="btn btn-purple rounded-1 w-100">
+                  Apply
+                </button>
+              </form>
             </div>
-          </div>
 
-          <!-- INPUT GENDER -->
-          <div class="dropdown u-border-bottom py-4 px-4">
-            <button
-              class="btn btn-purple rounded-1 dropdown-toggle w-100"
-              type="submit"
-              id="gender"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <i class="bi bi-gender-ambiguous pe-2"></i>
-              Gender
-            </button>
-            <ul class="dropdown-menu w-100" aria-labelledby="gender">
-              <li><a class="dropdown-item" href="#">Male</a></li>
-              <li><a class="dropdown-item" href="#">Female</a></li>
-            </ul>
-          </div>
+            <!-- INPUT CURRENT ADDRESS -->
+            <div class="input-currentAdd u-border-bottom py-4 px-4">
+              <div class="input-title pb-2">
+                <i class="bi bi-pin-map-fill"></i>
+                Current Address
+              </div>
+              <input
+                type="text"
+                name="currentAdd"
+                id="currentAdd"
+                class="w-100"
+                placeholder="Enter current address..."
+              />
+              <form action="" class="d-flex justify-content-end mt-2">
+                <button type="submit" class="btn btn-purple rounded-1 w-100">
+                  Apply
+                </button>
+              </form>
+            </div>
 
-          <!-- INPUT RELATIONSHIP STATUS -->
-          <div class="dropdown py-4 px-4">
-            <button
-              class="btn btn-purple rounded-1 dropdown-toggle w-100"
-              type="submit"
-              id="relationship"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <i class="bi bi-heart-fill pe-2"></i>
-              Relationship Status
-            </button>
-            <ul class="dropdown-menu w-100 p-0" aria-labelledby="relationship">
-              <li><a class="dropdown-item" href="#">Single</a></li>
-              <li><a class="dropdown-item" href="#">In a relationship</a></li>
-              <li><a class="dropdown-item" href="#">Engaged</a></li>
-              <li><a class="dropdown-item" href="#">Married</a></li>
-              <li>
-                <a class="dropdown-item" href="#">In an open relationship</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">It's complicated</a>
-              </li>
-            </ul>
-          </div>
+            <!-- INPUT HOMETOWN -->
+            <div class="input-hometown u-border-bottom py-4 px-4">
+              <div class="input-title pb-2">
+                <i class="bi bi-house-door-fill"></i>
+                Hometown
+              </div>
+              <input
+                type="text"
+                name="hometown"
+                id="hometown"
+                class="w-100"
+                placeholder="Enter hometown..."
+              />
+              <form action="" class="d-flex justify-content-end mt-2">
+                <button type="submit" class="btn btn-purple rounded-1 w-100">
+                  Apply
+                </button>
+              </form>
+            </div>
+
+            <!-- INPUT COUNTRY -->
+            <div class="input-country u-border-bottom py-4 px-4">
+              <div class="input-title pb-2">
+                <i class="bi bi-globe2 pe-2"></i>
+                Country
+              </div>
+              <div class="dropdown" id="searchCountry">
+                <input
+                  class="searchBar text-dark fw-normal col-12"
+                  id="countryInput"
+                  type="text"
+                  placeholder="Search by country..."
+                  data-toggle="dropdown"
+                  data-bs-toggle="dropdown"
+                />
+
+                <ul
+                  class="dropdown-menu bg-white text-dark fw-bold p-3"
+                  aria-labelledby="countryDropdown"
+                >
+                  <li class="dropdown-item">
+                    <button
+                      class="countryBtn01"
+                      type="submit"
+                      value="Afghanistan"
+                    >
+                      Afghanistan
+                    </button>
+                  </li>
+                  <li
+                    class="dropdown-item"
+                    class="countryBtn02"
+                    type="submit"
+                    value="Åland Islands"
+                  >
+                    <a href="#">Åland Islands</a>
+                  </li>
+                  <li
+                    class="dropdown-item"
+                    class="countryBtn03"
+                    type="submit"
+                    value="Albania"
+                  >
+                    <a href="#">Albania</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Algeria</a></li>
+                  <li class="dropdown-item"><a href="#">American Samoa</a></li>
+                  <li class="dropdown-item"><a href="#">Andorra</a></li>
+                  <li class="dropdown-item"><a href="#">Angola</a></li>
+                  <li class="dropdown-item"><a href="#">Anguilla</a></li>
+                  <li class="dropdown-item"><a href="#">Antarctica</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">Antigua and Barbuda</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Argentina</a></li>
+                  <li class="dropdown-item"><a href="#">Armenia</a></li>
+                  <li class="dropdown-item"><a href="#">Aruba</a></li>
+                  <li class="dropdown-item"><a href="#">Australia</a></li>
+                  <li class="dropdown-item"><a href="#">Austria</a></li>
+                  <li class="dropdown-item"><a href="#">Azerbaijan</a></li>
+                  <li class="dropdown-item"><a href="#">Bahamas</a></li>
+                  <li class="dropdown-item"><a href="#">Bahrain</a></li>
+                  <li class="dropdown-item"><a href="#">Bangladesh</a></li>
+                  <li class="dropdown-item"><a href="#">Barbados</a></li>
+                  <li class="dropdown-item"><a href="#">Belarus</a></li>
+                  <li class="dropdown-item"><a href="#">Belgium</a></li>
+                  <li class="dropdown-item"><a href="#">Belize</a></li>
+                  <li class="dropdown-item"><a href="#">Benin</a></li>
+                  <li class="dropdown-item"><a href="#">Bermuda</a></li>
+                  <li class="dropdown-item"><a href="#">Bhutan</a></li>
+                  <li class="dropdown-item"><a href="#">Bolivia</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">Bosnia and Herzegovina</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Botswana</a></li>
+                  <li class="dropdown-item"><a href="#">Bouvet Island</a></li>
+                  <li class="dropdown-item"><a href="#">Brazil</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">British Indian Ocean Territory</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a href="#">Brunei Darussalam</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Bulgaria</a></li>
+                  <li class="dropdown-item"><a href="#">Burkina Faso</a></li>
+                  <li class="dropdown-item"><a href="#">Burundi</a></li>
+                  <li class="dropdown-item"><a href="#">Cambodia</a></li>
+                  <li class="dropdown-item"><a href="#">Cameroon</a></li>
+                  <li class="dropdown-item"><a href="#">Canada</a></li>
+                  <li class="dropdown-item"><a href="#">Cape Verde</a></li>
+                  <li class="dropdown-item"><a href="#">Cayman Islands</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">Central African Republic</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Chad</a></li>
+                  <li class="dropdown-item"><a href="#">Chile</a></li>
+                  <li class="dropdown-item"><a href="#">China</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">Christmas Island</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a href="#">Cocos (Keeling) Islands</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Colombia</a></li>
+                  <li class="dropdown-item"><a href="#">Comoros</a></li>
+                  <li class="dropdown-item"><a href="#">Congo</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">Congo, The Democratic Republic of The</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Cook Islands</a></li>
+                  <li class="dropdown-item"><a href="#">Costa Rica</a></li>
+                  <li class="dropdown-item"><a href="#">Cote D'ivoire</a></li>
+                  <li class="dropdown-item"><a href="#">Croatia</a></li>
+                  <li class="dropdown-item"><a href="#">Cuba</a></li>
+                  <li class="dropdown-item"><a href="#">Cyprus</a></li>
+                  <li class="dropdown-item"><a href="#">Czech Republic</a></li>
+                  <li class="dropdown-item"><a href="#">Denmark</a></li>
+                  <li class="dropdown-item"><a href="#">Djibouti</a></li>
+                  <li class="dropdown-item"><a href="#">Dominica</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">Dominican Republic</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Ecuador</a></li>
+                  <li class="dropdown-item"><a href="#">Egypt</a></li>
+                  <li class="dropdown-item"><a href="#">El Salvador</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">Equatorial Guinea</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Eritrea</a></li>
+                  <li class="dropdown-item"><a href="#">Estonia</a></li>
+                  <li class="dropdown-item"><a href="#">Ethiopia</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">Falkland Islands (Malvinas)</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Faroe Islands</a></li>
+                  <li class="dropdown-item"><a href="#">Fiji</a></li>
+                  <li class="dropdown-item"><a href="#">Finland</a></li>
+                  <li class="dropdown-item"><a href="#">France</a></li>
+                  <li class="dropdown-item"><a href="#">French Guiana</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">French Polynesia</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a href="#">French Southern Territories</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Gabon</a></li>
+                  <li class="dropdown-item"><a href="#">Gambia</a></li>
+                  <li class="dropdown-item"><a href="#">Georgia</a></li>
+                  <li class="dropdown-item"><a href="#">Germany</a></li>
+                  <li class="dropdown-item"><a href="#">Ghana</a></li>
+                  <li class="dropdown-item"><a href="#">Gibraltar</a></li>
+                  <li class="dropdown-item"><a href="#">Greece</a></li>
+                  <li class="dropdown-item"><a href="#">Greenland</a></li>
+                  <li class="dropdown-item"><a href="#">Grenada</a></li>
+                  <li class="dropdown-item"><a href="#">Guadeloupe</a></li>
+                  <li class="dropdown-item"><a href="#">Guam</a></li>
+                  <li class="dropdown-item"><a href="#">Guatemala</a></li>
+                  <li class="dropdown-item"><a href="#">Guernsey</a></li>
+                  <li class="dropdown-item"><a href="#">Guinea</a></li>
+                  <li class="dropdown-item"><a href="#">Guinea-bissau</a></li>
+                  <li class="dropdown-item"><a href="#">Guyana</a></li>
+                  <li class="dropdown-item"><a href="#">Haiti</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">Heard Island and Mcdonald Islands</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a href="#">Holy See (Vatican City State)</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Honduras</a></li>
+                  <li class="dropdown-item"><a href="#">Hong Kong</a></li>
+                  <li class="dropdown-item"><a href="#">Hungary</a></li>
+                  <li class="dropdown-item"><a href="#">Iceland</a></li>
+                  <li class="dropdown-item"><a href="#">India</a></li>
+                  <li class="dropdown-item"><a href="#">Indonesia</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">Iran, Islamic Republic of</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Iraq</a></li>
+                  <li class="dropdown-item"><a href="#">Ireland</a></li>
+                  <li class="dropdown-item"><a href="#">Isle of Man</a></li>
+                  <li class="dropdown-item"><a href="#">Israel</a></li>
+                  <li class="dropdown-item"><a href="#">Italy</a></li>
+                  <li class="dropdown-item"><a href="#">Jamaica</a></li>
+                  <li class="dropdown-item"><a href="#">Japan</a></li>
+                  <li class="dropdown-item"><a href="#">Jersey</a></li>
+                  <li class="dropdown-item"><a href="#">Jordan</a></li>
+                  <li class="dropdown-item"><a href="#">Kazakhstan</a></li>
+                  <li class="dropdown-item"><a href="#">Kenya</a></li>
+                  <li class="dropdown-item"><a href="#">Kiribati</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">Korea, Democratic People's Republic of</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a href="#">Korea, Republic of</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Kuwait</a></li>
+                  <li class="dropdown-item"><a href="#">Kyrgyzstan</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">Lao People's Democratic Republic</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Latvia</a></li>
+                  <li class="dropdown-item"><a href="#">Lebanon</a></li>
+                  <li class="dropdown-item"><a href="#">Lesotho</a></li>
+                  <li class="dropdown-item"><a href="#">Liberia</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">Libyan Arab Jamahiriya</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Liechtenstein</a></li>
+                  <li class="dropdown-item"><a href="#">Lithuania</a></li>
+                  <li class="dropdown-item"><a href="#">Luxembourg</a></li>
+                  <li class="dropdown-item"><a href="#">Macao</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">Macedonia, The Former Yugoslav Republic of</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Madagascar</a></li>
+                  <li class="dropdown-item"><a href="#">Malawi</a></li>
+                  <li class="dropdown-item"><a href="#">Malaysia</a></li>
+                  <li class="dropdown-item"><a href="#">Maldives</a></li>
+                  <li class="dropdown-item"><a href="#">Mali</a></li>
+                  <li class="dropdown-item"><a href="#">Malta</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">Marshall Islands</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Martinique</a></li>
+                  <li class="dropdown-item"><a href="#">Mauritania</a></li>
+                  <li class="dropdown-item"><a href="#">Mauritius</a></li>
+                  <li class="dropdown-item"><a href="#">Mayotte</a></li>
+                  <li class="dropdown-item"><a href="#">Mexico</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">Micronesia, Federated States of</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a href="#">Moldova, Republic of</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Monaco</a></li>
+                  <li class="dropdown-item"><a href="#">Mongolia</a></li>
+                  <li class="dropdown-item"><a href="#">Montenegro</a></li>
+                  <li class="dropdown-item"><a href="#">Montserrat</a></li>
+                  <li class="dropdown-item"><a href="#">Morocco</a></li>
+                  <li class="dropdown-item"><a href="#">Mozambique</a></li>
+                  <li class="dropdown-item"><a href="#">Myanmar</a></li>
+                  <li class="dropdown-item"><a href="#">Namibia</a></li>
+                  <li class="dropdown-item"><a href="#">Nauru</a></li>
+                  <li class="dropdown-item"><a href="#">Nepal</a></li>
+                  <li class="dropdown-item"><a href="#">Netherlands</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">Netherlands Antilles</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">New Caledonia</a></li>
+                  <li class="dropdown-item"><a href="#">New Zealand</a></li>
+                  <li class="dropdown-item"><a href="#">Nicaragua</a></li>
+                  <li class="dropdown-item"><a href="#">Niger</a></li>
+                  <li class="dropdown-item"><a href="#">Nigeria</a></li>
+                  <li class="dropdown-item"><a href="#">Niue</a></li>
+                  <li class="dropdown-item"><a href="#">Norfolk Island</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">Northern Mariana Islands</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Norway</a></li>
+                  <li class="dropdown-item"><a href="#">Oman</a></li>
+                  <li class="dropdown-item"><a href="#">Pakistan</a></li>
+                  <li class="dropdown-item"><a href="#">Palau</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">Palestinian Territory, Occupied</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Panama</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">Papua New Guinea</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Paraguay</a></li>
+                  <li class="dropdown-item"><a href="#">Peru</a></li>
+                  <li class="dropdown-item"><a href="#">Philippines</a></li>
+                  <li class="dropdown-item"><a href="#">Pitcairn</a></li>
+                  <li class="dropdown-item"><a href="#">Poland</a></li>
+                  <li class="dropdown-item"><a href="#">Portugal</a></li>
+                  <li class="dropdown-item"><a href="#">Puerto Rico</a></li>
+                  <li class="dropdown-item"><a href="#">Qatar</a></li>
+                  <li class="dropdown-item"><a href="#">Reunion</a></li>
+                  <li class="dropdown-item"><a href="#">Romania</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">Russian Federation</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Rwanda</a></li>
+                  <li class="dropdown-item"><a href="#">Saint Helena</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">Saint Kitts and Nevis</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Saint Lucia</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">Saint Pierre and Miquelon</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a href="#">Saint Vincent and The Grenadines</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Samoa</a></li>
+                  <li class="dropdown-item"><a href="#">San Marino</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">Sao Tome and Principe</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Saudi Arabia</a></li>
+                  <li class="dropdown-item"><a href="#">Senegal</a></li>
+                  <li class="dropdown-item"><a href="#">Serbia</a></li>
+                  <li class="dropdown-item"><a href="#">Seychelles</a></li>
+                  <li class="dropdown-item"><a href="#">Sierra Leone</a></li>
+                  <li class="dropdown-item"><a href="#">Singapore</a></li>
+                  <li class="dropdown-item"><a href="#">Slovakia</a></li>
+                  <li class="dropdown-item"><a href="#">Slovenia</a></li>
+                  <li class="dropdown-item"><a href="#">Solomon Islands</a></li>
+                  <li class="dropdown-item"><a href="#">Somalia</a></li>
+                  <li class="dropdown-item"><a href="#">South Africa</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">South Georgia and The South Sandwich Islands</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Spain</a></li>
+                  <li class="dropdown-item"><a href="#">Sri Lanka</a></li>
+                  <li class="dropdown-item"><a href="#">Sudan</a></li>
+                  <li class="dropdown-item"><a href="#">Suriname</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">Svalbard and Jan Mayen</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Swaziland</a></li>
+                  <li class="dropdown-item"><a href="#">Sweden</a></li>
+                  <li class="dropdown-item"><a href="#">Switzerland</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">Syrian Arab Republic</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Taiwan (ROC)</a></li>
+                  <li class="dropdown-item"><a href="#">Tajikistan</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">Tanzania, United Republic of</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Thailand</a></li>
+                  <li class="dropdown-item"><a href="#">Timor-leste</a></li>
+                  <li class="dropdown-item"><a href="#">Togo</a></li>
+                  <li class="dropdown-item"><a href="#">Tokelau</a></li>
+                  <li class="dropdown-item"><a href="#">Tonga</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">Trinidad and Tobago</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Tunisia</a></li>
+                  <li class="dropdown-item"><a href="#">Turkey</a></li>
+                  <li class="dropdown-item"><a href="#">Turkmenistan</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">Turks and Caicos Islands</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Tuvalu</a></li>
+                  <li class="dropdown-item"><a href="#">Uganda</a></li>
+                  <li class="dropdown-item"><a href="#">Ukraine</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">United Arab Emirates</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">United Kingdom</a></li>
+                  <li class="dropdown-item"><a href="#">United States</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">United States Minor Outlying Islands</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Uruguay</a></li>
+                  <li class="dropdown-item"><a href="#">Uzbekistan</a></li>
+                  <li class="dropdown-item"><a href="#">Vanuatu</a></li>
+                  <li class="dropdown-item"><a href="#">Venezuela</a></li>
+                  <li class="dropdown-item"><a href="#">Viet Nam</a></li>
+                  <li class="dropdown-item">
+                    <a href="#">Virgin Islands, British</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a href="#">Virgin Islands, U.S.</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a href="#">Wallis and Futuna</a>
+                  </li>
+                  <li class="dropdown-item"><a href="#">Western Sahara</a></li>
+                  <li class="dropdown-item"><a href="#">Yemen</a></li>
+                  <li class="dropdown-item"><a href="#">Zambia</a></li>
+                  <li class="dropdown-item"><a href="#">Zimbabwe</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- SELECT AGE -->
+            <div class="input-age py-4 px-4">
+              <div class="input-title pb-2">
+                <i class="bi bi-person-lines-fill pe-2"></i>
+                Age
+              </div>
+              <div class="dropdown" id="searchAge">
+                <input
+                  class="searchBar text-dark fw-normal col-12"
+                  id="ageInput"
+                  type="text"
+                  placeholder="Search by age..."
+                  data-toggle="dropdown"
+                  data-bs-toggle="dropdown"
+                />
+
+                <ul
+                  class="dropdown-menu bg-white text-dark fw-bold p-3"
+                  aria-labelledby="ageDropdown"
+                >
+                  <li class="dropdown-item">
+                    <button class="ageBtn01" type="submit" value="20">
+                      20
+                    </button>
+                  </li>
+                  <li class="dropdown-item">
+                    <button class="ageBtn02" type="submit" value="30">
+                      30
+                    </button>
+                  </li>
+                  <li class="dropdown-item">
+                    <button class="ageBtn03" type="submit" value="40">
+                      40
+                    </button>
+                  </li>
+                  <li class="dropdown-item">
+                    <button class="ageBtn04" type="submit" value="50">
+                      50
+                    </button>
+                  </li>
+                  <li class="dropdown-item">
+                    <button class="ageBtn05" type="submit" value="60+">
+                      60+
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- INPUT GENDER -->
+            <div class="input-gender u-border-bottom py-4 px-4">
+              <div class="input-title pb-2">
+                <i class="bi bi-gender-ambiguous pe-2"></i>
+                Gender
+              </div>
+              <div class="dropdown" id="searchGender">
+                <input
+                  class="searchBar text-dark fw-normal col-12"
+                  id="genderInput"
+                  type="text"
+                  placeholder="Search by gender..."
+                  data-toggle="dropdown"
+                  data-bs-toggle="dropdown"
+                />
+
+                <ul
+                  class="dropdown-menu bg-white text-dark fw-bold p-3"
+                  aria-labelledby="genderDropdown"
+                >
+                  <li class="dropdown-item">
+                    <button class="maleBtn" type="submit" value="male">
+                      Male
+                    </button>
+                  </li>
+                  <li class="dropdown-item">
+                    <button class="femaleBtn" type="submit" value="female">
+                      Female
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- INPUT RELATIONSHIP STATUS -->
+            <div class="input-relationship-status py-4 px-4">
+              <div class="input-title pb-2">
+                <i class="bi bi-heart-fill pe-2"></i>
+                Relationship Status
+              </div>
+              <div class="dropdown" id="searchRelationship">
+                <input
+                  class="searchBar text-dark fw-normal col-12"
+                  id="relationshipInput"
+                  type="text"
+                  placeholder="Search by relationship..."
+                  data-toggle="dropdown"
+                  data-bs-toggle="dropdown"
+                />
+
+                <ul
+                  class="dropdown-menu bg-white text-dark fw-bold p-3"
+                  aria-labelledby="genderDropdown"
+                >
+                  <li class="dropdown-item">
+                    <button class="singleBtn" type="submit" value="single">
+                      Single
+                    </button>
+                  </li>
+                  <li class="dropdown-item">
+                    <button
+                      class="relationBtn"
+                      type="submit"
+                      value="relationship"
+                    >
+                      In a relationship
+                    </button>
+                  </li>
+                  <li class="dropdown-item">
+                    <button class="engagedBtn" type="submit" value="engaged">
+                      Engaged
+                    </button>
+                  </li>
+                  <li class="dropdown-item">
+                    <button class="marriedBtn" type="submit" value="married">
+                      Married
+                    </button>
+                  </li>
+                  <li class="dropdown-item">
+                    <button
+                      class="openBtn"
+                      type="submit"
+                      value="in an open relationship"
+                    >
+                      In an open relationship
+                    </button>
+                  </li>
+                  <li class="dropdown-item">
+                    <button
+                      class="complicatedBtn"
+                      type="submit"
+                      value="it's complicated"
+                    >
+                      It's complicated
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </form>
         </section>
         <!-- END SIDEBAR -->
 
@@ -778,7 +905,7 @@
               <div class="col-md-4 ms-auto d-flex justify-content-end mt-4">
                 <button
                   type="submit"
-                  class="btn btn-download border-3"
+                  class="btn btn-download border-3 hide"
                   disabled="disabled"
                 >
                   <i class="bi bi-download"></i>
@@ -791,7 +918,7 @@
           <!-- START TABLE -->
           <div
             class="section-table table-scrollable mx-5 mt-4 mb-2"
-            style="width: 75vw; overflow: auto; max-height: 78vh"
+            style="width: 75vw; overflow: auto; max-height: 85vh"
           >
             <div class="container">
               <div class="row">
@@ -1018,8 +1145,11 @@
 
           <!-- Download CSV Button -->
           <div class="container">
-            <div class="row">
-              <div class="col-md-4 ms-auto py-4 d-flex justify-content-end">
+            <div class="row py-4">
+              <div class="col-md-4 text-secondary ps-5">
+                Filtered records: 360,114
+              </div>
+              <div class="col-md-8 ms-auto d-flex justify-content-end">
                 <button
                   type="submit"
                   class="btn btn-download border-3"

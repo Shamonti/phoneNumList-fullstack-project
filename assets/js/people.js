@@ -22,52 +22,65 @@ function searchPeople() {
   }
 }
 
-//Access data via button
-// let accessDataBtn, buttonGroup, messageBox;
-// accessDataBtn = document.getElementById('accessBtn');
-// buttonGroup = document.getElementById('buttonGroup');
-// messageBox = document.getElementById('message');
+let genderInput = document.getElementById('genderInput');
+let relationshipInput = document.getElementById('relationshipInput');
+let countryInput = document.getElementById('countryInput');
+let ageInput = document.getElementById('ageInput');
 
-// accessDataBtn.addEventListener('click', showBtns);
+document.querySelector('.maleBtn').addEventListener('click', function () {
+  genderInput.value = document.querySelector('.maleBtn').value;
+});
 
-// function showBtns() {
-//   accessDataBtn.classList.add('hide');
-//   buttonGroup.classList.remove('hide');
+document.querySelector('.femaleBtn').addEventListener('click', function () {
+  genderInput.value = document.querySelector('.femaleBtn').value;
+});
 
-//   document.getElementsByClassName('message-box')[1].innerHTML =
-//     '+880 1234 345 45';
-//   document.getElementsByClassName('message-box')[2].innerHTML = 'a@gmail.com';
-// }
+document.querySelector('.singleBtn').addEventListener('click', function () {
+  relationshipInput.value = document.querySelector('.singleBtn').value;
+});
 
-//Access data via button for database
-// let collection,  buttonGroup, messageBox, buttonId;
+document.querySelector('.relationBtn').addEventListener('click', function () {
+  relationshipInput.value = document.querySelector('.relationBtn').value;
+});
 
-// messageBox = document.getElementById('message');
+document.querySelector('.engagedBtn').addEventListener('click', function () {
+  relationshipInput.value = document.querySelector('.engagedBtn').value;
+});
 
-// function accessPhoneNumber(id)
-// {
+document.querySelector('.marriedBtn').addEventListener('click', function () {
+  relationshipInput.value = document.querySelector('.marriedBtn').value;
+});
 
-//     $.ajax({
-//         url:"{{ route('peopleDataHistory') }}",
-//         method:"POST",
-//         data:{id:id, _token:"{{ csrf_token() }}"},
-//         dataType:"json",
-//         success:function(data)
-//         {
-//             collection = document.getElementById(id);
-//             buttonGroup = document.getElementById('buttonGroup'+id);
-//             buttonId = document.getElementById(id).value;
-//             collection.classList.add('hide');
-//             buttonGroup.classList.remove('hide');
-//             for(var count = 0; count < data.length; count++)
-//             {
-//                 $("#messagePhone"+id).text(data[count].phone);
-//                 if (data[count].email != null)
-//                     $("#messageEmail"+id).text(data[count].email);
-//                 else
-//                     $("#messageEmail"+id).text("N/A");
-//             }
-//         }
-//     })
+document.querySelector('.openBtn').addEventListener('click', function () {
+  relationshipInput.value = document.querySelector('.openBtn').value;
+});
 
-// }
+document
+  .querySelector('.complicatedBtn')
+  .addEventListener('click', function () {
+    relationshipInput.value = document.querySelector('.complicatedBtn').value;
+  });
+
+document.querySelector('.countryBtn01').addEventListener('click', function () {
+  countryInput.value = document.querySelector('.countryBtn01').value;
+});
+
+document.querySelector('.ageBtn01').addEventListener('click', function () {
+  ageInput.value = document.querySelector('.ageBtn01').value;
+});
+
+document.querySelector('.ageBtn02').addEventListener('click', function () {
+  ageInput.value = document.querySelector('.ageBtn02').value;
+});
+
+document.querySelector('.ageBtn03').addEventListener('click', function () {
+  ageInput.value = document.querySelector('.ageBtn03').value;
+});
+
+document.querySelector('.ageBtn04').addEventListener('click', function () {
+  ageInput.value = document.querySelector('.ageBtn04').value;
+});
+
+document.querySelector('.ageBtn05').addEventListener('click', function () {
+  ageInput.value = document.querySelector('.ageBtn05').value;
+});

@@ -37,6 +37,11 @@
       color: $color-primary;
     }
 
+    input {
+      width: 100% !important;
+      margin-bottom: 0.8rem !important;
+    }
+
     .dropdown {
       .show {
         justify-content: center;
@@ -44,11 +49,26 @@
       }
       &-menu {
         max-width: 21rem;
+        width: 100%;
       }
       &-item {
         font-size: 1.4rem;
+        padding: 0;
+
         &:active {
           background-color: $color-primary;
+        }
+
+        button {
+          width: 100%;
+          color: $color-grey-dark--1;
+          background-color: transparent;
+          padding: 0.75rem 1rem;
+          text-align: left;
+
+          &:hover {
+            background-color: $color-grey-light--1;
+          }
         }
       }
     }
@@ -74,11 +94,10 @@
           right: 0;
         }
 
-        &-item,
-        a {
+        &-item {
           font-size: 1.4rem;
           font-weight: 500;
-          padding: 0.5rem;
+          padding: 0;
 
           &:hover,
           &:visited,
@@ -115,8 +134,8 @@
 
     .section-table {
       display: flex;
-      width: calc(100vw -30rem);
-      height: calc(100vh - 25rem);
+      width: calc(100vw - 30rem);
+      height: calc(100vh - 19rem);
       overflow-y: scroll;
 
       // border: 1px solid $color-grey-light--1;

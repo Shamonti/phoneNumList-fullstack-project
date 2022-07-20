@@ -6,7 +6,7 @@
   display: flex;
 
   &--sidebar {
-    width: 30rem;
+    width: 25rem;
     height: 100vh;
     background-color: $color-dashboard--dark;
 
@@ -82,9 +82,15 @@
   }
 
   &--main {
-    width: calc(100vw - 30rem);
+    width: calc(100vw - 25rem);
+    height: 100vh;
     background-color: $color-dashboard--light;
     padding: 0 1.75rem;
+
+    #salesChart,
+    #creditChart {
+      height: 33vh !important;
+    }
 
     .container {
       padding: 3rem 3rem 0 3rem;
