@@ -1,0 +1,19 @@
+.u-border-bottom {
+  border-bottom: 1px solid $color-grey-light--1;
+}
+
+.u-box-shadow-1 {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.u-box-shadow-2 {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.u-padding-lg {
+  padding: 9rem 2.4rem;
+
+  @include respond(phone) {
+    padding: 7rem 1.5rem;
+  }
+}

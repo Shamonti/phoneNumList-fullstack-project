@@ -1,0 +1,223 @@
+.user-div {
+  .card {
+    border: none;
+    border-radius: 0.6rem;
+    text-align: center;
+    // padding: 3.5rem 4rem;
+
+    &-body {
+      margin: 4rem 0 1rem;
+      padding: 0 4rem 3.5rem 4rem;
+    }
+
+    &-title {
+      font-weight: 800 !important;
+      font-size: 2.4rem !important;
+      line-height: 1;
+      color: $color-grey-dark--2;
+      padding: 3.5rem 4rem 0 3.5rem;
+    }
+
+    &-text {
+      color: $color-grey-dark--3;
+      font-weight: 700;
+      font-size: 1.6rem;
+      line-height: 2.4;
+    }
+
+    &-footer {
+      background-color: transparent;
+      padding: 0;
+
+      .active {
+        box-shadow: inset 0 -2px 0 0 $color-primary;
+
+        .nav-link {
+          color: $color-primary;
+        }
+      }
+
+      .nav-item {
+        padding: 1.6rem 0;
+        margin-right: 2rem;
+
+        &:hover {
+          // border-bottom: 2px solid $color-primary;
+          box-shadow: inset 0 -2px 0 0 $color-primary;
+
+          .nav-link {
+            color: $color-primary;
+          }
+        }
+      }
+
+      .nav-link {
+        font-weight: 300;
+        font-size: 1.4rem;
+        color: $color-grey-dark--3;
+      }
+    }
+
+    .btn {
+      border: 1px solid $color-grey-light--3;
+      border-radius: 0.3rem;
+
+      // height: 30.5px;
+      text-align: center;
+
+      i {
+        font-size: 1.5rem;
+        color: $color-grey-dark--3;
+      }
+    }
+  }
+}
+
+.user-details-div {
+  .card {
+    border: none;
+    border-radius: 0.6rem;
+    text-align: center;
+  }
+
+  .card-title {
+    text-align: left;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $color-blue-dark;
+  }
+
+  .card-body {
+    margin-top: 0rem;
+  }
+
+  &__card {
+    padding: 4rem;
+
+    @include respond(phone) {
+      padding: 2rem;
+    }
+  }
+
+  .contact-details {
+    &__box {
+      display: flex;
+      // align-items: flex-end;
+      margin-top: 1.5rem;
+    }
+
+    &--icon {
+      .circle-element {
+        background-color: $color-grey-light--1;
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      i {
+        font-size: 1.8rem;
+        color: $color-grey-dark--3;
+      }
+    }
+
+    &--content {
+      display: flex;
+    }
+
+    &--text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      @include respond(tab-port) {
+        padding: 0;
+      }
+
+      span {
+        font-weight: 700;
+        font-size: 1.3rem;
+        line-height: 1;
+        margin-bottom: 0.5rem;
+        color: $color-grey-dark--3;
+      }
+
+      a {
+        color: $color-primary;
+        white-space: nowrap;
+
+        &:hover {
+          color: $color-grey-dark--2;
+        }
+      }
+
+      p {
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1;
+        color: $color-grey-dark--3;
+        text-align: start;
+      }
+    }
+  }
+}
+
+.section-main {
+  width: calc(100vw - 2.2rem);
+
+  .card {
+    .card-title {
+      font-weight: 600;
+      font-size: 1.6rem;
+      color: $color-grey-dark--2;
+      border-bottom: 1px solid $color-grey-light--3;
+    }
+
+    .card-body {
+      form {
+        label {
+          font-weight: 500;
+          font-size: 1.2rem;
+          color: $color-grey-dark--3;
+        }
+
+        input {
+          font-size: 1.4rem;
+          color: $color-grey-dark--2;
+        }
+
+        .form {
+          &-control:focus {
+            box-shadow: none;
+            border-color: $color-primary;
+          }
+
+          &-span {
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: $color-grey-dark--2;
+          }
+        }
+      }
+    }
+  }
+}
+
+.pop-up-message--box {
+  position: relative;
+
+  .card {
+    position: absolute;
+    right: 0;
+
+    background-color: $color-secondary !important;
+    animation: dissappear 3s forwards;
+
+    &-body {
+      color: $color-black !important;
+    }
+  }
+}

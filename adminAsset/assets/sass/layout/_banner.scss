@@ -1,0 +1,50 @@
+.section-banner {
+  p {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $color-text;
+  }
+
+  .input-group {
+    width: 45rem;
+
+    @include respond(phone) {
+      width: 30.5rem;
+    }
+
+    .form-control {
+      height: 6rem;
+      padding: 1rem 2rem;
+      border-radius: 5rem;
+      border: 1px solid $color-grey-light--1;
+      font-size: 1.8rem;
+      line-height: 1.5;
+      font-weight: 600;
+
+      @include respond(phone) {
+        height: 4.5rem;
+      }
+    }
+
+    button {
+      font-size: 1.6rem;
+      font-weight: 800;
+      border-radius: 5rem;
+      border: none;
+      padding: 0 1.5rem;
+
+      &:hover {
+        transform: scale(1) !important;
+      }
+    }
+  }
+
+  .banner-bg {
+    display: flex;
+    align-items: center;
+
+    &--img {
+      width: 100%;
+    }
+  }
+}

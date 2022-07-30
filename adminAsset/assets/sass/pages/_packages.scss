@@ -1,0 +1,147 @@
+.section-header {
+  .heading {
+    font-weight: 700;
+    font-size: 3rem;
+    color: $color-blue-dark;
+
+    &--sub {
+      font-weight: 600 !important;
+      font-size: 2.1rem;
+      color: $color-grey-dark--3;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.pricingTable {
+  text-align: center;
+  background: $color-white;
+  margin: 0 -1.5rem;
+  box-shadow: 0 0 10px #ababab;
+  padding-bottom: 4rem;
+  border-radius: 1rem;
+  color: #cad0de;
+  transform: scale(1);
+  transition: all 0.5s ease 0s;
+  cursor: pointer;
+
+  // height: 77rem;
+
+  @include respond(tab-land) {
+    // height: 83rem;
+    height: auto;
+  }
+
+  @include respond(phone) {
+    height: auto;
+  }
+}
+
+.pricingTable:hover {
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+.pricingTable .pricingTable-header {
+  padding: 4rem 0;
+  background: #f5f6f9;
+  border-radius: 10px 10px 50% 50%;
+  transition: all 0.5s ease 0s;
+}
+
+.pricingTable:hover .pricingTable-header {
+  background: $color-primary;
+}
+
+.pricingTable .pricingTable-header i {
+  font-size: 5rem;
+  color: #858c9a;
+  margin-bottom: 10px;
+  transition: all 0.5s ease 0s;
+}
+
+.pricingTable .price-value {
+  font-size: 3.5rem;
+  color: $color-primary;
+  transition: all 0.5s ease 0s;
+}
+
+.pricingTable .month {
+  display: block;
+  font-size: 1.4rem;
+  color: $color-grey-dark--3;
+}
+
+.pricingTable:hover .month,
+.pricingTable:hover .price-value,
+.pricingTable:hover .pricingTable-header i {
+  color: $color-white;
+}
+
+.pricingTable .heading {
+  font-size: 2.4rem;
+  color: $color-primary;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+
+  padding-top: 2rem;
+}
+
+.pricingTable .pricing-content ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2.75rem;
+
+  text-align: left;
+  padding: 0 2rem;
+}
+
+.pricingTable .pricing-content ul li {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: $color-grey-dark--2;
+  padding-bottom: 0.75rem;
+
+  display: flex;
+  align-items: center;
+
+  i {
+    color: $color-primary;
+    font-weight: 500;
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+}
+
+.pricingTable .pricingTable-signup .btn-default {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 1rem 3.5rem;
+  border-radius: 2rem;
+  background: $color-primary;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+
+  &:hover {
+    box-shadow: 0 0 10px $color-primary;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .pricingTable {
+    margin: 0 0 20px;
+  }
+}
+
+.price {
+  &-title {
+    font-size: 2rem;
+    font-weight: 500;
+    color: $color-grey-dark--3;
+  }
+}

@@ -1,0 +1,160 @@
+.section-searchbar {
+  .searchBar {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+  .btn-purple {
+    border-radius: 0.3rem !important;
+  }
+
+  #searchCountry {
+    .dropdown {
+      padding: 0.5rem;
+
+      position: relative;
+
+      &-menu {
+        height: 37.5rem;
+        width: 100%;
+        overflow-x: hidden;
+
+        position: absolute;
+        right: 0;
+      }
+
+      &-item {
+        font-size: 1.4rem;
+        font-weight: 500;
+        padding: 0.5rem;
+
+        &:hover,
+        &:visited,
+        &::selection {
+          cursor: pointer;
+          background-color: $color-grey-light--1;
+          font-weight: 600;
+        }
+
+        a:hover {
+          color: $color-black !important;
+        }
+      }
+    }
+  }
+
+  #searchPeopleByName {
+    .dropdown-menu {
+      font-size: $default-font-size !important;
+      border: 1px solid $color-grey-light--1 !important;
+      width: 24.75rem;
+    }
+  }
+}
+
+.section-people-cards {
+  .circle-element {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 3rem;
+    box-shadow: 0 4px 14px 0 rgba(27, 20, 65, 0.2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+
+    i {
+      color: $color-white;
+      font-size: 2.5rem;
+    }
+
+    &--person {
+      background-image: linear-gradient(
+        45deg,
+        $color-primary,
+        $color-purple-dark
+      );
+    }
+
+    &--company {
+      background-image: linear-gradient(
+        45deg,
+        $color-primary,
+        $color-purple-dark
+      );
+    }
+  }
+
+  .dark-link {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-right: 1.5rem;
+    line-height: 2.5;
+
+    &:hover {
+      font-weight: 500;
+      color: $color-primary;
+    }
+  }
+
+  .active {
+    font-weight: 700;
+    color: $color-primary;
+  }
+
+  .heading {
+    &--sub {
+      font-size: 2rem;
+
+      font-weight: 700 !important;
+      line-height: 1.5;
+    }
+  }
+
+  .btn-grad {
+    height: 3.75rem;
+    width: max-content;
+
+    font-size: 1.6rem;
+  }
+
+  #country {
+    font-size: 1.5rem;
+    color: $color-blue-dark;
+    border: 1px solid rgba($color-blue-dark, 0.5);
+    border-radius: 0.2rem;
+
+    &:focus-visible {
+      border: 1px solid rgba($color-blue-dark, 0.5);
+      outline: none;
+    }
+  }
+}
+
+.section-message {
+  .card-text {
+    font-size: 1.6rem;
+    font-style: italic;
+    color: $color-secondary;
+
+    span {
+      font-weight: 600;
+      color: $color-secondary;
+    }
+  }
+
+  .user-link {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.5;
+    color: $color-primary;
+    white-space: nowrap;
+
+    padding: 1rem 2rem 1rem 0;
+
+    &:hover {
+      color: $color-primary;
+      text-decoration: underline;
+    }
+  }
+}

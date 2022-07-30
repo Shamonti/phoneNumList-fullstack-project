@@ -1,0 +1,727 @@
+.section-login,
+.section-signup {
+  &--right {
+    position: relative;
+
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .company-logo {
+      display: none;
+    }
+
+    .login-form {
+      padding: 9rem 0;
+    }
+
+    .login-form,
+    .reset-form,
+    .signup-form {
+      display: flex;
+      justify-content: center;
+
+      .card {
+        width: 36rem;
+        font-weight: 700;
+        font-size: 1.4rem;
+        color: $color-grey-dark--3;
+
+        &-title {
+          width: 100%;
+          display: flex;
+
+          .login {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            text-transform: capitalize;
+
+            color: $color-primary;
+            border-bottom: 1px solid $color-primary;
+          }
+
+          .signup {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            text-transform: capitalize;
+            border-bottom: 1px solid $color-grey-light--3;
+
+            i {
+              color: $color-grey-dark--3;
+            }
+
+            &:hover {
+              color: $color-primary;
+              border-bottom: 1px solid $color-primary;
+
+              i {
+                color: $color-primary;
+              }
+            }
+          }
+        }
+
+        &-body {
+          .card-title {
+            display: flex;
+            flex-direction: column;
+          }
+
+          form {
+            label {
+              font-weight: 700;
+              font-size: 1.2rem;
+            }
+
+            #error-text {
+              display: flex;
+
+              margin-top: 0.5rem;
+              align-items: center;
+
+              p {
+                font-size: 1rem;
+                line-height: 1;
+                margin: 0;
+              }
+            }
+
+            input {
+              height: 3rem;
+              padding: 0 1rem 0 1rem;
+
+              font-weight: 600;
+              font-size: 1.4rem;
+              color: $color-grey-dark--2;
+
+              &::placeholder {
+                font-weight: 600;
+                font-size: 1.4rem;
+                color: $color-secondary;
+              }
+            }
+
+            .form-check {
+              display: flex;
+              justify-content: center;
+
+              &-input {
+                height: 1.6rem;
+
+                padding: 0 0.7rem;
+                margin: auto 0;
+                border-radius: 2px;
+              }
+
+              &-label {
+                font-weight: 600;
+                font-size: 1.4rem;
+              }
+            }
+
+            .form-control {
+              font-weight: 600;
+              font-size: 1.4rem;
+
+              &--option {
+                color: $color-grey-dark--2;
+              }
+
+              option {
+                font-weight: 600;
+                font-size: 1.4rem;
+                color: $color-grey-dark--2;
+              }
+            }
+          }
+        }
+
+        &-footer {
+          font-weight: 600;
+          font-size: 1.3rem;
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+
+          display: flex;
+          justify-content: center;
+
+          p {
+            color: $color-grey-dark--2;
+          }
+
+          span {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+
+    .reset-form {
+      padding: 19.65rem 0;
+
+      h1 {
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: $color-grey-dark--2;
+        text-align: center;
+      }
+
+      h2 {
+        font-weight: 400;
+        font-size: 1.4rem;
+        color: $color-grey-dark--3;
+        text-align: center;
+      }
+    }
+
+    .signup-form {
+      h1 {
+        font-weight: 700;
+        font-size: 2.2rem;
+
+        text-align: center;
+        padding: 1rem 0 1.8rem 0;
+      }
+
+      .card {
+        &-footer a {
+          color: $color-primary !important;
+        }
+      }
+    }
+  }
+
+  &--left {
+    width: 50vw;
+    height: 100vh;
+
+    .login-text-box,
+    .signup-text-box {
+      position: absolute;
+      top: 40vh;
+      left: 3vw;
+
+      text-align: center;
+      padding: 5rem;
+
+      @include respond(tab-land) {
+        left: -1.5vw;
+      }
+    }
+
+    .company-logo {
+      img {
+        width: 24rem;
+      }
+    }
+  }
+
+  &--admin {
+    width: 100vw;
+    height: 100vh;
+
+    .login-form {
+      padding: 3rem 0;
+    }
+
+    .login-form,
+    .reset-form {
+      display: flex;
+      justify-content: center;
+
+      .card {
+        width: 36rem;
+        font-weight: 700;
+        font-size: 1.4rem;
+        color: $color-grey-dark--3;
+
+        &-title {
+          width: 100%;
+          display: flex;
+
+          .login {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            text-transform: capitalize;
+
+            color: $color-blue-dark;
+            border-bottom: 1px solid $color-blue-dark;
+          }
+
+          .signup {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            text-transform: capitalize;
+            border-bottom: 1px solid $color-grey-light--3;
+
+            i {
+              color: $color-grey-dark--3;
+            }
+
+            &:hover {
+              color: $color-primary;
+              border-bottom: 1px solid $color-primary;
+
+              i {
+                color: $color-primary;
+              }
+            }
+          }
+        }
+
+        &-body {
+          .card-title {
+            display: flex;
+            flex-direction: column;
+          }
+
+          form {
+            label {
+              font-weight: 700;
+              font-size: 1.2rem;
+
+              display: flex;
+            }
+
+            #error-text {
+              display: flex;
+
+              margin-top: 0.5rem;
+              align-items: center;
+
+              p {
+                font-size: 1rem;
+                line-height: 1;
+                margin: 0;
+              }
+            }
+
+            input {
+              height: 3rem;
+              padding: 0 1rem 0 1rem;
+
+              font-weight: 600;
+              font-size: 1.4rem;
+              color: $color-grey-dark--2;
+            }
+
+            ::-webkit-input-placeholder {
+              font-weight: 600;
+              font-size: 1.4rem;
+              color: $color-secondary;
+            }
+
+            .form-check {
+              display: flex;
+              justify-content: center;
+
+              &-input {
+                height: 1.6rem;
+
+                padding: 0 0.7rem;
+                margin: auto 0;
+                border-radius: 2px;
+
+                &:checked {
+                  background-color: $color-blue-dark !important;
+                }
+              }
+
+              &-label {
+                font-weight: 600;
+                font-size: 1.4rem;
+              }
+            }
+
+            .form-control {
+              font-weight: 600;
+              font-size: 1.4rem;
+
+              &--option {
+                color: $color-grey-dark--2;
+              }
+
+              option {
+                font-weight: 600;
+                font-size: 1.4rem;
+                color: $color-grey-dark--2;
+              }
+            }
+          }
+        }
+
+        &-footer {
+          font-weight: 600;
+          font-size: 1.3rem;
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+
+          display: flex;
+          justify-content: center;
+
+          p {
+            color: $color-grey-dark--2;
+          }
+
+          span {
+            color: $color-blue-dark;
+          }
+        }
+      }
+    }
+
+    .reset-form {
+      padding: 3rem 0;
+
+      h1 {
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: $color-grey-dark--2;
+        text-align: center;
+      }
+
+      h2 {
+        font-weight: 400;
+        font-size: 1.4rem;
+        color: $color-grey-dark--3;
+        text-align: center;
+      }
+    }
+
+    .login-text-box {
+      width: 100%;
+
+      position: absolute;
+      top: 10vh;
+
+      display: flex;
+      justify-content: center;
+
+      text-align: center;
+      padding: 5rem;
+
+      @include respond(tab-land) {
+        left: -1.5vw;
+      }
+    }
+
+    .company-logo {
+      img {
+        width: 24rem;
+      }
+    }
+  }
+}
+
+.section-dashboard--addUser {
+  .signup-form,
+  .reset-form {
+    display: flex;
+    justify-content: center;
+
+    .card {
+      width: 36rem;
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: $color-grey-dark--3;
+
+      &-title {
+        width: 100%;
+        display: flex;
+
+        .signup {
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          text-transform: capitalize;
+          border-bottom: 1px solid $color-grey-light--3;
+
+          i {
+            color: $color-grey-dark--3;
+          }
+
+          &:hover {
+            color: $color-primary;
+            border-bottom: 1px solid $color-primary;
+
+            i {
+              color: $color-primary;
+            }
+          }
+        }
+      }
+
+      &-body {
+        .card-title {
+          display: flex;
+          flex-direction: column;
+        }
+
+        form {
+          label {
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: $color-white;
+          }
+
+          #error-text {
+            display: flex;
+
+            margin-top: 0.5rem;
+            align-items: center;
+
+            p {
+              font-size: 1rem;
+              line-height: 1;
+              margin: 0;
+            }
+          }
+
+          input {
+            height: 3rem;
+            padding: 0 1rem 0 1rem;
+
+            font-weight: 600;
+            font-size: 1.4rem;
+            color: $color-dashboard--dark;
+
+            &::placeholder {
+              font-weight: 600;
+              font-size: 1.4rem;
+              color: $color-dashboard--light--1;
+            }
+          }
+
+          .form-check {
+            display: flex;
+            justify-content: center;
+
+            &-input {
+              height: 1.6rem;
+
+              padding: 0 0.7rem;
+              margin: auto 0;
+              border-radius: 2px;
+            }
+
+            &-label {
+              font-weight: 600;
+              font-size: 1.4rem;
+            }
+          }
+
+          .form-control {
+            font-weight: 600;
+            font-size: 1.4rem;
+
+            &--option {
+              color: $color-grey-dark--2;
+            }
+
+            option {
+              font-weight: 600;
+              font-size: 1.4rem;
+              color: $color-grey-dark--2;
+            }
+          }
+
+          .btn-purple {
+            display: flex;
+          }
+        }
+      }
+
+      &-footer {
+        background-color: transparent;
+
+        span {
+          color: $color-white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.section-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  // margin: 3rem;
+
+  p {
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: $color-secondary;
+
+    margin: 0;
+
+    a {
+      color: $color-secondary;
+
+      &:hover {
+        color: $color-primary !important;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@include respond(tab-land) {
+  .section-login,
+  .section-signup {
+    &--right {
+      .login-form {
+        padding: 3.5rem 0;
+      }
+
+      .reset-form {
+        padding: 11.24rem 0;
+      }
+    }
+  }
+
+  .section-footer {
+    margin: 0.5rem;
+  }
+}
+
+@include respond(tab-port) {
+  .section-login {
+    &--right {
+      .company-logo {
+        margin: 4rem 0 0rem 0;
+      }
+    }
+  }
+
+  .section-signup {
+    &--right {
+      .company-logo {
+        margin: 28rem 0 0rem 0;
+      }
+    }
+  }
+
+  .section-login,
+  .section-signup {
+    &--left {
+      display: none;
+    }
+
+    &--right {
+      width: 100vw;
+      margin: 0;
+
+      .company-logo {
+        display: block;
+        text-align: center;
+
+        img {
+          width: 20rem;
+        }
+      }
+
+      .signup-form {
+        padding: 3rem 0 5rem 0;
+      }
+
+      .login-form {
+        padding: 1rem 0;
+      }
+
+      .reset-form {
+        padding: 8.7rem 0;
+      }
+
+      .login-form,
+      .reset-form,
+      .section-footer {
+        margin: 1rem;
+      }
+    }
+  }
+}
+
+@include respond(phone) {
+  .section-login {
+    &--right {
+      .company-logo {
+        margin: 4rem 0 0 0;
+      }
+    }
+  }
+
+  .section-signup {
+    &--right {
+      .company-logo {
+        margin: 18rem 0 0 0;
+      }
+    }
+  }
+
+  .section-login,
+  .section-signup {
+    &--right {
+      .company-logo {
+        img {
+          width: 20rem;
+        }
+      }
+
+      .signup-form {
+        padding: 0;
+      }
+
+      .login-form {
+        padding: 0;
+      }
+
+      .reset-form {
+        padding: 8rem 0 8.8rem 0;
+      }
+
+      .login-form,
+      .reset-form,
+      .signup-form {
+        .card {
+          background-color: transparent;
+          box-shadow: none !important;
+        }
+      }
+    }
+  }
+
+  .section-footer {
+    margin: 0 !important;
+  }
+}
+
+.divider {
+  font-size: 1.2rem;
+  color: $color-secondary;
+
+  display: flex;
+  align-items: center;
+
+  &--line {
+    height: 1px;
+    width: 100%;
+    background: $color-grey-light--3;
+  }
+}
+
+.divider span {
+  color: $color-blue-dark;
+  font-weight: 800;
+  font-size: 1.5rem;
+}

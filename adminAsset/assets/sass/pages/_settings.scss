@@ -1,0 +1,517 @@
+.section-settings {
+  .section-sidebar {
+    border-right: 1px solid rgba($color-secondary, 0.3);
+    width: 20rem;
+    height: calc(100vh - 5rem);
+
+    .nav {
+      span {
+        font-weight: 800;
+        font-size: 1.2rem;
+        color: $color-grey-dark--2;
+      }
+
+      .nav-item {
+        span {
+          font-size: 1.2rem;
+        }
+
+        .nav-link {
+          font-weight: 600;
+          font-size: $default-font-size;
+          color: $color-secondary;
+          line-height: 1.4;
+        }
+        .active h2 {
+          font-size: $default-font-size;
+          font-weight: 700;
+          line-height: 1.4;
+        }
+      }
+    }
+
+    .nav-pills .nav-link.active,
+    .nav-pills .show > .nav-link {
+      font-weight: 900;
+      background-color: transparent !important;
+      color: $color-grey-dark--2;
+    }
+  }
+
+  .section-main {
+    .card {
+      &-title {
+        font-weight: 700;
+
+        h1,
+        h3 {
+          font-weight: 700;
+          font-size: 1.6rem;
+        }
+
+        .btn-purple {
+          border-radius: 0.3rem;
+        }
+      }
+
+      .form-label {
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+
+      .form-control {
+        height: 3rem !important;
+      }
+    }
+
+    .btn-change {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: $color-grey-dark--3;
+
+      border: 1px solid #ced4da;
+      border-radius: 0.3rem;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+      padding: 0.2rem 0.6rem;
+
+      &:hover {
+        box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    .second-navbar {
+      .nav-link {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: $color-grey-dark--3;
+        padding: 1rem 1rem;
+        margin: 0 1.5rem;
+        border-color: transparent;
+
+        &:hover {
+          color: $color-primary;
+          border-bottom: 1px solid $color-primary;
+        }
+      }
+
+      .nav-tabs .nav-item.show .nav-link,
+      .nav-tabs .nav-link.active {
+        color: $color-primary;
+        border-color: transparent;
+        border-bottom: 1px solid $color-primary;
+      }
+    }
+
+    .modal {
+      &-title {
+        font-weight: 800;
+        font-size: $default-font-size;
+        color: $color-grey-dark--2;
+      }
+
+      .btn-close {
+        font-size: $default-font-size;
+      }
+
+      &-body .form-label {
+        font-weight: 700;
+      }
+
+      &-footer {
+        justify-content: flex-start;
+
+        .btn {
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    #errorModal {
+      .modal-title {
+        font-size: $default-font-size;
+        font-weight: 800;
+      }
+      .modal-body {
+        p {
+          font-size: $default-font-size;
+          font-weight: 500;
+        }
+      }
+    }
+
+    #country {
+      flex: 0 0 auto;
+      width: 100%;
+      height: 3rem !important;
+      border: 1px solid #ced4da !important;
+      border-radius: 0.3rem;
+
+      input {
+        padding: 0.3rem 1rem !important;
+
+        &::placeholder {
+          color: $color-grey-dark--2;
+        }
+      }
+
+      .dropdown {
+        padding: 0.5rem;
+
+        position: relative;
+
+        &-menu {
+          height: 37.5rem;
+          width: 100%;
+          overflow-x: hidden;
+
+          position: absolute;
+          right: 0;
+        }
+
+        &-item {
+          font-size: 1.4rem;
+          font-weight: 500;
+          padding: 0.5rem;
+
+          &:hover,
+          &:visited,
+          &::selection {
+            cursor: pointer;
+            background-color: $color-grey-light--1;
+            font-weight: 600;
+          }
+
+          a {
+            color: $color-grey-dark--2;
+
+            &:hover {
+              color: $color-black !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .section-settings-plan,
+  .section-current-credit {
+    .card {
+      &-bg {
+        background-color: $color-grey-light--2;
+        border-radius: 0.5rem;
+        padding: 1rem;
+      }
+
+      &-body {
+        padding: 1.5rem;
+
+        span {
+          font-size: 1.3rem;
+          color: $color-grey-light--5;
+        }
+
+        h3 {
+          color: $color-grey-dark--2;
+          font-size: 1.5rem;
+          font-weight: 700;
+        }
+
+        p {
+          color: $color-grey-dark--2;
+          font-weight: 500;
+          font-size: 1.5rem;
+          line-height: 1.5;
+
+          margin: 0;
+        }
+
+        .row {
+          padding: 1.5rem 0;
+        }
+      }
+
+      .btn-access {
+        color: $color-grey-dark--3;
+        font-weight: 700;
+
+        &:hover {
+          color: $color-primary;
+          border: 1px solid $color-primary;
+        }
+      }
+    }
+  }
+
+  .section-csv-exports-table,
+  .invoice-history-table {
+    .table {
+      margin: 0;
+
+      thead {
+        background-color: $color-grey-light--2;
+
+        th {
+          font-size: 1.3rem;
+          font-weight: 400;
+          color: $color-text;
+          padding: 1.5rem;
+          border-bottom: 1px solid #dee2e6;
+        }
+      }
+
+      tbody {
+        tr {
+          &:hover {
+            background-color: $color-grey-light--2;
+            cursor: pointer;
+          }
+        }
+
+        td {
+          vertical-align: middle;
+          padding: 1.5rem;
+          border-bottom: 1px solid #dee2e6;
+
+          p {
+            margin-bottom: 0;
+            color: $color-white;
+            font-size: 1.2rem;
+            font-weight: 700;
+          }
+
+          .circle-element {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 2.5rem;
+            width: 2.5rem;
+            border-radius: 50%;
+
+            background-color: $color-grey-dark--2;
+
+            &:hover {
+              .user-details {
+                display: block;
+              }
+            }
+          }
+
+          .user-details {
+            display: none;
+            border-radius: 0.3rem;
+
+            position: absolute;
+            right: 12vw;
+          }
+        }
+
+        .progress {
+          height: 1.5rem;
+          border-radius: 2rem;
+
+          &-bar {
+            background-color: $color-green;
+          }
+        }
+      }
+
+      tfoot {
+        display: flex;
+        justify-content: space-between;
+
+        border-bottom: transparent;
+
+        span {
+          color: $color-grey-dark--3;
+          font-size: 1.3rem;
+        }
+
+        .pagination {
+          .page-link {
+            color: $color-grey-dark--1;
+            display: flex;
+            align-items: center;
+          }
+
+          .page-item.active .page-link {
+            background-color: $color-grey-light--1;
+            border: 1px solid $color-grey-light--3;
+          }
+        }
+      }
+    }
+
+    .page-link {
+      height: 2.6rem;
+    }
+  }
+
+  .section-csv-export-settings {
+    .card {
+      width: 50rem;
+
+      @include respond(phone) {
+        width: 30rem;
+      }
+    }
+
+    .csv-export-box {
+      padding: 1.75rem 2rem;
+      border-radius: 0.5rem;
+      border: 1px solid $color-grey-light--3;
+
+      i {
+        color: $color-grey-light--5;
+      }
+
+      .csv-export-title {
+        font-weight: 700;
+        color: $color-grey-dark--2;
+      }
+
+      .btn-access {
+        color: $color-grey-dark--1;
+        font-weight: 600;
+        height: 3rem;
+
+        i {
+          color: $color-primary;
+        }
+
+        &:hover {
+          border: 1px solid $color-grey-light--3;
+          box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
+        }
+      }
+
+      .btn-purple {
+        border-radius: 0.3rem;
+      }
+
+      .modal {
+        .modal-dialog {
+          max-width: 75rem;
+        }
+
+        .field-name-box {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          border: 1px solid $color-grey-light--3;
+          border-radius: 0.3rem;
+          padding: 0.3rem 0.75rem;
+
+          h5 {
+            margin: 0rem;
+            color: $color-grey-dark--2;
+            font-weight: 600;
+            line-height: 1;
+          }
+
+          .form-check {
+            padding: 0;
+            align-self: center;
+
+            &-input {
+              border-radius: 0.3rem;
+              border: 1px solid $color-grey-light--5;
+              padding: 0;
+              margin-top: 0.4em !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .section-credit-history {
+    span {
+      color: $color-grey-dark--2;
+    }
+    .form-control {
+      height: 3.2rem;
+      background-color: transparent;
+      font-size: $default-font-size;
+    }
+  }
+
+  .section-settings-billing {
+    .credit-card-info {
+      max-width: 35rem;
+
+      .card-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+
+      .card-text {
+        margin: 0;
+        font-size: 1.6rem;
+      }
+    }
+    .modal {
+      &-dialog {
+        max-width: 65rem;
+      }
+
+      &-content {
+        border-radius: 0.5rem;
+      }
+
+      &-header {
+        border-bottom: transparent;
+
+        .btn-close {
+          background: transparent
+            url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e")
+            center/0.75em auto no-repeat;
+        }
+      }
+
+      &-body {
+        h5 {
+          font-weight: 700;
+          font-size: 1.5rem;
+        }
+
+        .card {
+          &-body {
+            padding: 2rem;
+
+            label {
+              font-size: 1.4rem;
+            }
+
+            .form-control {
+              padding: 0.575rem 0.75rem;
+              font-size: 1.3rem;
+            }
+
+            ::placeholder {
+              color: $color-secondary;
+              font-weight: 600;
+              font-size: 1.3rem;
+              line-height: 1.5;
+            }
+
+            .country-dropdown {
+              select {
+                border: 1px solid #ced4da;
+                height: 3.4rem;
+              }
+            }
+
+            .btn-purple {
+              height: 5rem;
+              width: 100%;
+              border-radius: 0.3rem;
+              font-size: 1.75rem;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}

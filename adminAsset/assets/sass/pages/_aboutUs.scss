@@ -1,0 +1,17 @@
+.section-aboutUs {
+  .heading {
+    &--main {
+      font-size: 7.2rem;
+      font-weight: 800;
+      color: $color-blue-dark;
+      line-height: 1;
+    }
+
+    &--sub {
+      font-size: 3.3rem;
+      font-weight: 800 !important;
+      color: $color-blue-dark;
+      margin-bottom: 1.6rem;
+    }
+  }
+}

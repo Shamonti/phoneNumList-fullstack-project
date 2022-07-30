@@ -1,0 +1,161 @@
+.section-careers-heading {
+  h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: $color-blue-dark;
+  }
+  .btn {
+    border-radius: 3rem;
+
+    @include respond(phone) {
+      padding: 1rem 3rem !important;
+    }
+  }
+}
+
+.careers-heading {
+  &--main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $color-primary;
+    line-height: 1;
+
+    margin-bottom: 1.75rem;
+  }
+
+  &--sub {
+    font-size: 3.3rem;
+    font-weight: 800;
+    color: $color-blue-dark;
+    line-height: 1.2;
+
+    width: 60%;
+    margin: auto;
+
+    @include respond(phone) {
+      width: 90%;
+    }
+  }
+}
+
+.section-careers-values {
+  .card {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+    padding: 2.5rem;
+
+    height: 100%;
+
+    &:hover {
+      transform: translateY(-1.5rem) scale(1.03);
+    }
+
+    &-body {
+      padding: 2rem 0 3rem 0;
+
+      i {
+        font-size: 6rem;
+        background-image: linear-gradient(
+          to right,
+          rgba($color-primary, 0.75),
+          $color-purple-dark
+        );
+        -webkit-background-clip: text;
+        color: transparent;
+        margin-bottom: 1.5rem;
+      }
+
+      button {
+        border-radius: 3rem;
+      }
+    }
+
+    &-title {
+      font-weight: 800;
+      font-size: 1.6rem;
+      line-height: 1.6;
+      text-transform: uppercase;
+      color: $color-blue-dark;
+    }
+
+    &-text {
+      font-size: 1.6rem;
+      line-height: 1.5;
+      font-weight: 600;
+      text-align: center;
+      color: $color-grey-dark--3;
+    }
+  }
+}
+
+.section-careers-meet-team {
+  width: 100%;
+  color: $color-white;
+  background: linear-gradient(180deg, #181f34 0%, #3d2a66 100%);
+
+  .card {
+    border: none;
+    border-radius: 0;
+    margin: 0 2.5rem;
+    background-color: transparent;
+
+    &-body {
+      padding: 0;
+      margin: 1.5rem 0;
+    }
+    &-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+
+    &-text {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.section-careers-join-team {
+  color: $color-blue-dark;
+
+  h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+  }
+
+  h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $color-blue-dark;
+  }
+}
+
+.section-careers-cta {
+  background: linear-gradient(
+    to right,
+    rgba(216, 102, 167, 0.1),
+    rgba(0, 136, 255, 0.1)
+  );
+
+  h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: $color-blue-dark;
+
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-size: 2rem;
+    color: $color-grey-dark--3;
+  }
+
+  a {
+    color: $color-purple-dark;
+    font-size: 2rem;
+    font-weight: 800;
+  }
+}

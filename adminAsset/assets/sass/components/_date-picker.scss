@@ -1,0 +1,73 @@
+// #date-picker {
+//   border: 1px solid $color-grey-light--5;
+// }
+
+.datepicker {
+  min-width: 27.4vw;
+  font-size: $default-font-size;
+  font-weight: 100 !important;
+
+  table {
+    width: 100%;
+
+    th {
+      font-weight: 600;
+    }
+
+    .day {
+      &:hover {
+        background: #8a79e838 !important;
+      }
+    }
+
+    .selected {
+      background: $color-primary !important;
+      border-radius: 0 !important;
+
+      &:hover {
+        background: $color-primary !important;
+      }
+    }
+    .range {
+      background: #f5f5f5 !important;
+    }
+  }
+}
+
+.daterangepicker {
+  // left: 17.4vw !important;
+
+  font-family: 'Nunito Sans', 'Roboto', sans-serif;
+  font-size: 1.6rem !important;
+
+  .drp-selected {
+    display: none;
+  }
+
+  .btn-primary {
+    background-color: $color-primary;
+    border: none;
+  }
+
+  td.active,
+  .daterangepicker td.active:hover,
+  td.active,
+  .daterangepicker td.active {
+    background-color: $color-primary !important;
+  }
+}
+
+.section-dashboard--orderHistory {
+  #reportrange {
+    left: 30vw !important;
+
+    display: flex;
+    justify-content: center;
+
+    font-weight: 600;
+    color: $color-grey-light--5;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: $color-dashboard--light--1 !important;
+  }
+}

@@ -1,0 +1,151 @@
+.section-similar-contacts {
+  a {
+    color: $color-primary;
+
+    &:hover {
+      color: $color-grey-dark--2;
+    }
+  }
+}
+
+.section-faq {
+  .card-header {
+    background-color: transparent;
+    font-size: 1.8rem !important;
+    font-weight: 500 !important;
+    color: $color-grey-dark--2;
+    padding: 3.5rem 0;
+    text-align: left;
+  }
+}
+
+.company-details {
+  &__box {
+    .company {
+      &-logo {
+        margin-right: 1.5rem;
+
+        width: 10rem;
+      }
+
+      &-title {
+        font-weight: 600;
+        font-size: 2.6rem;
+        color: $color-blue-dark;
+
+        text-align: left;
+        margin: 0;
+      }
+
+      &-subtitle {
+        font-weight: 300;
+        font-size: 1.3rem;
+        color: $color-grey-dark--3;
+      }
+
+      &-industry {
+        font-weight: 500;
+        font-size: 1.4rem;
+        color: $color-primary;
+      }
+
+      &-tag {
+        background-color: $color-grey-light--1;
+        border: none;
+        height: auto;
+        width: max-content;
+        color: $color-black;
+        font-size: 1.1rem;
+        margin-bottom: 2.4rem;
+
+        display: flex;
+      }
+      &-social-links {
+        i {
+          font-size: 1.75rem;
+          color: $color-grey-dark--3;
+          padding: 0.2rem;
+        }
+        a:hover i {
+          color: $color-primary !important;
+        }
+      }
+    }
+  }
+
+  &--title-box {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &--content {
+    text-align: start;
+
+    #more {
+      display: none;
+    }
+
+    #seeMoreBtn {
+      font-weight: 300;
+      font-size: 1.3rem;
+      color: $color-grey-dark--3;
+      background: transparent;
+      text-decoration: underline;
+    }
+
+    p {
+      font-weight: 300;
+      font-size: 1.4rem;
+      color: $color-grey-dark--3;
+      margin: 0;
+    }
+  }
+
+  &--btn {
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: 0.75rem 1rem;
+
+    border: 1px solid $color-grey-light--3;
+    border-radius: 0.3rem;
+
+    display: flex;
+  }
+}
+
+.similar-contacts-details {
+  &__box {
+    padding: 1.25rem 0;
+
+    text-align: left;
+  }
+
+  &--name {
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: $color-blue-dark !important;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &--job {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: $color-grey-dark--3;
+
+    margin-bottom: 0.3rem;
+  }
+  &--contact {
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: $color-primary;
+
+    display: flex;
+
+    i {
+      font-size: 1.3rem;
+      margin-right: 0.75rem;
+    }
+  }
+}
